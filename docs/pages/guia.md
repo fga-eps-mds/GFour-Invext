@@ -2,4 +2,4 @@
 
 |  Autor | Descrição | Data |
 |--|--|--|
-| [Maria Abritta](https://github.com/MariaAbritta) | Criação do Git Pages | 18/03/2022|
+| [Maria Abritta](https://github.com/MariaAbritta) | Criação do Git Pages | 01/07/2022|
