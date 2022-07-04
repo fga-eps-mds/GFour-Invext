@@ -1,4 +1,4 @@
-# GFour- Invex (Gerenciador de Carteira)
+# GFour- Invext (Gerenciador de Carteira)
 
 Contribua com informações respondendo esse formulário para nos ajudar a mapear o público alvo do nosso projeto
 - [Google Forms](https://forms.gle/Kf3idmQKuUbszZXHA)
