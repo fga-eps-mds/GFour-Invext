@@ -9,5 +9,5 @@ INVEXT - GFOUR
 - ***Atributos:*** nome completo, id, senha, cpf, rg, endereço, telefone, Patrimônio, Rendimento.
 - ***Métodos***: cadastrar usuário, editar informações, excluir conta.
 - **Investimento**
-- ***Atributos:*** tipo(Renda Variável, Renda Fixa), categoria(Ação, Fundo Imobiliário, Stock, CDB, Poupança, Tesouro Direto), valor, quantidade, descrição.
-- ***Métodos:*** calcular patrimônio geral, calcular rentabilidade ativo, calcular rentabilidade geral, cadastrar, excluir e editar.
+- ***Atributos:*** tipoMoeda (Real, Euro, Dólar...), tipo(Renda Variável, Renda Fixa), categoria(Ação, Fundo Imobiliário, Stock, CDB, Poupança, Tesouro Direto), valor, quantidade, descrição.
+- ***Métodos:*** calcular patrimônio geral, calcular rentabilidade ativo, calcular rentabilidade geral, mudarMoeda, cadastrar, excluir e editar.
