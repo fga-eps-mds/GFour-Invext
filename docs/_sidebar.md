@@ -1,5 +1,5 @@
-- [Home](README.md)
-- [Objetivos](pages/objetivos.md)
+- [Home](docs/README.md)
+- [Objetivos](docs/pages/objetivos.md)
 
 
 - Arquiterua
