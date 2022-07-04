@@ -188,4 +188,4 @@ manutenibilidade de qualquer artefato entregue;
 para manter e desenvolver as soluções propostas;
 
 - Documentar as informações necessárias.
-- (O que mais por?)
+
