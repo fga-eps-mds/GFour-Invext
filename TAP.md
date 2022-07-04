@@ -46,6 +46,8 @@ O Invext é um site 100% gratuito e open source que oferece o gerenciamento de c
 
 O tema escolhido para o estudo dessas partes foi: com o crescente aumento no mercado financeiro atualmente e a busca pelo lucro, observamos uma grande oportunidade de desenvolver um projeto que abrange um amplo grupo de usuários que almejam entender ou até mesmo adentrar ao mundo financeiro.
 
+Com isso, necessitam de uma plataforma que seja possível a visualização de todos os seus investimentos e também de como eles estão indo ao longo do tempo, é aí que entra a Invext (carteira de investimentos) que possibilitará ao usuário gerenciar seus investimentos facilitando a visualização dos mesmos, do patrimônio e da rentabilidade em dashboards de fácil entendimento.
+
 1. **Premissas do Projeto**
 - Oferecer um entendimento maior sobre a área financeira para os
 
