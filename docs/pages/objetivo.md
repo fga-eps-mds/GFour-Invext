@@ -6,5 +6,5 @@
 	Qualquer um atrelado ao repositório, pode adicionar seus docuemtnos aqui, usando a linguagem Markdown. Apenas pedimos 2 coisas:
   - 1. Sempre deixem o ambiente organizado e limpo, não adicionando algo que afetaria o trabalho feito.
   - 2. Atualizem o “Guia de Contribuição”, colocando seu nome, o que contribuiu e a data. <br>
-	<div style="color:#EE82EE">O objetivo do nosos Pages será sempre a organização e documentação da nossa evolução!</div>
+	<div style="color:#EE82EE">O objetivo do nosso Pages será sempre a organização e documentação da nossa evolução!</div>
 </h4>
