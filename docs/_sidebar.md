@@ -2,7 +2,7 @@
 - [Objetivos](pages/objetivo.md)
 
 
-- Arquiterua
+- Arquitetura
     - [Documento de Arquitetura de Software](pages/DocumentoDeArquiteturaDeSoftware.md)
 
 - [Guia de Contribuição](pages/guia.md)
