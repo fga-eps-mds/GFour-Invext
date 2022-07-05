@@ -4,3 +4,4 @@
 |--|--|--|
 | [Maria Abritta](https://github.com/MariaAbritta) | Criação do Git Pages | 01/07/2022|
 | [Maria Abritta](https://github.com/MariaAbritta) | Finalização do template do Pages | 04/07/2022|
+| [Maria Abritta](https://github.com/MariaAbritta) | Acrescentando a documentação de Arquivo de Software | 05/07/2022|
