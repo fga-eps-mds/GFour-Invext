@@ -1,6 +1,6 @@
 <p align="center">
   <img 
-    src="https://github.com/fga-eps-mds/GFour-Invext/blob/main/docs/assets/Images/InvextLogo.png"
+    src="https://github.com/fga-eps-mds/GFour-Invext/blob/main/docs/assets/msg1187136684-18592.jpg"
     alt: 'Logo Invext'
     width="1000"
     height="150"
