@@ -2,7 +2,7 @@
   <img 
     width="1000"
     height="150"
-    src="Images/InvextLogo.png"
+    src="../assets/Images/InvextLogo.png"
   >
 </p>
 <p align="center"><b>DOCUMENTO DE ARQUITETURA DE SOFTWARE</b></p>
@@ -13,7 +13,7 @@
   <img 
     width="765"
     height="380"
-    src="Images/FinancialImage.jpeg"
+    src="../assets/Images/FinancialImage.jpeg"
   >
 </p>
 
@@ -32,8 +32,10 @@
    Esse documento serve de guia para outros objetivos de construção software em questão, a partir de um projeto desenvolvido envolvendo outros softwares e plataformas possíveis, a documentos possíveis da construção do projeto, onde é possível ter uma visão de cada tema.
 
 3. ### _**CONFIGURAÇÕES, ACRÔNIMOS E ABREVIAÇÕES**_
+
    - API: É um acrônimo para Application Programming Interface(Interface de programação de aplicações). A API é um conjunto de definições e protocolos usados no desenvolvimento e na integração de um software, permitindo a interação com outros produtos sem a necessidade de interação com outro software.
-   - UML: É um acrônimo para Unified Modeling Language(linguagem de modelagem unificada). O UML é uma linguagem utilizada para visualizar, especificar, construir e documentar a arquitetura completa de um software, fornecendo informações detalhadas para o desenvolvedor implementar o software.s
+   - UML: É um acrônimo para Unified Modeling Language(linguagem de modelagem unificada). O UML é uma linguagem utilizada para visualizar, especificar, construir e documentar a arquitetura completa de um software, fornecendo informações detalhadas para o desenvolvedor implementar o software.
+   - UI: É uma sigla para User Interface(interface do usuário). É a área que está associada a criação das interfaces que interagem diretamente com o usuário do software, promovendo formas fáceis e amigáveis de interação no programa.
 
 4. ### _**REFERÊNCIAS BIOGRÁFICAS**_
 
@@ -50,15 +52,15 @@
    O documento de arquitetura está organizado em informações da seguinte maneira:
 
    1. Finalidade
-   2. Escopo.
-   3. Metas e Restrições de Arquitetura.
-   4. Visão dos Casos de Uso.
-   5. Visão Lógica.
-   6.  Visão de Processos.
-   7.  Visão de Implantação.
-   8.  Visão de implementação.
-   9.  Tamanho e Desempenho.
-   10. Qualidade.
+   2. Escopo
+   3. Metas e Restrições de Arquitetura
+   4. Visão dos Casos de Uso
+   5. Visão Lógica
+   6.  Visão de Processos
+   7.  Visão de Implantação
+   8.  Visão de implementação
+   9.  Tamanho e Desempenho
+   10. Qualidade
 
 6.  ### _**REPRESENTAÇÃO ARQUITETURAL**_
 
