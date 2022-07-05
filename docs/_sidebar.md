@@ -3,7 +3,7 @@
 
 
 - Arquiterua
-    - [Relação enter Hexad e Core Drives](pages/Documento de arquitetura de software.md)
+    - [(pages/DocumentoDeArquiteturaDeSoftware.md)]
 
 - [Guia de Contribuição](pages/guia.md)
    
