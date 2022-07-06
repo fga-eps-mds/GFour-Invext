@@ -2,31 +2,7 @@ Termo de Abertura do Projeto Projeto: Invext - Gfour![](Aspose.Words.6846382b-c0
 
 Brasília, XX de xxxxxx de 2022 (dia em que assina o contrato)
 
-Sumário
-
-1 **Informações** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . 2
-
-2 **Descrição do Projeto** . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . 3
-
-1. Premissas do Projeto . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
-1. Restrições do Projeto . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
-
-3 **Objetivos do Projeto** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
-
-4 **Entregas Previstas** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
-
-1. Plano Geral da Gamificação . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
-1. Manual da Gamificação . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
-
-5 **Cronograma Preliminar** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  4
-
-6 **Riscos Preliminares do Projeto** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
-
-1. Saída de Membros do Projeto . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  4
-1. Comunicação Ineficiente entre Stakeholders . . . . . . . . . . . . . . . . . . . . . . 5
-1. Alteração de Escopo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
-
-7 **Stakeholders** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+---------------------------------------------------------------
 
 1 **Informações**
 
@@ -38,6 +14,8 @@ Sumário
 
 **Previsão de Término**: XX/XX/2022
 
+---------------------------------------------------------------
+
 2 **Descrição do Projeto**
 
 A Disciplina Métodos e Desenvolvimentos de Software visando a aprendizagem prática de como se dá todas as etapas de um processo da construção de software com valor de mercado. Serão feitos encontros semanais para discussão de objetivos e passos a serem tomados(Scrum). O objetivo principal do projeto é promover aos estudantes uma experiência profissional com as partes integrantes do projeto ao todo.
@@ -48,7 +26,9 @@ O tema escolhido para o estudo dessas partes foi: com o crescente aumento no mer
 
 Com isso, necessitam de uma plataforma que seja possível a visualização de todos os seus investimentos e também de como eles estão indo ao longo do tempo, é aí que entra a Invext (carteira de investimentos) que possibilitará ao usuário gerenciar seus investimentos facilitando a visualização dos mesmos, do patrimônio e da rentabilidade em dashboards de fácil entendimento.
 
-1. **Premissas do Projeto**
+---------------------------------------------------------------
+
+3. **Premissas do Projeto**
 - Oferecer um entendimento maior sobre a área financeira para os
 
 usuários;
@@ -65,7 +45,9 @@ financeiro;
 
 virtude do fato de estarmos consumindo dados armazenados até então;
 
-2. **Restrições do Projeto**
+---------------------------------------------------------------
+
+4. **Restrições do Projeto**
 - Não se incluem dentro do escopo do projeto os custos de
 
 infraestrutura e custos de aplicação montada;
@@ -74,7 +56,9 @@ infraestrutura e custos de aplicação montada;
 
 desenvolvimento dos formulários.
 
-3 **Objetivos do Projeto**
+---------------------------------------------------------------
+
+5. **Objetivos do Projeto**
 
 - Gerenciamento de carteira virtual de investimentos;
 - Facilitar a visualização dos investimentos por meio de dashboards de
@@ -87,13 +71,17 @@ lugar(Notícias, gráficos, Cálculo do patrimônio, Rentabilidade, Visualizaç�
 
 - Fidelizar o cliente através da facilidade e custo benefício;
 
-4 **Entregas Previstas**
+---------------------------------------------------------------
 
-4.1 **(Explicar aqui todas as entregas que iremos fazer, o que vai ter na**
+6. **Entregas Previstas**
+
+6.1 **(Explicar aqui todas as entregas que iremos fazer, o que vai ter na**
 
 **nossa aplicação)**
 
-5 **Cronograma Preliminar**
+---------------------------------------------------------------
+
+7. **Cronograma Preliminar**
 
 Foi acordado que toda segunda-feira às 20 horas, semanalmente, será o dia da Sprint Review de ambas as partes para discussão sobre o projeto. Toda quarta-feira, às 19 horas, semanalmente, será o dia final de Sprint e de diálogo para a construção da nova Sprint. Os outros dias úteis da semana serão de trabalho exclusivo de cada membro.
 
@@ -101,7 +89,9 @@ A apresentação final ocorrerá no dia XX/XX/2022, onde o time apresentará a a
 
 Vale lembrar que esse cronograma se encontra como preliminar, pois a entrega de cada uma das etapas depende da aprovação de todos os envolvidos.
 
-6 **Riscos Preliminares do Projeto**
+---------------------------------------------------------------
+
+8. **Riscos Preliminares do Projeto**
 
 1. **Saída de Membros do Projeto**
 
@@ -117,7 +107,9 @@ Mal entendidos e falta de alinhamento entre as partes interessadas do projeto é
 
 Um planejamento que priorize entregas pequenas e frequentes mitigará parte desse risco, pois, supondo o bom cumprimento do planejado, sempre existirão resultados palpáveis para que o público-alvo o validem.
 
-7 **Membros**
+---------------------------------------------------------------
+
+9. **Membros**
 
 Luciano de Freitas Melo
 
