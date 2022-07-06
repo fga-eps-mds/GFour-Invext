@@ -10,5 +10,6 @@
 | [Luciano Freitas](https://github.com/luciano-freitas-melo) | Correções ortográficas nos docs do git pages | 05/07/2022|
 | [Luciano Freitas](https://github.com/luciano-freitas-melo) | Correção da inserção de imagens no doc de arquitetura | 05/07/2022|
 | [Maria Abritta](https://github.com/MariaAbritta) | Add o TAP no side bar | 06/07/2022|
+| [Maria Abritta](https://github.com/MariaAbritta) | Criando a tabela de dailys | 06/07/2022|
 
 
