@@ -13,7 +13,7 @@
 
 <p align="center">
   <img
-    src="https://github.com/fga-eps-mds/GFour-Invext/blob/main/docs/assets/Images/FinancialImage.jpeg"
+    src="https://github.com/fga-eps-mds/GFour-Invext/tree/main/docs/assets/Images/FinancialImage.jpeg"
     alt: 'Homem vendo o celular e gráfico financeiro'
     width="765"
     height="380"   
