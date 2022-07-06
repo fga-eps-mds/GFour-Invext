@@ -5,7 +5,7 @@
 - Arquitetura
     - [Documento de Arquitetura de Software](pages/DocumentoDeArquiteturaDeSoftware.md)
 
-- Daily
+- Dailys
     - [Tabela de Perguntas](pages/daily.md)
     - [Mitigar Riscos]
 
