@@ -15,6 +15,7 @@
 | [Maria Abritta](https://github.com/MariaAbritta) | Escrevendo a minha daily | 07/07/2022 | 
 | [Maria Abritta](https://github.com/MariaAbritta) | Arrumando o estilo da página de objetivos | 07/07/2022 | 
 | [Maria Abritta](https://github.com/MariaAbritta) | Add as páginas das atas | 07/07/2022 | 
+| [Luciano Freitas](https://github.com/luciano-freitas-melo) | Testando modificações na side bar | 07/07/2022 |
 
 
 
