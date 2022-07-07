@@ -13,5 +13,7 @@
 | [Maria Abritta](https://github.com/MariaAbritta) | Criando a tabela de dailys | 06/07/2022 | 
 | [Maria Abritta](https://github.com/MariaAbritta) | Implementando dailys na side bar | 06/07/2022 |
 | [Maria Abritta](https://github.com/MariaAbritta) | Escrevendo a minha daily | 07/07/2022 | 
+| [Maria Abritta](https://github.com/MariaAbritta) | Arrumando o estilo da página de objetivos | 07/07/2022 | 
+
 
 
