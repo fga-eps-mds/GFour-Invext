@@ -8,9 +8,21 @@
 <p align="center"> 
  <h3 align="left"> 
       - 1. Sempre deixem o ambiente organizado e limpo, não adicionando algo que afetaria o trabalho feito.
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="left"> 
       - 2. Atualizem o “Guia de Contribuição”, colocando seu nome, o que contribuiu e a data.
  </h1>
 </p>
+
+<p align="center"> 
+ <h3 align="left"> 
+      - 3. Sempre respondam as perguntas da daily!
+ </h1>
+</p>
+
 <br>
 	<div style="color:#EE82EE">O objetivo do nosso Pages será sempre a organização e documentação da nossa evolução!</div>
 </h4>
