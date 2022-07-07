@@ -5,6 +5,9 @@
 - Arquitetura
     - [Documento de Arquitetura de Software](pages/DocumentoDeArquiteturaDeSoftware.md)
 
+----------------------------------------------------
+### _**Equipe**_
+
 - Atas
     - [Sprint Review e Retrospect](pages/atasSprintReviewERetro.md)
     - [Sprint Planning](pages/atasSprintPlanning.md)
