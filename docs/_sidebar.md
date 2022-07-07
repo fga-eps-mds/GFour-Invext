@@ -6,7 +6,7 @@
     - [Documento de Arquitetura de Software](pages/DocumentoDeArquiteturaDeSoftware.md)
 
 - Atas
-    - [Sprint Review e Retrospectiva](pages/atasSprintReviewERetro.md)
+    - [Sprint Review e Retrospect](pages/atasSprintReviewERetro.md)
     - [Sprint Planning](pages/atasSprintPlanning.md)
 
 - Backlog
