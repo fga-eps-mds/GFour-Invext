@@ -1,17 +1,17 @@
-<p align="center">
+<!-- <p align="center">
   <img 
     src="https://github.com/fga-eps-mds/GFour-Invext/blob/main/docs/assets/msg1187136684-18592.jpg"
     alt: 'Logo Invext'
     width="1000"
     height="150"
   />
-</p>
+</p> -->
 
 <h1 align="center"><b>DOCUMENTO DE ARQUITETURA DE SOFTWARE</b></h1>
 
 &nbsp;
 
-<p align="center">
+<!-- <p align="center">
   <img 
     src="https://github.com/fga-eps-mds/GFour-Invext/blob/main/docs/assets/Images/FinancialImage.jpeg"
     alt: 'Homem vendo o celular e gráfico financeiro'
@@ -19,7 +19,7 @@
     height="380"   
   />
 </p>
-
+ -->
 ---
 
 ## **INTRODUÇÃO**
