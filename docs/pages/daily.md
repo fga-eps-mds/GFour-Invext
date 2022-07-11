@@ -24,3 +24,12 @@
 |--|--|--|--|
 | [Lucas Felipe](https://github.com/lucasfs1007) | Capacitação em React.js e figma  | Irei revisar o que fiz em meu documento de visão | Apenas o tempo mais corrido hoje |
 -----------------------------------------------------------------------------------------------------------
+<p align="center"> 
+ <h3 align="left"> 
+     11 / 07
+ </h1>
+</p>
+
+|  Autor | O que você fez ontem? | O que você fará hoje? | Existe/existiu algum impedimento no seu caminho? |
+|--|--|--|--|
+| [Lucas Felipe](https://github.com/lucasfs1007) | Capacitação em React.js modificações no documento de visão | Seguirei com a capacitação em react js e farei algumas modificações sugeridas para o docs de visão | Tive alguns problemas quanto meus horários esses dias então está bem corrido
