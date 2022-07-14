@@ -16,7 +16,7 @@
     - [Sprint Review e Retrospect](pages/atasSprintReviewERetro.md)
     - [Sprint Planning](pages/atasSprintPlanning.md)
 
-- Backlog
+- [Backlog](pages/backlog.md)
 
 - [Quadro de Conhecimento](https://docs.google.com/spreadsheets/d/1eeSjNd9G90ZPLCYiCNmlVcYRW4Fsy09LDEK4t4K-gMQ/edit#gid=1642377366)
 
