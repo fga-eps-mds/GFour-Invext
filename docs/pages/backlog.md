@@ -13,12 +13,6 @@
  </h1>
 </p>
 
-<p align="center"> 
- <h3 align="right"> 
-     Sprint 5
- </h1>
-</p>
-
          - A Prototipação deve ter pelo menos a tela inicial feita.
          - TAP.
          - Diagrama de Implementação deve estar pela metade.
