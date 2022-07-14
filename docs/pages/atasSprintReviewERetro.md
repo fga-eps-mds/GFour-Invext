@@ -10,16 +10,19 @@
 
 1. ### _**Itens de ação**_
 
-   * Luciano fez o template da issues.
-   * Maria Abritta fez as partes adicionais do Git Pages, porém a parte de daily e guia de contribuição, conversando com a professora, ela nos auxiliou a retira-la do GitPages.
-   * Antônio começou a prototipação.
-   
-2. ### _**Entregas**_
-
    * Documento de visão é para ser entregue.
    * Um maior desenvolvimento da prototipação.
    * Esboço do diagrama de classes e o de pacotes.
          - Todos para 13/07 -> Final da Sprint
+   
+2. ### _**Entregas**_
+
+   * Amanda e Antônio fizeram o primeiro esboço da prototipação.
+   * Lucas Gomes e Lucas Felipe fizeram o Diagrama de Classes.
+   * Josué e Leonardo fizeram o Diagrama de Pacotes.
+   * Luciano fez o template da issues.
+   * Maria Abritta fez as partes adicionais do Git Pages, porém a parte de daily e guia de contribuição, conversando com a professora, ela nos auxiliou a retira-la do GitPages.
+   * Antônio começou a prototipação.
    
 3. ### _**Dúvidas**_
 
