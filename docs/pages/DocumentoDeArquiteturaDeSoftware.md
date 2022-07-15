@@ -39,7 +39,7 @@
    - API: É um acrônimo para Application Programming Interface(Interface de programação de aplicações). A API é um conjunto de definições e protocolos usados no desenvolvimento e na integração de um software, permitindo a interação com outros produtos sem a necessidade de interação com outro software.
    - UML: É um acrônimo para Unified Modeling Language(linguagem de modelagem unificada). O UML é uma linguagem utilizada para visualizar, especificar, construir e documentar a arquitetura completa de um software, fornecendo informações detalhadas para o desenvolvedor implementar o software.
    - UI: É uma sigla para User Interface(interface do usuário). É a área que está associada a criação das interfaces que interagem diretamente com o usuário do software, promovendo formas fáceis e amigáveis de interação no programa.
-
+   - UX: É uma sigla para User Experience(Experiência do usuário). É uma estratégia que tem como objetivo promover uma melhor experiência para os usuários. Isso é, promover ao usuário que a utilização de um site,aplicativo ou produto ocorra sem obstáculos
 4. ### _**REFERÊNCIAS BIOGRÁFICAS**_
 
    Arquitetura	de	Software.	Disponível	em: <http://repositorio.aee.edu.br/bitstream/aee/1106/3/TCC2_2018_2_Gabriel> LeiteDias\_MatheusLimadeAlbuquerque\_Apêndice2.pdf . Acesso em: 30 de abril de 2021.
