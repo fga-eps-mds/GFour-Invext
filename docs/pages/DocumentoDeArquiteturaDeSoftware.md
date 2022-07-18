@@ -11,15 +11,15 @@
 
 &nbsp;
 
-<!-- <p align="center">
+<p align="center">
   <img 
-    src="https://github.com/fga-eps-mds/GFour-Invext/blob/main/docs/assets/Images/FinancialImage.jpeg"
+    src="../assets/Images/FinancialImage.jpeg"
     alt: 'Homem vendo o celular e gráfico financeiro'
     width="765"
     height="380"   
   />
 </p>
- -->
+
 ---
 
 ## **INTRODUÇÃO**
@@ -42,9 +42,9 @@
    - UX: É uma sigla para User Experience(Experiência do usuário). É uma estratégia que tem como objetivo promover uma melhor experiência para os usuários. Isso é, promover ao usuário que a utilização de um site,aplicativo ou produto ocorra sem obstáculos
 4. ### _**REFERÊNCIAS BIOGRÁFICAS**_
 
-   Arquitetura	de	Software.	Disponível	em: <http://repositorio.aee.edu.br/bitstream/aee/1106/3/TCC2_2018_2_Gabriel> LeiteDias\_MatheusLimadeAlbuquerque\_Apêndice2.pdf . Acesso em: 30 de abril de 2021.
+   Arquitetura	de	Software.	Disponível	em: <http://repositorio.aee.edu.br/bitstream/aee/1106/3/TCC2_2018_2_GabrielLeiteDias\_MatheusLimadeAlbuquerque\_Apêndice2.pdf> . Acesso em: 30 de abril de 2021.
 
-   O que é UML e Diagramas de Caso de Uso: Introdução Prática à UML. Disponível: https://[www.devmedia.com.br/o-que-e-uml-e-diagramas-de-caso-de-uso-int](http://www.devmedia.com.br/o-que-e-uml-e-diagramas-de-caso-de-uso-int) roducao-pratica-a-uml/23408 . Acesso em: 03 de maio de 2021.
+   O que é UML e Diagramas de Caso de Uso: Introdução Prática à UML. Disponível: <http://www.devmedia.com.br/o-que-e-uml-e-diagramas-de-caso-de-uso-introducao-pratica-a-uml/23408>. Acesso em: 03 de maio de 2021.
 
    ReactJS Disponível em: https://pt-br.reactjs.org/ Acesso em: 03 de maio de 2021.
 
