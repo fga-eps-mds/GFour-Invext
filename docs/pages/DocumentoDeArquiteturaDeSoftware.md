@@ -68,7 +68,7 @@
 6.  ### _**REPRESENTAÇÃO ARQUITETURAL**_
 
 - A Parte Dianteira:
-   - React: É um conjunto de bibliotecas de código aberto seguro para a criação de UIs interativas de forma mais fácil. Toda lógica é escrita em JavaScript da Repassagem de dados ao longo da passagem de dados. Essa tecnologia foi escolhida por quantidade de conteúdo disponível na internet, para o treinamento e aprendizado da equipe, outro ponto positivo é o fórum de dúvidas acerca do assunto estar sempre a disposição.
+   - React: É um conjunto de bibliotecas de código aberto seguro para a criação de UIs interativas de forma mais fácil. Toda lógica é escrita em JavaScript da Repassagem de dados ao longo da passagem de dados. Essa tecnologia foi escolhida por quantidade de conteúdo disponível na internet, para o treinamento e aprendizado da equipe, outro ponto positivo é a comunidade sempre muito presente quanto a dúvidas e práticas.
 - Parte Interna:
    - Node.Js: O Node.Js é uma tecnologia usada para executar código em JavaScript fora do navegador. Com ele podemos construir aplicações web em geral, desde websites até APIs e microsserviços. Isso é possível graças a união do ambiente de execução do JavaScript pelo próprio motor de interpretação Node.Js e execução do JavaScript presente no Google Chrome chamado V8.
 
