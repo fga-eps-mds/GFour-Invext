@@ -55,7 +55,7 @@
 - Facilitar a visualização dos investimentos por meio de dashboards de
 fácil entendimento;
 
-- Inovação no mercado de investimentos, trazendo tudo em um só lugar (Notícias, gráficos, Cálculo do patrimônio, Rentabilidade, Visualização de seus investimentos, como: (Ações, Tesouro direto, Renda fixa, Renda variável, Imobiliário, Stock, CDB, Poupança)--> MODIFICAR PARA OS QUE ESCOLHEMOS);
+- Inovação no mercado de investimentos, trazendo tudo em um só lugar (Gráficos, Cálculo do patrimônio, Rentabilidade, Visualização dos investimentos dos seus ativos);
 
 - Fidelizar o cliente através da facilidade e custo benefício.
 
