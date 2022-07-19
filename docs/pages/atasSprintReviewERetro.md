@@ -8,14 +8,7 @@
  </h1>
 </p>
 
-1. ### _**Itens de ação**_
-
-   * Documento de visão é para ser entregue.
-   * Um maior desenvolvimento da prototipação.
-   * Esboço do diagrama de classes e o de pacotes.
-         - Todos para 13/07 -> Final da Sprint
-   
-2. ### _**Entregas**_
+1. ### _**Entregas**_
 
    * Amanda e Antônio fizeram o primeiro esboço da prototipação.
    * Lucas Gomes e Lucas Felipe fizeram o Diagrama de Classes.
@@ -23,6 +16,13 @@
    * Luciano fez o template da issues.
    * Maria Abritta fez as partes adicionais do Git Pages, porém a parte de daily e guia de contribuição, conversando com a professora, ela nos auxiliou a retira-la do GitPages.
    * Antônio começou a prototipação.
+
+2. ### _**Itens de ação**_
+
+   * Documento de visão é para ser entregue.
+   * Um maior desenvolvimento da prototipação.
+   * Esboço do diagrama de classes e o de pacotes.
+         - Todos para 13/07 -> Final da Sprint
    
 3. ### _**Dúvidas**_
 
@@ -34,10 +34,54 @@
 
    * Vamos adiar para a próxima sprint as dailys, porque a professora pediu para retirar do pages.
    * Não seguiremos mais com o guia de contribuição 
+
+5. ### _**Retrospect**_
    
-5. ### _**Participantes**_
+6. ### _**Participantes**_
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
 |--|--|--|--|--|--|--|--|
 |✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+   
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     18 / 07
+ </h1>
+</p>
+   
+1. ### _**Entregas**_
+
+   * Lucas Felipe e Josué fizeram a revisão do documento de arquitetura, com uns ajustes em gramática e a inserção das imagens dos diagramas.
+   * Lucas Gomes e Leonardo finalizaram o diagrama de uso, entendendo melhor sobre a aplicação.
+   * Amanda e Antônio finalizara a tela inicial da prototipação e ainda fizeram outras páginas: Cadastro, Configurações...
+   * Maria Abritta finalizou o TAP e entregou o conteúdo para o Luciano estudar sobre o Diagrama de Implementação.
+   * Luciano está terminando o documento de visão e ainda vai começar a capacitação para o Diagrama de Implementação.
+
+2. ### _**Itens de ação**_
+
+   * Documento de visão é para ser entregue.
+   * Lucas Felipe, Josué e Luciano irão fazer o markdown do Documento de Visão.
+         - Todos para 20/07 -> Final da Sprint
+   
+3. ### _**Dúvidas**_
+
+   * Amanda está tendo dificuldades de como fazer uma tela para apresentar os gráficos. 
+   * O quanto do protótipo a professor quer desenvolvido? 
+   * Quando vai ser o término do projeto? 
+         - Para finalizar o TAP.
+   
+4. ### _**Comunicados finais**_
+
+   * Quinta-feira terá apresentação do desenvolvimento --> Checar essa informação.
+   * Deixar a professora e os monitores cientes sobre a situação dos commits.
+   * Mostrar para os monitores o nosso progresso.
+
+5. ### _**Retrospect**_
+   
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|❓|✔️|✔️|
    
 -----------------------------------------------------------------------------------------------------------
