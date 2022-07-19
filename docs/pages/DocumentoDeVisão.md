@@ -140,7 +140,7 @@
       - Vincular seus dados financeiros na plataforma como forma de armazenamento de seus dados e coleta de dados elaborados diretamente pela plataforma.
       - Visualização de dados e gráficos acerca de sua situação financeira.
       - Visualização acerca de seus lucros, prejuízos, investimentos e estimativas sobre sua conta mediante ao seu histórico de variação nos últimos períodos.
-      - Possibilidade de visualização de dados com diferentes tipos de moeda, tal qual: **Real, Euro** e **Dólar**.
+      - Possibilidade de visualização de dados com diferentes tipos de moeda, tais quais: **Real, Euro** e **Dólar**.
       - Acesso aos mais variados recursos da plataforma de forma totalmente grátis, isto é, sem nenhum acréscimo de valor mediante a quaisquer funcionalidade da plataforma.
 
    ### 5.2. **_Usuário_**
