@@ -118,9 +118,29 @@
 
    ### 3.5. **_Perfis dos Usuários_**
 
+      - ### 3.5.1. **_investidores_**
+
+         |**Descrição**|**Responsabilidades**|**Critérios de Sucesso**|**Comentários ou Problemas**|
+         | - | - | - | :- |
+         |Pessoas que investem na bolsa de valores e desejam entender seus investimentos|Se cadastrar na plataforma e inserir dados sobre seus investimentos|Visualizar seus ativos na plataforma e obter informações relevantes para a tomada de decisões dos investimentos.|<p>Não ter alguns conhecimentos sobre</p><p>- mundo dos investimentos (como rentabilidade, cotação de ativos…)</p>|
+
    ### 3.6. **_Principais Necessidades da Parte Interessada ou do Usuário_**
 
+      |**Usuário**|**Necessidade**|**Solução Atual**|**Solução Proposta**|
+      | - | - | - | - |
+      |Investidores|Visualizar seus ativos e obter informações sobre eles, através de gráficos e outros componentes visuais|Plataformas pagas, em que o usuário deve fazer pagamentos mensais para continuar utilizando os recursos e ter acesso às informações sobre sua carteira|Uma plataforma de fácil utilização, em que o usuário possa visualizar seus ativos e ter todos os dados necessários sobre a carteira, e de forma totalmente gratuita.|
+
    ### 3.7. **_Alternativas e Concorrência_**
+
+      - ### 3.7.1. **_TradeMap_**
+         Site web e aplicativo mobile que traz uma plataforma para investimentos. Traz uma série de funcionalidades, como: integração direta com a bolsa de valores (B3), comunicação com corretoras de valores, gráficos analíticos sobre investimentos e notícias.
+
+         Porém, a maior parte das funcionalidades presentes só podem ser acessadas mediante ao pagamento de mensalidades, que variam de acordo com os planos que a plataforma oferece.
+
+      - ### 3.7.2. **_Status Invest_**
+         Site web responsivo para gerenciamento de carteiras de investimento. Além do gerenciamento e monitoramento da carteira, oferece também rentabilidade da carteira, comparações de ativos, personalização de telas, múltiplas carteiras, entre outros.
+
+         Como o TradeMap, algumas das funcionalidades do Status Invest só são acessíveis ao usuário por meio do pagamento de uma mensalidade na plataforma.
 
 4. ## **Visão Geral do Produto**
 
