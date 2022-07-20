@@ -4,10 +4,12 @@
 ----------------------------------------------------
 ### _**Projeto**_
 
+- [TAP](pages/TAP.md)
+- [Documento de Visão](pages/DocumentoDeVisão.md)
 - Arquitetura
     - [Documento de Arquitetura de Software](pages/DocumentoDeArquiteturaDeSoftware.md)
 
-- [TAP](pages/TAP.md)
+
 
 ----------------------------------------------------
 ### _**Equipe**_
