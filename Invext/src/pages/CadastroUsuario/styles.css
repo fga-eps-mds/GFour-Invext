@@ -16,7 +16,6 @@ body {
 .div-cadastro{
     display: flex;
     flex-direction: column;
-
     padding: 2%;
     width: 80%;
     background-color: rgba(10, 17, 79, 0.8);
@@ -33,6 +32,7 @@ body {
     font-size: 2em;
     cursor: pointer;
 }
+
 .icone-voltar:hover{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -60,6 +60,7 @@ input{
     font-size: 1.5em;
     text-align: center;
 }
+
 input::placeholder{
     color: rgba(255, 255, 255, 0.7);
     font-family: 'Roboto';
@@ -73,7 +74,6 @@ input::placeholder{
     font-size: 1.5em;
     text-align: center;
     padding: 0.5em 1.5em; 
-
     cursor: pointer;
     transition: 0.25s;
 }
