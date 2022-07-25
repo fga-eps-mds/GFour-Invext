@@ -85,3 +85,46 @@
 |✔️|✔️|✔️|✔️|✔️|❓|✔️|✔️|
    
 -----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     25 / 07
+ </h1>
+</p>
+   
+1. ### _**Entregas**_
+
+   * Lucas Felipe e Luciano com a tela de cadstro com 50% pronto.
+   * O protótipo está quase finalizado pela Amanda e pelo Antônio, uns 80%.
+   * Lucas Gomes, Lucas Felipe e Josué estão finalizando o diagrama de classes.
+   * Lucas Gomes e Leonardo estão começando a base do banco de dados.
+   * Maria terminando a ideia do Diagrama de Implementação e do Banco de Dados.
+
+2. ### _**Itens de ação**_
+
+   * Amanda e Maria com o diagrama de implementação.
+   * Josué e Maria com o diagrama de Banco de Dados.
+   * Finalizar as partes das entregas.
+         - Todos para 27/07 -> Final da Sprint
+   
+3. ### _**Dúvidas**_
+
+   * Será que dá para rodar o MySQL sem ser localmente?
+         - Para finalizar o TAP.
+   
+4. ### _**Comunicados finais**_
+
+   * Nenhum comunicado.
+
+5. ### _**Retrospect**_
+
+retrospect25.07
+
+ <img src="/GFour-Invext/assets/retrospect25.07.png" width="450" height="400" />
+   
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|❓|✔️|✔️|✔️|✔️|✔️|❓|
+   
+-----------------------------------------------------------------------------------------------------------
