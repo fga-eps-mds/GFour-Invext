@@ -118,9 +118,8 @@
 
 5. ### _**Retrospect**_
 
-retrospect25.07
-
  <img src="/GFour-Invext/assets/retrospect25.07.png" width="450" height="400" />
+ 
    
 6. ### _**Participantes**_
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
