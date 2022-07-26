@@ -1,8 +1,46 @@
 import { IMaskInput } from "react-imask";
 import { IoMdArrowBack } from 'react-icons/io';
 import './styles.css';
+import { useEffect, useState } from "react";
 
 const CadastroUsuario = () => {
+
+    const [displayName, setDisplayName] = useState("");
+    const [birth, setBirth] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [error, setError] = useState("");
+
+    const handleSubmit = async (e : React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        setError("");
+
+        const user = {
+            displayName,
+            email,
+            password,
+            phone,
+            birth,
+        }
+
+        if (password != confirmPassword) {
+            setError("As senhas precisam ser iguais");
+    
+        } else if (password.length < 8) {
+            setError("A senha precisa ter pelo menos 8 caracteres");
+    
+        } else {
+            setError("");
+            console.log(user);
+        };
+    }
+
+   
+
+
     return (
         <body>
             <div className="background-img">
@@ -13,34 +51,64 @@ const CadastroUsuario = () => {
                     />
                     <h1 className="titulo">Cadastrar</h1>
 
-                    <form className="form-cadastro">
-                        <input type="text" name="displayName" required placeholder="Nome Completo " />
+                    <form onSubmit={handleSubmit} className="form-cadastro">
+
+                        <input
+                            type="text"
+                            name="displayName"
+                            required placeholder="Nome Completo"
+                            value={displayName}
+                            onChange={(e) => setDisplayName(e.target.value)}
+                        />
 
                         <IMaskInput
                             type="text"
                             name="birth"
                             required
                             mask="00/00/0000"
-                            placeholder="Data de Nascimento " />
+                            placeholder="Data de Nascimento"
+                            value={birth}
+                            onChange={(e) => setBirth(e.currentTarget.value)}
+                        />
 
                         <IMaskInput
                             type="text"
                             name="phone"
-                            mask="(00) 0.0000-0000"
+                            mask="(00) 00000-0000"
                             placeholder="Telefone (opcional)"
+                            value={phone}
+                            onChange={(e) => setPhone(e.currentTarget.value)}
                         />
 
-                        <input type="email" name="email" required placeholder="E-mail " />
+                        <input
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="E-mail"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)} 
+                        />
 
-                        <input type="password" name="password" required placeholder="Senha " />
+                        <input
+                            type="password"
+                            name="password"
+                            required
+                            placeholder="Senha "
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
 
-                        <input type="password"
+                        <input
+                            type="password"
                             name="confirmaPassword"
                             required
                             placeholder="Confirme a senha "
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
                         />
-
-                        <button className='submit_button'>Cadastrar</button>
+                        
+                        <button className='submit-button'>Cadastrar</button>
+                        {error && <p className="error"> {error}</p>}
                     </form>
                 </div>
             </div >
