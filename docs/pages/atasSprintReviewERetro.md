@@ -49,7 +49,7 @@
      18 / 07
  </h1>
 </p>
-   
+
 1. ### _**Entregas**_
 
    * Lucas Felipe e Josué fizeram a revisão do documento de arquitetura, com uns ajustes em gramática e a inserção das imagens dos diagramas.
@@ -91,7 +91,7 @@
      25 / 07
  </h1>
 </p>
-   
+
 1. ### _**Entregas**_
 
    * Lucas Felipe e Luciano com a tela de cadstro com 50% pronto.
@@ -117,6 +117,10 @@
    * Nenhum comunicado.
 
 5. ### _**Retrospect**_
+   * Perguntas:
+         - O que gostamos e queremos continuar fazendo na próxima sprint?
+         - O que aprendemos nessa sprint e devemos aplicar na próxima?
+         - O que erramos e temos que melhorar para a próxima sprint?
 
  <img src="/GFour-Invext/assets/retrospect25.07.png" width="450" height="400" />
  
