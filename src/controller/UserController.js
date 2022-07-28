@@ -1,13 +1,17 @@
 const express = require("express");
+const bcrypt = require("bcryptjs");
+const User = require("../models/User");
 const app = express();
-
-const User = require('../models/User');
 
 // so esse funciona
 app.post("/cadastrar", async (req, res) => {
-    console.log(req.body);
+    const salt = await bcrypt.genSalt(10);
+    var usr = {
+        email: req.body.email,
+        senha: await bcrypt.hash(req.body.senha, salt)
+    };
 
-    await User.create(req.body)
+    await User.create(usr)
     .then(() => {
         return res.json({
             erro: false,
@@ -22,21 +26,31 @@ app.post("/cadastrar", async (req, res) => {
 })
 
 // nao funciona
-app.get("/buscar", async (req, res) => {
-    console.log(req.body);
-
-    await User.create(req.body)
-    .then(() => {
-        return res.json({
-            erro: false,
-            message: "Usuario cadastrado com sucesso"
-        })
-    }).catch(() => {
+app.post("/login", async (req, res) => {
+    const user = await User.findOne({
+        where: {
+            email: req.body.email
+        }
+    });
+    if(user){
+        const validador_de_senha = await bcrypt.compare(req.body.senha, User.senha);
+        if(validador_de_senha){
+            return res.json({
+                erro: false,
+                message: "Usuario logado com sucesso"
+            })
+        } else {
+            return res.status(400).json({
+                erro: true,
+                message: "Usuario nao logado com sucesso"
+            })
+        }
+    } else {
         return res.status(400).json({
             erro: true,
-            message: "Usuario nao cadastrado com sucesso"
+            message: "Usuario nao existe"
         })
-    });
+    }
 })
 
 // nao funciona
