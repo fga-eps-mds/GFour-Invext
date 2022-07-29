@@ -7,6 +7,9 @@ const app = express();
 app.post("/cadastrar", async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     var usr = {
+        nomeCompleto: req.body.nomeCompleto,
+        dataNascimento: req.body.dataNascimento,
+        telefone: req.body.telefone,
         email: req.body.email,
         senha: await bcrypt.hash(req.body.senha, salt)
     };
