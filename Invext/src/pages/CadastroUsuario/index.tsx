@@ -34,7 +34,6 @@ const CadastroUsuario = () => {
     
         } else {
             setError("");
-            console.log(user);
         };
     }
 
