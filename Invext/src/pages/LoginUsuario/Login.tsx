@@ -1,7 +1,5 @@
-import { IMaskInput } from "react-imask";
-import { IoMdArrowBack } from 'react-icons/io';
 import './Login.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const LoginUsuario = () => {
 
@@ -32,40 +30,36 @@ const LoginUsuario = () => {
     }
            
         return (
-            <body>
-                <div className="background-img">
-                    <div className="div-cadastro">
-                        <IoMdArrowBack
-                            title="Voltar ao menu principal"
-                            className="icone-voltar"
+            
+            <div className="background-img">
+                <div className="div-login">
+                
+                    <h1 className="titulo">Entrar</h1>
+
+                    <form onSubmit={handleSubmit} className="form-login">
+                        <input
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="E-mail"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)} 
                         />
-                        <h1 className="titulo">Entrar</h1>
 
-                        <form onSubmit={handleSubmit} className="form-cadastro">
-                            <input
-                                type="email"
-                                name="email"
-                                required
-                                placeholder="E-mail"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)} 
-                            />
-
-                            <input
-                                type="password"
-                                name="password"
-                                required
-                                placeholder="Senha "
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />                        
-                            <button className='submit-button'>Entrar</button>
-                            <button className='sign-up-button'>Inscreva-se</button>
-                            {error && <p className="error"> {error}</p>}
-                        </form>
-                    </div>
-                </div >
-            </body>
+                        <input
+                            type="password"
+                            name="password"
+                            required
+                            placeholder="Senha"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />                        
+                        <button type="submit" className='submit-button'>Entrar</button>
+                        <button type="button" className='sign-up-button'>Inscreva-se</button>
+                        {error && <p className="error"> {error}</p>}
+                    </form>
+                </div>
+            </div >
 
         
 
