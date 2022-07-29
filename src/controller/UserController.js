@@ -76,40 +76,14 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// nao funciona
+// nao funciona -> somente o usuario logado deve conseguir atualizar suas infos
 app.post("/atualizar", async (req, res) => {
-    console.log(req.body);
 
-    await User.destroy(req.body)
-    .then(() => {
-        return res.json({
-            erro: false,
-            message: "Usuario deletado com sucesso"
-        })
-    }).catch(() => {
-        return res.status(400).json({
-            erro: true,
-            message: "Usuario nao deletado com sucesso"
-        })
-    });
 })
 
-// nao funciona
+// nao funciona -> somente o usuario logado deve conseguir deletar sua conta
 app.post("/deletar", async (req, res) => {
-    console.log(req.body);
 
-    await User.destroy(req.body)
-    .then(() => {
-        return res.json({
-            erro: false,
-            message: "Usuario deletado com sucesso"
-        })
-    }).catch(() => {
-        return res.status(400).json({
-            erro: true,
-            message: "Usuario nao deletado com sucesso"
-        })
-    });
 })
 
 module.exports = app;
