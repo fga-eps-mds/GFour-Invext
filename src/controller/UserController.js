@@ -14,18 +14,27 @@ app.post("/cadastrar", async (req, res) => {
         senha: await bcrypt.hash(req.body.senha, salt)
     };
 
-    await User.create(usr)
-    .then(() => {
-        return res.json({
-            erro: false,
-            message: "Usuario cadastrado com sucesso"
-        })
-    }).catch(() => {
+    const achou = await User.findOne({ where: { email: usr.email}  });
+
+    if (achou == null){
+        await User.create(usr)
+        .then(() => {
+            return res.json({
+                erro: false,
+                message: "Usuario cadastrado com sucesso"
+            })
+        }).catch(() => {
+            return res.status(400).json({
+                erro: true,
+                message: "Usuario nao cadastrado com sucesso"
+            })
+        });
+    } else {
         return res.status(400).json({
             erro: true,
-            message: "Usuario nao cadastrado com sucesso"
+            message: "Usuario ja existente no banco"
         })
-    });
+    }
 })
 
 // nao funciona

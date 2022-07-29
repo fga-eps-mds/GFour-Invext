@@ -11,9 +11,19 @@ const User = db.define('users', {
     nomeCompleto: {
         type: Sequelize.STRING,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Esse campo nao pode ser vazio"
+            }
+        }
     },
     dataNascimento: {
         type: Sequelize.DATEONLY,
+        validate: {
+            notEmpty: {
+                msg: "Esse campo nao pode ser vazio"
+            }
+        }
     },
     telefone: {
         type: Sequelize.STRING,
@@ -22,10 +32,20 @@ const User = db.define('users', {
     email: {
         type: Sequelize.STRING,
         allowNull: false,
+        validate: {
+            isEmail: {
+                msg: "Esse campo precisa ser um email"
+            }
+        }
     },
     senha: {
         type: Sequelize.STRING,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Esse campo nao pode ser vazio"
+            }
+        }
     }
 });
 
