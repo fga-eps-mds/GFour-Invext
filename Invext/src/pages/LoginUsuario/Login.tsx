@@ -1,5 +1,6 @@
 import './Login.css';
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const LoginUsuario = () => {
 
@@ -55,7 +56,9 @@ const LoginUsuario = () => {
                             onChange={(e) => setPassword(e.target.value)}
                         />                        
                         <button type="submit" className='submit-button'>Entrar</button>
-                        <button type="button" className='sign-up-button'>Inscreva-se</button>
+                        <Link to="/cadastro">
+                            <button type="button" className='sign-up-button'>Inscreva-se</button>
+                        </Link>
                         {error && <p className="error"> {error}</p>}
                     </form>
                 </div>
