@@ -1,9 +1,13 @@
 import { IMaskInput } from "react-imask";
 import { IoMdArrowBack } from 'react-icons/io';
-import './styles.css';
+import './Cadastro.css';
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const CadastroUsuario = () => {
+
+    // Vai redirecionar a pagina para o login
+    let navigate = useNavigate();
 
     const [displayName, setDisplayName] = useState("");
     const [birth, setBirth] = useState("");
@@ -33,21 +37,26 @@ const CadastroUsuario = () => {
             setError("A senha precisa ter pelo menos 8 caracteres");
     
         } else {
+            // Caso caia nesse else, o usuario deve ser gravado no banco
             setError("");
+            // Usuario eh redirecionado para a página de login
+            navigate("/");
         };
     }
 
-   
+
 
 
     return (
         <body>
             <div className="background-img">
                 <div className="div-cadastro">
-                    <IoMdArrowBack
-                        title="Voltar ao menu principal"
-                        className="icone-voltar"
-                    />
+                    <Link to="/">
+                        <IoMdArrowBack
+                            title="Voltar ao menu principal"
+                            className="icone-voltar"
+                        />
+                    </Link>
                     <h1 className="titulo">Cadastrar</h1>
 
                     <form onSubmit={handleSubmit} className="form-cadastro">
@@ -92,7 +101,7 @@ const CadastroUsuario = () => {
                             type="password"
                             name="password"
                             required
-                            placeholder="Senha "
+                            placeholder="Senha"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
@@ -101,7 +110,7 @@ const CadastroUsuario = () => {
                             type="password"
                             name="confirmaPassword"
                             required
-                            placeholder="Confirme a senha "
+                            placeholder="Confirme a senha"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                         />
