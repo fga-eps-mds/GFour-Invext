@@ -129,5 +129,8 @@ Desenvolvedor: amarelo #
 
 <br/> 
 
+## Contatos
+<b>lucasfs1007@gmail.com</b>
+
 ## 📜 Documentação 
 🚧
