@@ -3,6 +3,7 @@ import { IoMdArrowBack } from 'react-icons/io';
 import './Cadastro.css';
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Axios from "axios";
 
 const CadastroUsuario = () => {
 
@@ -37,15 +38,23 @@ const CadastroUsuario = () => {
             setError("A senha precisa ter pelo menos 8 caracteres");
     
         } else {
-            // Caso caia nesse else, o usuario deve ser gravado no banco
-            setError("");
-            // Usuario eh redirecionado para a página de login
-            navigate("/");
+            Axios.post("http://localhost:3000/usuario/cadastrar", {
+                nomeCompleto: displayName,
+                dataNascimento: birth,
+                telefone: phone,
+                email: email,
+                senha: password
+            }).then(function (response) {
+                // Usuario eh cadastrado no banco e redirecionado para a pagina de login
+                navigate("/");
+              })
+              .catch(function (response) {
+                // Caso caia nesse catch, o usuario nao eh gravado no banco e retorna um erro
+                const message = response.response.data.message;
+                setError(message);
+              })
         };
     }
-
-
-
 
     return (
         <body>
