@@ -136,7 +136,7 @@ Desenvolvedor: amarelo #
 <b>zjosuez@outlook.com</b>
 <b>lggomes007@gmail.com</b>
 <b>lucianodefreitasmelo@gmail.com</b>
-<b>Leonardo </b>
+<b>leonardopadre@hotmail.com </b>
 <b>juniorleao20@gmail.com</b>
 
 
