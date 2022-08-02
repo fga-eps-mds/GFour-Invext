@@ -24,13 +24,14 @@
    9. Visão de Implantação 
    10. Visão de Implementção 
    11. Visão de Dados
-   12. Diagrama de Classes
-   13. Diagrama de Pacotes 
-   14. Diagrama de Casos de Uso
-   15. Diagrama de Banco de Dados
-   16. Tamanho e Desempenho
-   17. Qualidade
-   18. Referências Bibliográficas 
+   12. Diagrama de Implementação
+   13. Diagrama de Classes
+   14. Diagrama de Pacotes 
+   15. Diagrama de Casos de Uso
+   16. Diagrama de Banco de Dados
+   17. Tamanho e Desempenho
+   18. Qualidade
+   19. Referências Bibliográficas 
 
 1. ### _**FINALIDADE**_
 
@@ -101,37 +102,38 @@
 
 Descreve como os defensores do desenvolvimento estão organizados no sistema de arquivos. Os elementos são arquivos e pastas(Quaisquer itens de configuração). Isto inclui as propriedades de desenvolvimento e os riscos de implantação.
 
-   - Diagramas de Aulas:
-
-É uma representação da estrutura e relações das classes que servem de modelo para os objetos. Consiste em um conjunto de objetos com as mesmas características. Dessa forma, consegue-se identificar os objetos agrupá-los, de forma a encontrar suas classes conhecidas
-
-11. ### _**VISÃO DE DADOS**_
+1.  ### _**VISÃO DE DADOS**_
 
    Essa visão é utilizada em projetos onde existe alguma camada de duração, geralmente, um banco de dados racional. É uma visão geral dos dados persistentes, por meio dessa, objetos são mapeados dados persistentes. Essa visão é visualizada com o Modelo Entidade Relacionamento, no caso de banco de dados relacionais.
 
-12. ### _**DIAGRAMA DE CLASSES**_
+12. ### _**DIAGRAMA DE IMPLEMENTAÇÃO**_
+    Essa é a primeira versão das classes e métodos adotados no diagrama de classe do projeto Invext.
+    
+    <img src="/GFour-Invext/assets/diagrama_de_implementação.png" width="750" height="500" />
+
+13. ### _**DIAGRAMA DE CLASSES**_
     Essa é a primeira versão das classes e métodos adotados no diagrama de classe do projeto Invext.
     
     <img src="/GFour-Invext/assets/diagrama_de_classes.png" width="750" height="500" />
 
-13. ### _**DIAGRAMA DE PACOTES**_
+14. ### _**DIAGRAMA DE PACOTES**_
     Essa é a primeira versão da implementação do diagrama de pacotes do projeto Invext.
 
     <img src="/GFour-Invext/assets/diagrama_de_pacotes.png" width="750" height="500" />
 
     <img src="/GFour-Invext/assets/diagrama_de_pacotesMVC.png" width="750" height="500" />
     
-14. ### _**DIAGRAMA DE CASOS DE USO**_
+15. ### _**DIAGRAMA DE CASOS DE USO**_
     Essa é a primeira versão da implementação do diagrama de casos de uso do projeto Invext.
 
     <img src="/GFour-Invext/assets/diagramaDeCasosDeUso.png" width="750" height="500" />
     
-15. ### _**DIAGRAMA DE BANCO DE DADOS*_
+16. ### _**DIAGRAMA DE BANCO DE DADOS*_
     Essa é a primeira versão da implementação do diagrama de banco de dados do projeto Invext.
 
     <img src="/GFour-Invext/assets/DiagramaDeBancoDeDados.png" width="750" height="500" />
 
-16. ### _**TAMANHO E DESEMPENHO**_
+17. ### _**TAMANHO E DESEMPENHO**_
 
    Descrição do desempenho e das características do software que impactam na arquitetura de software.
 
@@ -139,11 +141,11 @@ Descreve como os defensores do desenvolvimento estão organizados no sistema de 
    - É necessário possuir conexão com a internet;
    - Para desenvolver, possuir: Windows, linux ou MacOS;
 
-17. ### _**QUALIDADE**_
+18. ### _**QUALIDADE**_
 
    Qualidade de software tem como objetivo atingir os requisitos especificados durante a elaboração do projeto, e como expectativas de usuários de clientes e diretamente relacionados com: Escalabilidade, Manutenção, Confiabilidade, Usabilidade e assim por diante.
 
-18. ### _**REFERÊNCIAS BIOGRÁFICAS**_
+19. ### _**REFERÊNCIAS BIOGRÁFICAS**_
 
    Arquitetura	de	Software.	Disponível	em: <http://repositorio.aee.edu.br/bitstream/aee/1106/3/TCC2_2018_2_GabrielLeiteDias\_MatheusLimadeAlbuquerque\_Apêndice2.pdf> . Acesso em: 30 de abril de 2021.
 
