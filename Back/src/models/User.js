@@ -30,7 +30,7 @@ const User = db.define('users', {
         allowNull: false,
         validate: {
             isEmail: {
-                msg: "Esse campo precisa ser um email"
+                msg: "Email digitado eh invalido!"
             }
         }
     },

@@ -30,7 +30,7 @@ app.post("/cadastrar", async (req, res) => {
             console.log(error);
             return res.status(400).json({
                 erro: true,
-                message: "Usuario nao cadastrado com sucesso!"
+                message: error.message
             })
         });
     } else {
