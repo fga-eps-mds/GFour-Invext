@@ -1,6 +1,7 @@
 import './Login.css';
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import Axios from "axios";
 
 const LoginUsuario = () => {
 
@@ -22,10 +23,24 @@ const LoginUsuario = () => {
 
         if (!user || !password) {
             setError("Usuário ou senha inválido");
+
         } else if(error) {
             setError("Erro, tente novamente");
-        
+
         }else{
+            Axios.post("http://localhost:3000/usuario/login", {
+                email: email,
+                senha: password
+            }).then(function (response) {
+                const message = response.data.message;
+                const token = response.data.token;
+                alert(message);
+              })
+              .catch(function (response) {
+                // Caso caia nesse catch, o usuario nao eh gravado no banco e retorna um erro
+                const message = response.response.data.message;
+                setError(message);
+              })
             setError("");
         }
     }

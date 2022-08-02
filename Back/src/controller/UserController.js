@@ -26,10 +26,11 @@ app.post("/cadastrar", async (req, res) => {
                 erro: false,
                 message: "Usuario cadastrado com sucesso!"
             })
-        }).catch(() => {
+        }).catch((error) => {
+            console.log(error);
             return res.status(400).json({
                 erro: true,
-                message: "Usuario nao cadastrado com sucesso!"
+                message: error.message
             })
         });
     } else {
@@ -58,7 +59,7 @@ app.post("/login", async (req, res) => {
         if(!(await bcrypt.compare(req.body.senha, usuario.senha))){
             return res.status(400).json({
                 erro: true,
-                mensagem: "Senha incorreta!"
+                message: "Senha incorreta!"
             });
         } else {
             const token = jwt.sign({id: usuario.id}, "INVEXTGFOURD62ST92Y7A6V7K5C6W9ZU6W8KS3", {
@@ -69,7 +70,7 @@ app.post("/login", async (req, res) => {
         
             return res.json({
                 erro: false,
-                mensagem: "Login realizado com sucesso!",
+                message: "Login realizado com sucesso!",
                 token
             });
         }

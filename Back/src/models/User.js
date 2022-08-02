@@ -18,12 +18,8 @@ const User = db.define('users', {
         }
     },
     dataNascimento: {
-        type: Sequelize.DATEONLY,
-        validate: {
-            notEmpty: {
-                msg: "Esse campo nao pode ser vazio"
-            }
-        }
+        type: Sequelize.STRING,
+        allowNull: false,
     },
     telefone: {
         type: Sequelize.STRING,
@@ -34,7 +30,7 @@ const User = db.define('users', {
         allowNull: false,
         validate: {
             isEmail: {
-                msg: "Esse campo precisa ser um email"
+                msg: "Email digitado eh invalido!"
             }
         }
     },

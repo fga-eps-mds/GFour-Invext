@@ -1,2 +1,29 @@
-node_modules
-package-lock.json
+Back/node_modules
+Back/package-lock.json
+Front/node_modules
+Front/package-lock.json
+
+# Logs
+Front/logs
+Front/*.log
+Front/npm-debug.log*
+Front/yarn-debug.log*
+Front/yarn-error.log*
+Front/pnpm-debug.log*
+Front/lerna-debug.log*
+
+Front/node_modules
+Front/dist
+Front/dist-ssr
+Front/*.local
+
+# Editor directories and files
+Front/.vscode/*
+Front/!.vscode/extensions.json
+Front/.idea
+Front/.DS_Store
+Front/*.suo
+Front/*.ntvs*
+Front/*.njsproj
+Front/*.sln
+Front/*.sw?
