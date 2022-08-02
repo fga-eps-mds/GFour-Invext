@@ -129,8 +129,11 @@ Desenvolvedor: amarelo #
 
 <br/> 
 
-## Contatos
+## Contatos https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
 <b>lucasfs1007@gmail.com</b>
+<b>Amanda.fnodaa@gmail.com</b>
+<b>EduardaAbritta@gmail.com</b>
+<b>zjosuez@outlook.com</b>
 
 ## 📜 Documentação 
 🚧
