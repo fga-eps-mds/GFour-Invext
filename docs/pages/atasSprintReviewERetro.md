@@ -131,3 +131,56 @@
 |✔️|❓|✔️|✔️|✔️|✔️|✔️|❓|
    
 -----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     01 / 08
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+   * A Prototipação foi concluída, apenas falta revisar certos detalhes, mas sas telas estão concluídas.
+   * Luciano está finalizando os detalhes do diagrama de implementação.
+   * CRUD de usuário -> Ficou tela de Cadastro e loging, assim conseguimos aprender de forma mais calma e efetiva todas as partes do desenvolvimento. O usuário vai conseguir entrar na plataforma. O cadastro e a tela de loging estão feitas.
+   * Front-end -> Cadastro, Tela de Loging, Rotas das páginas e as validações do cadastro no front.
+   * Back-end -> Validação dos e-mails para não repetir usuário e Login(token).
+   * Maria e Josúe terminou do Banco de Dados.
+
+2. ### _**Itens de ação**_
+
+   * Back-end -> Integração com o Front-end.
+   * O Scrum-team do back-end (Leonardo) alinhar com a Maria -> Final da Sprint
+   * Maria vai terminar de revisar todos os documentos.
+   * Maria vai implementar no gitpages a Prototipação.
+   * Maria deve colocar o diagrama de banco de dados dentro de arquiterua e revisar se os que estão lá são os atualizados.
+   * Lucas Gomes e Luciano vão fazer a implementação
+   * Antônio e Josué a fazer o check list do community standards
+   * Amanda e Lucas Felipe fazer better code hub.
+         - Todos para RELEASE 01 (02/08)
+   
+3. ### _**Dúvidas**_
+
+   * Não há dúvidas.
+   
+4. ### _**Comunicados finais**_
+
+   * Na apresentação, o Luciano vai falar do Front-end, Leonarndo vai falar do Back-end e Maria vai falar da documentação (TAP -> mostrar o proejto e o que queremos fazer; Doc. de Visão -> Escopo e requisitos; Arquitetura -> Qual estamos usando e os diagramas e por fim o protótipo)
+   * Explicar no Notion como roda o back-end.
+
+5. ### _**Retrospect**_
+   * Perguntas:
+         - O que gostamos e queremos continuar fazendo na próxima sprint?
+         - O que aprendemos nessa sprint e devemos aplicar na próxima?
+         - O que erramos e temos que melhorar para a próxima sprint?
+
+ <img src="/GFour-Invext/assets/retrospect01.08.png" width="450" height="400" />
+ 
+   
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|❓|❓|✔️|✔️|✔️|✔️
+   
+-----------------------------------------------------------------------------------------------------------
+
