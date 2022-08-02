@@ -1,4 +1,5 @@
-# Termo de Abertura do Projeto Projeto: Invext - Gfour! 
+# Termo de Abertura de Projeto:
+# Invext - Gfour 
 Brasília, 17 de julho de 2022 
 
 ### _*Informações*_
