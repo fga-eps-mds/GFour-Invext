@@ -1,0 +1,36 @@
+{
+  "name": "gfour-invext",
+  "version": "1.0.0",
+  "description": "Contribua com informações respondendo esse formulário para nos ajudar a mapear o público alvo do nosso projeto - [Google Forms](https://forms.gle/Kf3idmQKuUbszZXHA) - [Planilha de resultados](https://docs.google.com/spreadsheets/d/177AoJFlq8A621-zy8515E2BPtlMRGWuLVCv_POgNQwU/edit?usp=sharing)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fga-eps-mds/GFour-Invext.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fga-eps-mds/GFour-Invext/issues"
+  },
+  "homepage": "https://github.com/fga-eps-mds/GFour-Invext#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "sequelize": "^6.21.3"
+  }
+}
