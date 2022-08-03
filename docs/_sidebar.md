@@ -8,9 +8,7 @@
 - [Documento de Visão](pages/DocumentoDeVisão.md)
 - Arquitetura
     - [Documento de Arquitetura de Software](pages/DocumentoDeArquiteturaDeSoftware.md)
-
-
-
+    - [Prototipação](pages/Prototipação.md)
 ----------------------------------------------------
 ### _**Equipe**_
 

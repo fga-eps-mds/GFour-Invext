@@ -108,7 +108,7 @@
 
          |**Representantes**|**Descrição**|**Responsabilidades**|**Critérios de Sucesso**|**Envolvimento**|
          | - | - | - | :- | - |
-         |<p>Amanda Fernandes Custodio,</p><p>Antônio José Magalhães Leão Júnior,</p><p>Josué Teixeira Santana,</p><p>Luciano de Freitas Melo,</p><p>Lucas Felipe Soares,</p><p>Lucas Gomes Caldas,</p><p>Leonardo Fernandes Padre</p>|Estudantes da disciplina de MDS da UNB - FGA|Gerenciamento de documentação e do projeto; Desenvolvimento, teste e implementação do produto.|Entregar o produto com qualidade, seguindo os critérios descritos na documentação e dentro do período estipulado.|Alto|
+         |<p>Amanda Fernandes Custodio,</p><p>Antônio José Magalhães Leão Júnior,</p><p>Josué Teixeira Santana,</p><p>Luciano de Freitas Melo,</p><p>Lucas Felipe Soares,</p><p>Lucas Gomes Caldas,</p><p>Leonardo Fernandes Padre,</p><p>Maria Eduarda Dos Santos Abritta Ferreira</p>|Estudantes da disciplina de MDS da UNB - FGA|Gerenciamento de documentação e do projeto; Desenvolvimento, teste e implementação do produto.|Entregar o produto com qualidade, seguindo os critérios descritos na documentação e dentro do período estipulado.|Alto|
 
      - ### 3.4.2. **_Avaliadores_**
 

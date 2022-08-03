@@ -1,6 +1,6 @@
-# Termo de Abertura do Projeto Projeto: Invext - Gfour! 
-## Brasília, 17 de julho de 2022 
----------------------------------------------------------------
+# Termo de Abertura de Projeto:
+# Invext - Gfour 
+Brasília, 17 de julho de 2022 
 
 ### _*Informações*_
 
@@ -12,7 +12,7 @@
 
 **Previsão de Início**: 27/06/2022
 
-**Previsão de Término**: XX/XX/2022
+**Previsão de Término**: 15/09/2022
 
 ---------------------------------------------------------------
 
@@ -75,7 +75,7 @@ financeiro.
 
    Foi acordado que toda segunda-feira às 20 horas, semanalmente, será o dia da Sprint Review de ambas as partes para discussão sobre o projeto. Toda quarta-feira, às 19 horas, semanalmente, será o dia final de Sprint e de diálogo para a construção da nova Sprint. Os outros dias úteis da semana serão de trabalho exclusivo de cada membro.
 
-   A apresentação final ocorrerá no dia XX/XX/2022, onde o time apresentará a aplicação e entregará os artefatos citados anteriormente.
+   A apresentação final ocorrerá no dia 15/09/2022, onde o time apresentará a aplicação e entregará os artefatos citados anteriormente.
 
    Vale lembrar que esse cronograma se encontra como preliminar, pois a entrega de cada uma das etapas depende da aprovação de todos os envolvidos.
 

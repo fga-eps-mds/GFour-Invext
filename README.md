@@ -129,5 +129,16 @@ Desenvolvedor: amarelo #
 
 <br/> 
 
+## Contatos 
+<b>lucasfs1007@gmail.com</b>
+<b>Amanda.fnodaa@gmail.com</b>
+<b>EduardaAbritta@gmail.com</b>
+<b>zjosuez@outlook.com</b>
+<b>lggomes007@gmail.com</b>
+<b>lucianodefreitasmelo@gmail.com</b>
+<b>leonardopadre@hotmail.com </b>
+<b>juniorleao20@gmail.com</b>
+
+
 ## 📜 Documentação 
 🚧
