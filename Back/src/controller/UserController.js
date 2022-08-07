@@ -3,7 +3,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken');
 
 const User = require("../models/User");
-const Acoes = require("../models/Acao");
 const app = express();
 
 // funciona
