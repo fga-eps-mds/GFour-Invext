@@ -7,7 +7,6 @@ export function RequireAuth ( { children }: { children: JSX.Element } ) : JSX.El
     let auth = useAuth();
     let location = useLocation();
 
-    console.log(auth.getToken());
     if (!auth.getToken()) {
       // Redirect them to the /login page, but save the current location they were
       // trying to go to when they were redirected. This allows us to send them
