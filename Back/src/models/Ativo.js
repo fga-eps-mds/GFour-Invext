@@ -1,10 +1,9 @@
 const Sequelize = require('sequelize');
 const db = require('./db');
 
-const Acao = db.define('acao', {
+const Ativo = db.define('ativo', {
     id: {
         type: Sequelize.INTEGER,
-        autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
@@ -17,10 +16,6 @@ const Acao = db.define('acao', {
             }
         }
     },
-    tipo: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
     sigla: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -32,7 +27,7 @@ const Acao = db.define('acao', {
     },
     preco: {
         type: Sequelize.FLOAT,
-        allowNull: true,
+        allowNull: false,
     },
     quantidade: {
         type: Sequelize.INTEGER,
@@ -43,7 +38,7 @@ const Acao = db.define('acao', {
             }
         }
     },
-    dataCompra: {
+    data: {
         type: Sequelize.STRING,
         allowNull: false,
         validate: {
@@ -51,12 +46,16 @@ const Acao = db.define('acao', {
                 msg: "Esse campo nao pode ser vazio"
             }
         }
+    },
+    execucao: {
+        type: Sequelize.STRING,
+        allowNull: false
     }
 });
 
-Acao.sync()
+Ativo.sync()
 
 // verifica se existe alteração na model que não está no BD
 // Acao.sync({ alter: true })
 
-module.exports = Acao;
+module.exports = Ativo;

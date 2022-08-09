@@ -1,23 +1,22 @@
 const express = require("express");
-const Acao = require("../models/Acao");
+const Ativo = require("../models/Ativo");
 const app = express();
 
 
-app.post("/cadastrarAcao", async (req, res) => {
+app.post("/cadastrar", async (req, res) => {
     
-    const nova_acao = {
+    const novo_ativo = {
         nomeAtivo: req.body.nomeAtivo,
-        tipo: req.body.tipo,
         sigla: req.body.sigla,
         preco: req.body.preco,
         quantidade: req.body.quantidade,
-        dataCompra: req.body.dataCompra,
+        dataCompra: req.body.data
     };
 
-    const acoes = await Acao.findOne({ where: { nomeAtivo: nova_acao.nomeAtivo}  });
+    const ativos = await Ativo.findOne({ where: { nomeAtivo: novo_ativo.nomeAtivo}  });
 
-    if (acoes === null || acoes === acoes){
-        await Acao.create(nova_acao)
+    if (ativos === null || ativos === ativos){
+        await Ativo.create(novo_ativo)
         .then(() => {
             return res.json({
                 erro: false,
