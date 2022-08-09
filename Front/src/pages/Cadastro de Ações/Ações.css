@@ -1,14 +1,12 @@
-body {
-    margin: 0;
-}
 .background-img {
     display: flex;
-    align-items: center;
+    flex-direction: column;   alig-rn-items: center;
     justify-content: center;
     position: absolute;
     height: 100vh;
     width:100vw;
     background-image: url('../../assets/background.jpeg');
+    background-color: #232239;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -17,23 +15,26 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2%;
-    width: 80%;
+    width: 60%;
     background-color: rgba(10, 17, 79, 0.8);
     border-radius: 40px;
     color: white;
-    opacity: 25%;
+    
 }
 
 .titulo {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 0.5em; 
+    align-items: center;
+    color: white;
+    font-weight: bold;
 }
 
 input{
     background-color:rgba(169, 178, 194, 0.7);
     color: white;
-    width: 50%;
+    width: 30%;
     padding: 0.5em;
     border: none;
     border-radius: 40px;
@@ -45,6 +46,11 @@ input{
 input::placeholder{
     color: rgba(255, 255, 255, 0.7);
     font-family: 'Roboto';
+    font-size: 1em;
+}
+
+.busca-input{
+    width: 85%;
 }
 
 .buy-button {
@@ -91,9 +97,19 @@ input::placeholder{
 }
 
 .buttonBox{
-    display: inline;
+    display: flex;
+
+    justify-content: space-between;
+    
 }
 
 .columnBox {
-    display: inline;
+    display: flex;
+    justify-content: space-between;
+}
+.date-input{
+    justify-items: right;
+    text-align: center;
+    width: 30%;
+
 }

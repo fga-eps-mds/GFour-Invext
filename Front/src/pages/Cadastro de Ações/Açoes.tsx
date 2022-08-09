@@ -1,10 +1,7 @@
-import { IMaskInput } from "react-imask";
-import { IoMdArrowBack } from 'react-icons/io';
 import './Ações.css';
+import { IMaskInput } from "react-imask";
 import { useState } from "react";
-import { parseISO, isAfter, sub, add } from "date-fns";
-import { Link, useNavigate } from "react-router-dom";
-import Axios from "axios";
+
 
 const CadastroAcoes = () => {
 
@@ -24,64 +21,58 @@ const CadastroAcoes = () => {
     const [inputType, setInputType] = useState("text");
 
     return (
-        <body>
-            <div className="background-img">
-                <div className="div-cadastro">
-                    <h1 className="titulo">Invext-Comprar/Vender</h1>
-                    <form onSubmit={handleSubmit} className="form-login">
-
-                        <h1>Ativo</h1>
-                        <input
-                            type="assets"
-                            name="assets"
-                            required
-                            placeholder="cadastre a companhia que se deseja comprar ou vender ações"
-                            value={assets}
-                            onChange={(e) => setAssets(e.target.value)}
-                        />
-                    {/*A ideia é alinhar eles na mesma linha */}
-                    <div className="columnBox"> 
-                    <h1>Preço da Ação</h1>
+        <div className="background-img">
+            <h1 className="titulo">Compra/Venda de Ativos</h1>
+            <div className="div-cadastro">
+                <form onSubmit={handleSubmit} className="form-login">
                     <input
-                            type="price"
-                            name="stockPrice"
-                            required
-                            placeholder="Preço da Ação."
-                            value={stockPrice}
-                            onChange={(e) => setStockPrice(e.target.value)}
+                        type="text"
+                        name="ativo"
+                        className="busca-input"
+                        required
+                        placeholder="Busque seu ativo"
+                        value={assets}
+                        onChange={(e) => setAssets(e.target.value)}
+                    />
+                {/*A ideia é alinhar eles na mesma linha */}
+                <div className="columnBox"> 
+                    <input
+                        type="number"
+                        name="preco"
+                        required
+                        placeholder="Preço da Ação"
+                        value={stockPrice}
+                        onChange={(e) => setStockPrice(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        name="quantidade"
+                        required
+                        placeholder="Quantidade"
+                        value={quantity}
+                        onChange={(e) => setQuantity(e.target.value)}
                         />
-                        <h1>Quantidade</h1>
-                         <input
-                            type="quantity"
-                            name="quantity"
-                            required
-                            placeholder="Quantidade"
-                            value={quantity}
-                            onChange={(e) => setQuantity(e.target.value)}
-                        />
-                    </div>
-                    <h1>Data</h1>
-                         <input
-                            type="date"
-                            name="date"
-                            required
-                            placeholder="Data"
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)}
-                            onFocus={() => setInputType("date")}
-                            onBlur={() => setInputType("text")}
-                        />
-                        <div className="buttonBox">
+                </div>
+                    <input
+                        type="date"
+                        name="date"
+                        className='date-input'
+                        required
+                        placeholder="Data"
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)}
+                        onFocus={() => setInputType("date")}
+                        onBlur={() => setInputType("text")}
+                    />
+                    <div className="buttonBox">
                         <button className='buy-button'>Comprou</button>
                         {error && <p className="error"> {error}</p>}
                         <button className='sell-button'>Vendeu</button>
                         {error && <p className="error"> {error}</p>}
-                        </div>
-                    </form>
-                </div>
-            </div >
-        </body>
-
+                    </div>
+                </form>
+            </div>
+        </div>
     )
 }
 
