@@ -4,6 +4,7 @@ const db = require('./db');
 const Ativo = db.define('ativo', {
     id: {
         type: Sequelize.INTEGER,
+        autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
@@ -28,6 +29,11 @@ const Ativo = db.define('ativo', {
     preco: {
         type: Sequelize.FLOAT,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Esse campo nao pode ser vazio"
+            }
+        }
     },
     quantidade: {
         type: Sequelize.INTEGER,
@@ -49,7 +55,7 @@ const Ativo = db.define('ativo', {
     },
     execucao: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     }
 });
 
