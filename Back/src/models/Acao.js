@@ -17,6 +17,10 @@ const Acao = db.define('acao', {
             }
         }
     },
+    tipo: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
     sigla: {
         type: Sequelize.STRING,
         allowNull: false,
