@@ -4,7 +4,6 @@ const db = require('./db');
 const Ativo = db.define('ativo', {
     id: {
         type: Sequelize.INTEGER,
-        autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },

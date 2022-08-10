@@ -3,8 +3,9 @@ const Ativo = require("../models/Ativo");
 const app = express();
 const Axios = require("axios");
 const linkApi = ("https://api-cotacao-b3.labdo.it/api/carteira");
+const auth = require("../middleware/auth");
 
-app.post("/cadastrar", async (req, res) => {
+app.post("/cadastrar", auth, async (req, res) => {
     let sigla =  null;
     
     // verifica na API da B3 qual eh a sigla do ativo que o
@@ -29,6 +30,7 @@ app.post("/cadastrar", async (req, res) => {
     });
     
     const novo_ativo = {
+        id: req.usuario.id,
         nomeAtivo: req.body.nomeAtivo,
         sigla: sigla,
         preco: req.body.preco,
