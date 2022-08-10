@@ -30,7 +30,7 @@ app.post("/cadastrar", auth, async (req, res) => {
     });
     
     const novo_ativo = {
-        id: req.usuario.id,
+        id_usuario: req.usuario.id,
         nomeAtivo: req.body.nomeAtivo,
         sigla: sigla,
         preco: req.body.preco,
