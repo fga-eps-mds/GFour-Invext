@@ -52,11 +52,11 @@ const CadastroAcoes = () => {
                         value={quantity}
                         onChange={(e) => setQuantity(e.target.value)}
                         />
-                </div>
+                </div >
+                <div className="date-input">
                     <input
                         type="date"
                         name="date"
-                        className='date-input'
                         required
                         placeholder="Data"
                         value={date}
@@ -64,9 +64,12 @@ const CadastroAcoes = () => {
                         onFocus={() => setInputType("date")}
                         onBlur={() => setInputType("text")}
                     />
+                </div>
                     <div className="buttonBox">
                         <button className='buy-button'>Comprou</button>
                         {error && <p className="error"> {error}</p>}
+
+
                         <button className='sell-button'>Vendeu</button>
                         {error && <p className="error"> {error}</p>}
                     </div>

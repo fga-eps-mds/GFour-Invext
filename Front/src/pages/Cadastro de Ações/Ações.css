@@ -16,6 +16,7 @@
     flex-direction: column;
     padding: 2%;
     width: 60%;
+    height: 60%;
     background-color: rgba(10, 17, 79, 0.8);
     border-radius: 40px;
     color: white;
@@ -34,13 +35,14 @@
 input{
     background-color:rgba(169, 178, 194, 0.7);
     color: white;
-    width: 30%;
+    width: 45%;
     padding: 0.5em;
     border: none;
     border-radius: 40px;
     font-size: 1.5em;
     text-align: center;
     font-weight: bold;
+    
 }
 
 input::placeholder{
@@ -77,9 +79,11 @@ input::placeholder{
     border-radius:70px;
     font-size: 1.5em;
     text-align: center;
-    padding: 0.5em 1.5em; 
+    padding: 0.5em 2em; 
     cursor: pointer;
     transition: 0.25s;
+    align-content: space-between;
+    
 }
 
 .sellbutton:hover{
@@ -98,9 +102,7 @@ input::placeholder{
 
 .buttonBox{
     display: flex;
-
-    justify-content: space-between;
-    
+    margin-top: 12.5%;   
 }
 
 .columnBox {
@@ -108,8 +110,16 @@ input::placeholder{
     justify-content: space-between;
 }
 .date-input{
-    justify-items: right;
+    background-color:rgba(169, 178, 194, 0.7);
+    color: white;
+    width: 45%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 40px;
+    font-size: 1em;
     text-align: center;
-    width: 30%;
-
+    font-weight: bold;
+    
+    
+    
 }
