@@ -132,10 +132,59 @@ Todos:
 
 | Finalizados | Não finalizados |
 |--|--|
-|--|--|
+|Resolver o design da aplicação --> "deixar mais harmônico"|Pesquisa para fazer os Testes|
+|Organizar a protopiação (Excluir itens que não usaremos, reorganizar a side bar...)|--|
+|Rotas quando o usuário estiver logado ou deslogado|--|
+|Alinhamento geral|--|
+|Show de code|--|
+|Pesquisar como fazer a pesquisa/busca de dados da API e implementar|--|
+|Configuração de banco de dados (criar o data base)|--|
+|Fazer o Guia de Contribuição|--|
    
 ### _**Participantes de Acordo e Cientes**_
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
 |--|--|--|--|--|--|--|--|
 |✔️|✔️|✔️|✔️|✔️|✔️|✔️|❓|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 9
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     10/08 à 17/08
+ </h1>
+</p>
+
+Front-end:
+
+         - Continuar a tela de "Comprar/Vender" (Finalizar!) --> Amanda e Antônio
+         - Finalizar o design e aplicar no código --> Amanda e Antônio 
+         - Como funcionar a questão do tempo do usuário logado (deslogar depois de quanto tempo?) --> Luciano e Lucas Felipe
+         - Integração da tela Cadastrar/Vender do Front/Back --> Luciano e Lucas Felipe
+
+Back-end:
+
+         - Continuar a parte de busca, em que o back-end percorre os dados de acordo que o front manda letra por letra, adicionada na barra de busca, e assim mandar para o front. --> Lucas Gomes e Abritta
+         - Aperfeiçoar o banco de dados --> Leonardo e Josué 
+         - Puxar a parte do histórico --> Todos
+         - Continuar a tela de "Comprar/Vender"  --> Todos
+  
+Todos:
+
+         - Trazer na Sprint Review o que fez na semana --> Seu "show de code".
+         - Pesquisa para fazer os Testes --> (Tanto no Front quanto no Back) --> Ficou para a próxima sprint(Sprint 10)
+         - Trazer como fazer os testes --> Front: Lucas Felipe e Antônio e Back: Abritta e Josué 
+
+| Finalizados | Não finalizados |
+|--|--|
+|--|--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
 -----------------------------------------------------------------------------------------------------------
