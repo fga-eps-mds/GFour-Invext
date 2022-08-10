@@ -1,27 +1,25 @@
-/******import React, {FC, useState} from 'react';
+import React, { useState } from 'react'
+import * as FaIcons from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import './Sidebar.css'
+import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import styled from "styled-components";
+import { SidebarData } from './SidebarData';
 
-const Nav = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 5rem;
-    background-color: black;
-`;
 
-const SidebarNav = styled.div<{ sidebar: boolean}>
-    width: 250px;
-    height: 100vh;
-    backgroud-color: black;
-    position: fixed;
-    top: 0;
-    left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-    transition: 350ms;
-;
 
-const SidebarWrap = styled.div``;
+function Sidebar() {
+    const [currImg, setCurrImg] = useState(0);
 
-**/
+    return (
+    <>
+      <div className = 'sidebar'>
+        <Link to = "#" className = 'menu-bars'>
+          <FaIcons.FaBars/>
+        </Link>
+      </div>
+    </>
+  );
+}
+
+export default Sidebar;

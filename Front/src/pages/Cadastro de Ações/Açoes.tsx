@@ -1,10 +1,12 @@
 import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
+import Sidebar from "../Componentes/Sidebar";
+import React from "react"
 
 
 const CadastroAcoes = () => {
-
+    <Sidebar/>
     const [error, setError] = useState("");
     const [assets,setAssets] = useState(""); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
@@ -73,7 +75,7 @@ const CadastroAcoes = () => {
                 </form>
             </div>
         </div>
-    )
+    );
 }
 
 

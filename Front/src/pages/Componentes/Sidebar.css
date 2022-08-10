@@ -1,0 +1,13 @@
+.sidebar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 80px;
+    background-color: rgb(14, 3, 61);
+}
+
+.menu-bars{
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+}
