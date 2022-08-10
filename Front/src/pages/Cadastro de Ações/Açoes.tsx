@@ -3,6 +3,7 @@
 import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
+import { parseISO } from 'date-fns';
 
 
 const CadastroAcoes = () => {
@@ -17,6 +18,15 @@ const CadastroAcoes = () => {
         e.preventDefault();
 
         setError("");
+        // Transforma a data de compra em um objeto Date
+        const parsedBirth = parseISO(date); //vamos validar somente os anos de compra e venda ?
+
+
+        //p fazer as máscaras depois
+        {/*const nameMask = function (value: string) {
+            var pattern = new RegExp(/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/);
+            return pattern.test(value);
+        };*/}
     }
 
     //p formatar data
