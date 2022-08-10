@@ -17,7 +17,7 @@ const CadastroAcoes = () => {
         setError("");
     }
 
-    //p formatar data
+    //Formatar data
     const [inputType, setInputType] = useState("text");
 
     return (
