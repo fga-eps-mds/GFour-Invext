@@ -64,7 +64,9 @@ Pull requests serão realizados para controle de estabilidade das branches:
 
 Quando disponível uma nova release ou funcionalidade, esta será integrada através de pull request na branch main.
 
-Durante a criação de um pull request, deve-se observar o template definido no repositório.
+Durante a criação de um pull request, deve-se observar o template definido no repositório e adicionar o scrum team como reviewer.
+
+Todos os merges devem ser realizados pelos scrum teams, com excessão de quando o scrum team é quem fez o codigo. Nesse caso o código deve ser revisado por alguém do outro time.
 
 Após a revisão do código e aceitação do pull request, deve ser realizado o merge.
 
