@@ -3,7 +3,7 @@ import { useLocation, Navigate } from "react-router-dom";
 
 
 
-export function RequireAuth ( { children }: { children: JSX.Element } ) : JSX.Element{
+export const RequireAuth = ( { children }: { children: JSX.Element } ) => {
     let auth = useAuth();
     let location = useLocation();
 

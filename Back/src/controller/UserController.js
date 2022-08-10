@@ -71,8 +71,7 @@ app.post("/login", async (req, res) => {
             return res.json({
                 erro: false,
                 message: "Login realizado com sucesso!",
-                token,
-                usuario
+                token
             });
         }
     }

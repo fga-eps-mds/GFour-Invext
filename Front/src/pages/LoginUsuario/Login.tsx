@@ -33,9 +33,8 @@ const LoginUsuario = () => {
         }).then(function (response) {
             const message = response.data.message;
             const token = response.data.token;  
-            const user = response.data.usuario;
 
-            auth.login(token, user, () => {
+            auth.login(token, () => {
                 navigate(from, { replace: true });
             });
 

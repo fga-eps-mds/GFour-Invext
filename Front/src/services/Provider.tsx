@@ -5,8 +5,7 @@ import { returnToken, setarToken, destroyToken } from "./authToken";
 // Criação de um Context para saber se o usuario estah logad  o ou nao
 interface AuthContextType {
   getToken: () => any;
-  user: any;
-  login: (token: string, newUser: any, callback: VoidFunction) => void;
+  login: (token: string, callback: VoidFunction) => void;
   logout: (callback: VoidFunction) => void;
 }
 
@@ -14,12 +13,9 @@ const AuthContext = createContext<AuthContextType>(null!);
 
 export const AuthProvider = ({ children }: { children: JSX.Element }) => {
 
-  const [user, setUser] = useState<any>(null);
-
   // call this function when you want to authenticate the user
-  const login = (token: string, newUser: any, callback: VoidFunction) => {
+  const login = (token: string, callback: VoidFunction) => {
     return setarToken(token, () => {
-      setUser(newUser);
       callback();
     });
     
@@ -29,7 +25,6 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
   // call this function to sign out logged in user
   const logout = (callback: VoidFunction) => {
     return destroyToken(() => {
-      setUser(null);
       callback();
     });
     
@@ -39,7 +34,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     return returnToken();
   };
 
-  let value = { getToken, user, login, logout };
+  let value = { getToken, login, logout };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

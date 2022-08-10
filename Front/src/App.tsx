@@ -1,14 +1,12 @@
 import './App.css'
 import CadastroUsuario from './pages/CadastroUsuario/Cadastro'
 import LoginUsuario from './pages/LoginUsuario/Login'
-import {Route, Routes } from "react-router-dom";
-import { AuthProvider } from './services/Provider';
+import {Route, Routes} from "react-router-dom";
+import { AuthProvider} from './services/Provider';
 import { RequireAuth } from './services/requireAuth';
+import { SideBar } from './pages/Sidebar/Sidebar';
+import { PublicRoute } from './services/publicRoute';
 
-// Remover e colocar a side bar que realmente será implementada
-function SideBar() {
-  return <div>SideBar</div>
-}
 
 function App() {
 
@@ -16,8 +14,11 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<LoginUsuario />} />
-          <Route path="/cadastro" element={<CadastroUsuario />} />
+          <Route element={<PublicRoute />}>
+            <Route path="/" element={<LoginUsuario />} />
+            <Route path="/cadastro" element={<CadastroUsuario />} />
+          </Route>
+          
 
           <Route path="/index" element={
             <RequireAuth>
