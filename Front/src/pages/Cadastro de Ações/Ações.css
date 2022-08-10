@@ -33,8 +33,8 @@
 }
 
 input{
-    background-color:rgba(169, 178, 194, 0.7);
-    color: white;
+    background-color:white;
+    color:black;
     width: 45%;
     padding: 0.5em;
     border: none;
@@ -46,7 +46,7 @@ input{
 }
 
 input::placeholder{
-    color: rgba(255, 255, 255, 0.7);
+    color:gray;
     font-family: 'Roboto';
     font-size: 1em;
 }
@@ -65,11 +65,15 @@ input::placeholder{
     padding: 0.5em 1.5em; 
     cursor: pointer;
     transition: 0.25s;
+    margin-right: 25%;
 }
 
 .buy-button:hover{
+    float: left;
     background: white;
     color: black;
+    align-items: left;
+    justify-items: left;
 }
 
 .sell-button {
@@ -82,7 +86,7 @@ input::placeholder{
     padding: 0.5em 2em; 
     cursor: pointer;
     transition: 0.25s;
-    align-content: space-between;
+    margin-right: 20%;
     
 }
 
@@ -102,7 +106,8 @@ input::placeholder{
 
 .buttonBox{
     display: flex;
-    margin-top: 12.5%;   
+    margin-top: 6.75%;
+       
 }
 
 .columnBox {
@@ -110,16 +115,15 @@ input::placeholder{
     justify-content: space-between;
 }
 .date-input{
-    background-color:rgba(169, 178, 194, 0.7);
-    color: white;
+    float: left;
+    background-color:white;
+    color:gray;
     width: 45%;
     padding: 0.5em;
     border: none;
     border-radius: 40px;
     font-size: 1em;
     text-align: center;
-    font-weight: bold;
-    
-    
-    
+    margin-right: 50%;
+       
 }

@@ -1,3 +1,5 @@
+//talvez podemos começar a checar os subtitulos igual no prototipo usando uma nova div e mexendo apenas no p.
+//lembrar de alterar o fundo
 import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
