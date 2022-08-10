@@ -1,6 +1,6 @@
 .background-img {
     display: flex;
-    flex-direction: column;   alig-rn-items: center;
+    flex-direction: column;   
     justify-content: center;
     position: absolute;
     height: 100vh;
