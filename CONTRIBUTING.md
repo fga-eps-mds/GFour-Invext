@@ -12,22 +12,19 @@ Caso encontre um bug ou tenha alguma sugestão de melhoria ao projeto, siga os p
 1. Defina as labels que são pertinentes ao problema ou sugestão;
 1. Se aplicável, defina os responsáveis pela issue, o milestone e o projeto.
 1. Retire dúvidas através da issue.
-## Gitflow
+
 Para contribuir com o projeto, observe as políticas adotadas em relação a padronização e organização de código e documentação.
 
-Documentação
-Regras:
+Documentação: [Acesso a documentação](https://fga-eps-mds.github.io/GFour-Invext/#/pages/DocumentoDeArquiteturaDeSoftware)
 
-1. Novas branchs devem ser criadas a partir da main;
-1. Depois de fazer modificações na branch, submete-a por pull request para integrar a branch principal (main);
-1. Após aprovado ou recusado o pull request, apague a branch.
+Issues: [Acesso as issues](https://github.com/fga-eps-mds/GFour-Invext/issues)
 
-## Código
+## Política de Branches
+
 1. Novas branchs devem ser criadas a partir da dev;
 1. Depois de fazer modificações na branch, submete-a por pull request para integrar a branch secundária (Develop);
 1. Após aprovado ou recusado o pull request, apague a branch.
 
-## Política de Branches
 ### **main:**
 main é a branch de produção, onde se encontra a versão que estará disponível para utilização no mercado.
 
@@ -35,16 +32,28 @@ main é a branch de produção, onde se encontra a versão que estará disponív
 develop é a branch de homologação, onde se encontra a versão mais atualizada do projeto.
 
 ### **Nome das Branches**
-Crie a branch com a seguinte estrutura:
+Para criar novas branchs crie com a seguinte estrutura:
 
       [número-da-issue]-<nome-significativo-da-branch-separada-por-hífens-com-letras-minusculas-sem-acento>
 
 ## Política de Commits
-Para commits individuais, use: git commit -m "Mensagem". Para commits em pares, digite git commit e atribua os co-authoreds na mensagem:
+Para realizar commits, utilize o template abaixo:
 
+            git commit -m "tipo: Exemplo de commit"
 
-    Mensagem do commit:
-    Co-authored-by: Nome e sobrenome do parceiro(a) <email@email.com>
+- Os commits devem utilizar o tempo presente. Exemplo: "Adiciona funcionalidade" e não "Adicionada a funcionalidade".
+
+- Escreva o commit de maneira objetiva, descrevendo brevemente o que foi implementado, alterado, etc.
+
+- Utilize os comentários da issue para detalhar mais sobre o que etá sendo implementado.
+
+Os tipos de commits podem ser:
+- **feat** (novo recurso)
+- **fix** (correção de bug)
+- **refactor** (refatorando o código de produção)
+- **style** (formatação, falta de ponto e vírgula, etc; sem alteração de código)
+- **docs** (alterações na documentação)
+- **teste** (adicionando ou refatorando testes; sem alteração do código de produção)
 
 ## Política de Merges e Pull Requests
 ### Pull Requests:
@@ -56,6 +65,8 @@ Pull requests serão realizados para controle de estabilidade das branches:
 Quando disponível uma nova release ou funcionalidade, esta será integrada através de pull request na branch main.
 
 Durante a criação de um pull request, deve-se observar o template definido no repositório.
+
+Após a revisão do código e aceitação do pull request, deve ser realizado o merge.
 
 ## Code Review
 Na revisão de código de pull request, observe os pontos abaixo:
