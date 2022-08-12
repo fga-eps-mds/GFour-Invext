@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "../../services/Provider";
+import "./Sidebar.css";
 
 
 export const SideBar = () => {
@@ -7,9 +8,9 @@ export const SideBar = () => {
     let navigate = useNavigate();
 
     return(
-    <div>
+    <div className="sidebar">
       <h1>Bem vindo usuario</h1>
       <button onClick={() => {auth.logout(() => {navigate("/");})}}>Sair</button>
-  
+      <Outlet/>
     </div>
   )};

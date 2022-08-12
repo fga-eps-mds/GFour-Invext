@@ -1,9 +1,8 @@
 import './App.css'
 import CadastroUsuario from './pages/CadastroUsuario/Cadastro'
 import LoginUsuario from './pages/LoginUsuario/Login'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import CadastroAcoes from './pages/Cadastro de Ações/Açoes';
-import {Route, Routes} from "react-router-dom";
 import { AuthProvider} from './services/Provider';
 import { RequireAuth } from './services/requireAuth';
 import { SideBar } from './pages/Sidebar/Sidebar';
@@ -26,8 +25,8 @@ function App() {
               <SideBar />
             </RequireAuth>
           } >
-              <Route path="/acoes" element={<CadastroAcoes />} />
-              {/* Aqui ficarão as outras rotas do usuário logado */}
+              <Route path="/index/acoes" element={<CadastroAcoes />} />
+              
           </Route>
           
         </Routes>
