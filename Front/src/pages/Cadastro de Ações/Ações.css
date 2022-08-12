@@ -1,0 +1,129 @@
+.background-img {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('../../assets/background.jpeg');
+    background-color: #232239;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.div-cadastro{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(10, 17, 79, 0.8);
+    border-radius: 40px;
+    color: white;
+    
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em; 
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+input{
+    background-color:white;
+    color:black;
+    width: 45%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+input::placeholder{
+    color:gray;
+    font-family: 'Roboto';
+    font-size: 1em;
+}
+
+.busca-input{
+    width: 85%;
+}
+
+.buy-button {
+    background-color:#47B802;
+    color:white;
+    border: none;
+    border-radius:70px;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5em 1.5em; 
+    cursor: pointer;
+    transition: 0.25s;
+    margin-right: 25%;
+}
+
+.buy-button:hover{
+    float: left;
+    background: white;
+    color: black;
+    align-items: left;
+    justify-items: left;
+}
+
+.sell-button {
+    background-color:#9F0303;
+    color:white;
+    border: none;
+    border-radius:70px;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5em 2em; 
+    cursor: pointer;
+    transition: 0.25s;
+    margin-right: 20%;
+    
+}
+
+.sellbutton:hover{
+    background: white;
+    color: black;
+}
+
+.error{
+    color:#721c24;
+    background-color: #F8D7D4;
+    border: 1px solid #F5C6CB;
+    padding: 0.5em 1.5em; 
+    border-radius: 5px;
+    
+}
+
+.buttonBox{
+    display: flex;
+    margin-top: 6.75%;
+       
+}
+
+.columnBox {
+    display: flex;
+    justify-content: space-between;
+}
+.date-input{
+    float: left;
+    background-color:white;
+    color:gray;
+    width: 45%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 40px;
+    font-size: 1em;
+    text-align: center;
+    margin-right: 50%;
+       
+}
