@@ -28,4 +28,10 @@ export const SidebarData = [
         icon: <AiIcons.AiOutlineLogout/>,
         cName:'nav-test',
     },
-]
+    {
+        title: 'Support',
+        path: '/support',
+        icon: <IoIcons.IoMdHelpCircle />,
+        cName: 'nav-text'
+  }
+];

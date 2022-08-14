@@ -6,7 +6,6 @@ import React from "react"
 
 
 const CadastroAcoes = () => {
-    <Sidebar/>
     const [error, setError] = useState("");
     const [assets,setAssets] = useState(""); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
