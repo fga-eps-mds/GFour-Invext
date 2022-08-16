@@ -35,7 +35,8 @@ app.post("/cadastrar", auth, async (req, res) => {
         sigla: sigla,
         preco: req.body.preco,
         quantidade: req.body.quantidade,
-        data: req.body.data
+        data: req.body.data,
+        execucao: "compra"
     };
 
     // caso nao ache o nome da empresa,
@@ -47,28 +48,19 @@ app.post("/cadastrar", auth, async (req, res) => {
         })
     }
 
-    const ativos = await Ativo.findOne({ where: { nomeAtivo: novo_ativo.nomeAtivo}  });
-
-    if (ativos === null){
-        await Ativo.create(novo_ativo)
-        .then(() => {
-            return res.json({
-                erro: false,
-                message: "Ativo cadastrado com sucesso!"
-            })
-        }).catch((error) => {
-            console.log(error);
-            return res.status(400).json({
-                erro: true,
-                message: error.message
-            })
-        });
-    } else {
+    await Ativo.create(novo_ativo)
+    .then(() => {
+        return res.json({
+            erro: false,
+            message: "Ativo cadastrado com sucesso!"
+        })
+    }).catch((error) => {
+        console.log(error);
         return res.status(400).json({
             erro: true,
-            message: "Ativo ja existente no banco!"
+            message: error.message
         })
-    }
+    });
 })
 
 module.exports = app;
