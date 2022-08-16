@@ -58,15 +58,9 @@ export const CadastroAcoes = () => {
 
     //mascara para quantidade
     const quantityMask = function (value: string) {
-        var pattern = new RegExp(/^[0-9 ]+$/);
+        var pattern = new RegExp(/^[0-9]+$/);
         return pattern.test(value);
     };
-
-    //mascara para preço
-    const priceMask = function (value: string) {
-        var pattern = new RegExp(/^\d+([.,]\d{2})?$/);
-        return pattern.test(value);
-    }
 
     //p formatar data
     const [inputType, setInputType] = useState("text");
@@ -89,9 +83,11 @@ export const CadastroAcoes = () => {
                 <div className="columnBox"> 
 
                     <IMaskInput
-                        type="text"
+                        mask={Number}
+                        scale= {2}
                         name="preco"
-                        mask={priceMask}
+                        max= {999.99}
+                        padFractionalZeros= {true}
                         required
                         placeholder="Preço da Ação"
                         value={stockPrice}
