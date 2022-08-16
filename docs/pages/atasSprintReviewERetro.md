@@ -184,3 +184,47 @@
    
 -----------------------------------------------------------------------------------------------------------
 
+<p align="center"> 
+ <h3 align="left"> 
+     15 / 08
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+ * Sidebar está praticamente concluída
+ * Foi feita a estilização do projeto -> Ajuste das fontes
+ * Pesquisa sobre testes
+ * Escolhido o ambiente para testes: Jest
+
+2. ### _**Itens de ação**_
+
+ * Finalização da sidebar
+ * Finalizar a tela de compra/venda de ativos
+ * Ligação entre back e front end da compra/venda de ativos
+ * Criar banco para pegar dados diretos da api
+ * Busca de ativo por caractere
+ * Ligação entre usuario e ativos
+ * Venda de ativos
+ * Configurar o Jest no projeto
+   
+3. ### _**Dúvidas**_
+
+ * Como coordenar as branchs de desenvolvimento?
+ * Confirmar se a estilização é suficiente
+ * Issues que dependem de outras
+   
+4. ### _**Comunicados finais**_
+
+ * Colocar suas próprias issues no github nessa sprint
+
+5. ### _**Retrospect**_
+
+ <img src="/GFour-Invext/assets/retrospect15.08.png" width="450" height="400" />
+ 
+   
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|❓|✔️|✔️|✔️|✔️|❓|✔️|✔️
+   
