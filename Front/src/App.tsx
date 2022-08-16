@@ -2,7 +2,7 @@ import './App.css'
 import CadastroUsuario from './pages/CadastroUsuario/Cadastro'
 import LoginUsuario from './pages/LoginUsuario/Login'
 import { Route, Routes } from "react-router-dom";
-import CadastroAcoes from './pages/Cadastro de Ações/Açoes';
+import { CadastroAcoes } from './pages/Cadastro de Ações/Açoes';
 import { AuthProvider} from './services/Provider';
 import { RequireAuth } from './services/requireAuth';
 import { SideBar } from './pages/Sidebar/Sidebar';
