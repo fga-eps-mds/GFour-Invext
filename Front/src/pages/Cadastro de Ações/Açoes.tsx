@@ -24,7 +24,7 @@ export const CadastroAcoes = () => {
 
         setError("");
         // Transforma a data de compra em um objeto Date
-        const parsedBirth = parseISO(date);  
+        const parsedDate = parseISO(date);  
         
         if (quantity.length < 0 ){
             setError("É necessário inserir uma quantidade válida")
@@ -107,12 +107,13 @@ export const CadastroAcoes = () => {
                 </div >
                 <div className="date-input">
                     <input
-                        type="date"
+                        type={inputType}
                         name="date"
                         required
                         placeholder="Data"
                         value={date}
-                        onChange={(e) => setDate(e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                            setDate(e.currentTarget.value)}
                         onFocus={() => setInputType("date")}
                         onBlur={() => setInputType("text")}
                     />
