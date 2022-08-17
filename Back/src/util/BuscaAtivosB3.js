@@ -7,8 +7,7 @@ const sequelize = new Sequelize("usuario", "root", "12345678", {
 });
 
 exports.buscaPorCaractere =  function (caracter) {
-    let caracter = "BANANA"
-    const query = sequelize.query(`SELECT * FROM b3_ativos WHERE (nome_empresa LIKE '${caracter}%' OR codigo_acao LIKE '${caracter}%');`, { type: QueryTypes.SELECT }).
+    sequelize.query(`SELECT * FROM b3_ativos WHERE (nome_empresa LIKE '${caracter}%' OR codigo_acao LIKE '${caracter}%');`, { type: QueryTypes.SELECT }).
     then(function(res) {
         var lista_ativos = [];
         for (let ativo of res) {
