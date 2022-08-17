@@ -5,33 +5,39 @@ import * as IoIcons from 'react-icons/io'
 
 export const SidebarData = [
     {
-        title:'Minha Carteira',
-        path:'/',
+        title:'Carteira',
+        path:'/Carteira',
         icon: <AiIcons.AiFillWallet/>,
-        cName:' nav-test ',
+        cName:'nav-test',
     },
     {
-        title:' Ações ',
+        title:'Ações',
         path:'/Acoes',
         icon: <AiIcons.AiFillFileAdd/>,
         cName:'nav-test',
     },
     {
-        title:'Meu Perfil',
-        path:'/MeuPerfil',
+        title:'Histórico',
+        path:'/Historico',
+        icon: <AiIcons.AiOutlineHistory/>,
+        cName: 'nav-test',
+    },
+    {
+        title:'Perfil',
+        path:'/Perfil',
         icon: <AiIcons.AiFillProfile/>,
         cName:'nav-test',
     },
     {
-        title:'Sair ',
+        title:'Sair',
         path:'/Sair',
         icon: <AiIcons.AiOutlineLogout/>,
         cName:'nav-test',
     },
     {
-        title: 'Support',
-        path: '/support',
+        title:'Ajuda',
+        path:'/Ajuda',
         icon: <IoIcons.IoMdHelpCircle />,
-        cName: 'nav-text'
-  }
+        cName:'nav-text'
+    },
 ];

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .App {
     font-family: 'Roboto Flex';
     font-style: normal;
@@ -9,20 +10,13 @@ body {
   padding: 0;
 }
 
-.MinhaCarteira,
-.Ações,
-.MeuPerfil
-.Sair {
+.carteira,
+.acoes,
+.historico,
+.perfil {
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato', sans-serif;
-}
+};
