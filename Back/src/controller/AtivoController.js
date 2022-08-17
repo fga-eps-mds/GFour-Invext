@@ -6,8 +6,8 @@ const linkApi = ("https://api-cotacao-b3.labdo.it/api/carteira");
 const auth = require("../middleware/auth");
 
 app.post("/cadastrar", auth, async (req, res) => {
-    let sigla =  null;
-    
+    let sigla = "";
+   
     // verifica na API da B3 qual eh a sigla do ativo que o
     // usuario deseja cadastrar
     await Axios.get(linkApi, {
@@ -40,8 +40,8 @@ app.post("/cadastrar", auth, async (req, res) => {
 
     // caso nao ache o nome da empresa,
     // o ativo nao eh cadastrado
-    if (novo_ativo.sigla === null) {
-        return res.json({
+    if (!novo_ativo.sigla) {
+        return res.status(400).json({
             erro: true,
             message: "Ativo nao listado na B3!"
         })

@@ -3,40 +3,31 @@
 import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
-import { parseISO } from 'date-fns';
 import Axios from "axios";
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../services/Provider';
 
 
 export const CadastroAcoes = () => {
 
     const [error, setError] = useState("");
-    const [assets,setAssets] = useState(""); //Assets é os ativos
+    const [assets,setAssets] = useState(""); //Assets é o ativo
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
     const [quantity,setQuantity] = useState("");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        const navigate = useNavigate();
-        const auth = useAuth();
+    
         e.preventDefault();
-
         setError("");
-        // Transforma a data de compra em um objeto Date
-        const parsedDate = parseISO(date);  
-        
+    
         if (quantity.length < 0 ){
-            setError("É necessário inserir uma quantidade válida")
+            setError("É necessário inserir uma quantidade válida");
         
         }else if (stockPrice.length < 0 ) {
-            setError("É necessário inserir um valor válido")
+            setError("É necessário inserir um valor válido");
             
         } else {
-            const token = auth.getToken();
-            Axios.post("http://localhost:3000/ativo/cadastrar", 
-            {
-                token: token,
+            // Funciona somente quando não está sendo usado o auth no back
+            Axios.post("http://localhost:3000/ativo/cadastrar", {
                 nomeAtivo: assets,
                 preco: stockPrice,
                 quantidade: quantity,
@@ -44,19 +35,16 @@ export const CadastroAcoes = () => {
             }).then(function (response) {
                 console.log(response);
                 alert(response.data.message);
-                // descomentar a linha abaixo para o usuario ser redirecionado para o historico
-                // de acoes
-                // navigate("/historico");
+                // Colocar posteriormente o redirecionamento para o historico de acoes
 
-            }).catch(function (response) {
-                const message = response.data.message;
-                console.log(response);
+            }).catch(function (error) {
+                const message = error.response.data.message;
                 setError(message);
             })
         }
     }
 
-    //mascara para quantidade
+    // mascara para quantidade
     const quantityMask = function (value: string) {
         var pattern = new RegExp(/^[0-9]+$/);
         return pattern.test(value);
@@ -85,9 +73,9 @@ export const CadastroAcoes = () => {
                     <IMaskInput
                         mask={Number}
                         scale= {2}
-                        name="preco"
                         max= {999.99}
                         padFractionalZeros= {true}
+                        name="preco"
                         required
                         placeholder="Preço da Ação"
                         value={stockPrice}
@@ -120,12 +108,11 @@ export const CadastroAcoes = () => {
                 </div>
                     <div className="buttonBox">
                         <button className='buy-button'>Comprou</button>
-                        {error && <p className="error"> {error}</p>}
-
 
                         <button className='sell-button'>Vendeu</button>
-                        {error && <p className="error"> {error}</p>}
+                       
                     </div>
+                    {error && <p className="error"> {error}</p>}
                 </form>
             </div>
         </div>
