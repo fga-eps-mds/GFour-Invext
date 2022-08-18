@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons';
 
 
 
-function Sidebar() {
+export const Sidebar = () => {
     const [navbar, setNavbar] = useState(false);
 
     const showNavbar = () => setNavbar(!navbar);
@@ -44,5 +44,3 @@ function Sidebar() {
     </>
   );
 }
-
-export default Sidebar;

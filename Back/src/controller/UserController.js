@@ -41,7 +41,7 @@ app.post("/cadastrar", async (req, res) => {
     }
 })
 
-// funciona
+//funciona
 app.post("/login", async (req, res) => {
     const usuario = await User.findOne({
         attributes: ["id", "email", "senha"],

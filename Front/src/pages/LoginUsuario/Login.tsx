@@ -1,6 +1,7 @@
 import './Login.css';
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate} from 'react-router-dom';
+import { useAuth } from '../../services/Provider';
 import Axios from "axios";
 
 const LoginUsuario = () => {
@@ -8,26 +9,29 @@ const LoginUsuario = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const [user, setUser] = useState([]);
 
+    // Variaveis para encaminhamento de usuario logado/nao logado
+    let navigate = useNavigate();
+    let location = useLocation();
+    let auth = useAuth();
+
+    let from = location.state?.from?.pathname || "/index";
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         setError("");
 
-        const user = {
-            email,
-            password,
-        }
-
         Axios.post("http://localhost:3000/usuario/login", {
             email: email,
             senha: password
         }).then(function (response) {
-            const message = response.data.message;
-            const token = response.data.token;
-            alert(message);
+            const token = response.data.token;  
+
+            auth.login(token, () => {
+                navigate(from, { replace: true });
+            });
+
         }).catch(function (response) {
             // Caso caia nesse catch, o usuario nao eh gravado no banco e retorna um erro
             const message = response.response.data.message;

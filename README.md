@@ -38,12 +38,107 @@ Frontend | Backend | Database
 <br/> 
 
 
-## 💻 Como Utilizar 
+## 💻 Como Utilizar
 
-Comandos
+>**Warning**
+>O Sistema Operacional base para o guia de utilização é o Ubuntu 22.04
 
-🚧
+### 👨‍💻 Instalação das tecnologias
 
+#### NodeJs
+Versão utilizada no projeto: 16.16.0 (LTS)
+
+[Link para instalação do Node](https://nodejs.org/en/download/)
+
+#### Mysql Server
+Versão utilizada no projeto: 8.0.30
+
+No terminal, digite:
+
+```
+sudo apt-get install mysql-server
+```
+![image](https://user-images.githubusercontent.com/88516249/182737956-7bf7a0d8-acc7-481a-b116-0ea23f82951a.png)
+
+Após isso, verifique se foi instalado corretamente:
+
+```
+systemctl is-active mysql
+```
+Caso o comando retorne "active", o mysql foi instalado corretamente
+
+### ⚙️ Configurando o MySQL server ⚙️
+No terminal do computador, digite:
+```
+sudo mysql_secure_installation
+```
+- Pressione "y" para aceitar a validação por senha
+- Após isso, digite "0" para o nível de política de validação de senha
+
+Assim, deve aparecer o campo para inserir uma senha. A senha deve ser: 12345678
+
+Pressione "y" para aceitar a senha
+
+E por fim, serão mostradas algumas opções de configuração do mysql, faça como na imagem abaixo:
+![image](https://user-images.githubusercontent.com/88516249/182738634-d5195544-6531-4395-9056-b603550fc329.png)
+
+Beleza! Agora só precisamos criar o nosso database, seguindo os seguintes passos:
+
+Entre no mysql pelo terminal, com o seguinte comando:
+```
+mysql -u root -p
+```
+Você deve ver a seguinte mensagem:
+
+![image](https://user-images.githubusercontent.com/88516249/182742836-91f52092-5ac8-48b5-82b7-f86a88121b65.png)
+
+Após isso, digite:
+```
+CREATE DATABASE usuario;
+```
+
+E pronto! O banco de dados foi configurado!🎉
+
+### 💽 Rodando a Aplicação
+Primeiramente, clone o repositório na máquina local:
+```
+git clone https://github.com/fga-eps-mds/GFour-Invext.git
+```
+Após isso entre na pasta do projeto:
+```
+cd GFour-Invext
+```
+#### Backend
+Para configurar o backend da aplicação, entre na pasta "Back":
+```
+cd Back
+```
+Instale todas as dependências:
+```
+npm install
+```
+Rode a aplicação:
+```
+npm start
+```
+#### Frontend
+A partir da pasta do projeto "GFour-Invext na pasta "Front":
+```
+cd Front
+```
+Instalar as dependências:
+```
+npm install
+```
+Rodar o projeto:
+```
+npm run dev
+```
+Será apresentado um link para acessar a aplicação, como no exemplo:
+
+![image](https://user-images.githubusercontent.com/88516249/182744741-1b380baa-973d-4600-9edf-d5c8e56fb32d.png)
+
+Basta colar o link no navegador e aproveitar o projeto!
 
 ## Colaboradores
 

@@ -1,23 +1,36 @@
 import './App.css'
 import CadastroUsuario from './pages/CadastroUsuario/Cadastro'
 import LoginUsuario from './pages/LoginUsuario/Login'
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import CadastroAcoes from './pages/Cadastro de Ações/Açoes';
-import Sidebar from './pages/Componentes/Sidebar';
-import React from 'react';
+import { Route, Routes } from "react-router-dom";
+import { CadastroAcoes } from './pages/Cadastro de Ações/Açoes';
+import { AuthProvider} from './services/Provider';
+import { RequireAuth } from './services/requireAuth';
+import { Sidebar } from './pages/Componentes/Sidebar';
+import { PublicRoute } from './services/publicRoute';
 
 function App() {
 
   return (
-    <div className='App'>
-      <Router>
-        <Sidebar/>
+    <div className="App">
+      <AuthProvider>
         <Routes>
-          <Route path="/" element={<LoginUsuario />} />
-          <Route path="/cadastro" element={<CadastroUsuario />} />
-          <Route path="/acoes" element={<CadastroAcoes />} />
+        
+          <Route element={<PublicRoute />}>
+            <Route path="/" element={<LoginUsuario />} />
+            <Route path="/cadastro" element={<CadastroUsuario />} />
+          </Route>
+
+          <Route path="/index" element={
+            <RequireAuth>
+              <Sidebar />
+            </RequireAuth>
+          } >
+              <Route path="/index/acoes" element={<CadastroAcoes />} />
+              
+          </Route>
+          
         </Routes>
-      </Router>
+      </AuthProvider>
     </div>
   );
 }
