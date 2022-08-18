@@ -22,16 +22,10 @@ const LoginUsuario = () => {
 
         setError("");
 
-        const user = {
-            email,
-            password,
-        }
-
         Axios.post("http://localhost:3000/usuario/login", {
             email: email,
             senha: password
         }).then(function (response) {
-            const message = response.data.message;
             const token = response.data.token;  
 
             auth.login(token, () => {
