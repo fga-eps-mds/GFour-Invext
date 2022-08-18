@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import { CadastroAcoes } from './pages/Cadastro de Ações/Açoes';
 import { AuthProvider} from './services/Provider';
 import { RequireAuth } from './services/requireAuth';
-import { SideBar } from './pages/Sidebar/Sidebar';
+import { Sidebar } from './pages/Componentes/Sidebar';
 import { PublicRoute } from './services/publicRoute';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
 
           <Route path="/index" element={
             <RequireAuth>
-              <SideBar />
+              <Sidebar />
             </RequireAuth>
           } >
               <Route path="/index/acoes" element={<CadastroAcoes />} />
@@ -32,7 +32,7 @@ function App() {
         </Routes>
       </AuthProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

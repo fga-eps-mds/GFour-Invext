@@ -15,7 +15,6 @@ export const CadastroAcoes = () => {
     const [quantity,setQuantity] = useState("");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    
         e.preventDefault();
         setError("");
     
@@ -97,6 +96,7 @@ export const CadastroAcoes = () => {
                     <input
                         type={inputType}
                         name="date"
+                        className='date-input'
                         required
                         placeholder="Data"
                         value={date}
