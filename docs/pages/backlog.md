@@ -188,3 +188,52 @@ Todos:
 |--|--|--|--|--|--|--|--|
 |✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
 -----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 10
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     18/08 à 24/08
+ </h1>
+</p>
+
+Front-end:
+
+         - Finalizar o bug da sidebar --> Amanda
+         - Tela Cadastrar/Vender: Buscar --> Lucas Felipe e Luciano 
+         - Começar o design da tela ações/históricos (histórico de ações) --> Antônio
+         - Implementar a parte dos testes --> Lucas Felipe e Antônio
+         - Atualizar o protótipo --> Amanda
+         - Middleware no Front --> Luciano 
+
+Back-end:
+
+         - Puxar a parte do histórico --> Leonardo e Josué
+         - Criar a parte de "Editar" e "Excluir" --> Lucas Gomes e Abritta
+         - Implementar os testes --> Abritta e Josué
+         - Como fazer os indiciadores com a bolsa de valores? --> Lucas Gomes e Leonardo
+  
+Todos:
+         
+         - Tela Cadastrar/Vender: Autenticação Front + Back.
+         - Trazer como fazer os testes --> Front: Lucas Felipe e Antônio e Back: Abritta e Josué --> Para cada Grupo
+
+| Finalizados | Não finalizados |
+|--|--|
+|Continuar a tela de "Comprar/Vender" (Front-end)|Como funcionar a questão do tempo do usuário logado (deslogar depois de quanto tempo?)|
+|Finalizar o design e aplicar no código|Integração da tela Cadastrar/Vender do Front/Back|
+|Finalizar a parte de busca dentro da API|Puxar a parte do histórico|
+|Aperfeiçoar o banco de dados|Tela Cadastrar/Vender: Autenticação Front + Back|
+|Continuar a tela de "Comprar/Vender" (Back-end)|--|
+|Trazer na Sprint Review o que fez na semana|--|
+|Pesquisa para fazer os Testes |--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
