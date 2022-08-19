@@ -11,7 +11,7 @@ import { useAuth } from '../../services/Provider';
 
 export const CadastroAcoes = () => {
 
-    const [error, setError] = useState("É necessário inserir uma quantidade válida");
+    const [error, setError] = useState("");
     const [assets,setAssets] = useState(""); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
