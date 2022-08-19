@@ -3,30 +3,40 @@
 import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
+import { parseISO } from 'date-fns';
 import Axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../services/Provider';
 
 
 export const CadastroAcoes = () => {
 
-    const [error, setError] = useState("");
-    const [assets,setAssets] = useState(""); //Assets é o ativo
+    const [error, setError] = useState("É necessário inserir uma quantidade válida");
+    const [assets,setAssets] = useState(""); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
     const [quantity,setQuantity] = useState("");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        const navigate = useNavigate();
+        const auth = useAuth();
         e.preventDefault();
+
         setError("");
-    
+        // Transforma a data de compra em um objeto Date
+        const parsedDate = parseISO(date);  
+        
         if (quantity.length < 0 ){
-            setError("É necessário inserir uma quantidade válida");
+            setError("É necessário inserir uma quantidade válida")
         
         }else if (stockPrice.length < 0 ) {
-            setError("É necessário inserir um valor válido");
+            setError("É necessário inserir um valor válido")
             
         } else {
-            // Funciona somente quando não está sendo usado o auth no back
-            Axios.post("http://localhost:3000/ativo/cadastrar", {
+            const token = auth.getToken();
+            Axios.post("http://localhost:3000/ativo/cadastrar", 
+            {
+                token: token,
                 nomeAtivo: assets,
                 preco: stockPrice,
                 quantidade: quantity,
@@ -34,16 +44,19 @@ export const CadastroAcoes = () => {
             }).then(function (response) {
                 console.log(response);
                 alert(response.data.message);
-                // Colocar posteriormente o redirecionamento para o historico de acoes
+                // descomentar a linha abaixo para o usuario ser redirecionado para o historico
+                // de acoes
+                // navigate("/historico");
 
-            }).catch(function (error) {
-                const message = error.response.data.message;
+            }).catch(function (response) {
+                const message = response.data.message;
+                console.log(response);
                 setError(message);
             })
         }
     }
 
-    // mascara para quantidade
+    //mascara para quantidade
     const quantityMask = function (value: string) {
         var pattern = new RegExp(/^[0-9]+$/);
         return pattern.test(value);
@@ -56,7 +69,7 @@ export const CadastroAcoes = () => {
         <div className="background-img">
             <h1 className="titulo">Compra/Venda de Ativos</h1>
             <div className="div-cadastro">
-                <form onSubmit={handleSubmit} className="form-login">
+                <form onSubmit={handleSubmit} className="form-cadastro">
                     <input
                         type="text"
                         name="ativo"
@@ -67,14 +80,14 @@ export const CadastroAcoes = () => {
                         onChange={(e) => setAssets(e.target.value)}
                     />
                 {/*A ideia é alinhar eles na mesma linha */}
-                <div className="columnBox"> 
+                <div className="linebox"> 
 
                     <IMaskInput
                         mask={Number}
                         scale= {2}
+                        name="preco"
                         max= {999.99}
                         padFractionalZeros= {true}
-                        name="preco"
                         required
                         placeholder="Preço da Ação"
                         value={stockPrice}
@@ -96,7 +109,6 @@ export const CadastroAcoes = () => {
                     <input
                         type={inputType}
                         name="date"
-                        className='date-input'
                         required
                         placeholder="Data"
                         value={date}
@@ -108,9 +120,7 @@ export const CadastroAcoes = () => {
                 </div>
                     <div className="buttonBox">
                         <button className='buy-button'>Comprou</button>
-
                         <button className='sell-button'>Vendeu</button>
-                       
                     </div>
                     {error && <p className="error"> {error}</p>}
                 </form>

@@ -25,10 +25,10 @@ function App() {
               <Sidebar />
             </RequireAuth>
           } >
-              <Route path="/index/acoes" element={<CadastroAcoes />} />
+            
               
           </Route>
-          
+          <Route path="/acoes" element={<CadastroAcoes />} />
         </Routes>
       </AuthProvider>
     </div>

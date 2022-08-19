@@ -10,17 +10,19 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 .div-cadastro{
     display: flex;
-    flex-direction: column;
-    padding: 2%;
     width: 60%;
     height: 60%;
     background-color: rgba(10, 17, 79, 0.8);
     border-radius: 40px;
+}
+.form-cadastro{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
     color: white;
-    
+    gap:1.25em;
 }
 
 .titulo {
@@ -36,12 +38,13 @@ input{
     background-color:white;
     color:black;
     width: 45%;
-    padding: 0.5em;
     border: none;
-    border-radius: 40px;
+    border-radius: 40px;    
     font-size: 1.5em;
     text-align: center;
     font-weight: bold;
+    padding: 0.5em;
+    
     
 }
 
@@ -52,7 +55,8 @@ input::placeholder{
 }
 
 .busca-input{
-    width: 85%;
+    width: 97%;
+    margin-right: 0%;
 }
 
 .buy-button {
@@ -65,7 +69,7 @@ input::placeholder{
     padding: 0.5em 1.5em; 
     cursor: pointer;
     transition: 0.25s;
-    margin-right: 25%;
+    margin-right: 15%;
 }
 
 .buy-button:hover{
@@ -86,11 +90,11 @@ input::placeholder{
     padding: 0.5em 2em; 
     cursor: pointer;
     transition: 0.25s;
-    margin-right: 20%;
+    margin-right: 30%;
     
 }
 
-.sellbutton:hover{
+.sell-button:hover{
     background: white;
     color: black;
 }
@@ -106,24 +110,20 @@ input::placeholder{
 
 .buttonBox{
     display: flex;
-    margin-top: 6.75%;
-       
+    margin-top: 5.75%;
+    margin-right: 5%;   
 }
 
-.columnBox {
+.linebox {
     display: flex;
     justify-content: space-between;
 }
+
 .date-input{
-    float: left;
-    background-color:white;
-    color:gray;
-    width: 45%;
-    padding: 0.5em;
+    margin-left: 40%;
+    display: flex;
+    width: 80%;
     border: none;
     border-radius: 40px;
-    font-size: 1em;
-    text-align: center;
-    margin-right: 50%;
-       
+    margin-right: 60%; 
 }
