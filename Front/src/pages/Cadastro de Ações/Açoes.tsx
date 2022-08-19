@@ -11,7 +11,7 @@ import { useAuth } from '../../services/Provider';
 
 export const CadastroAcoes = () => {
 
-    const [error, setError] = useState("");
+    const [error, setError] = useState("É necessário inserir uma quantidade válida");
     const [assets,setAssets] = useState(""); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
@@ -120,12 +120,9 @@ export const CadastroAcoes = () => {
                 </div>
                     <div className="buttonBox">
                         <button className='buy-button'>Comprou</button>
-                        {error && <p className="error"> {error}</p>}
-
-
                         <button className='sell-button'>Vendeu</button>
-                        {error && <p className="error"> {error}</p>}
                     </div>
+                    {error && <p className="error"> {error}</p>}
                 </form>
             </div>
         </div>
