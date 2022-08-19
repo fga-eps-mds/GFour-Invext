@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+.background-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('../../assets/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titulo {
+    font-size: 2.5em;           
+}
+
+ul {
+    color: #000000;
+    padding-right: 10px;
+    display: flex;
+}
+li{
+    padding: 10px;
+}
+.div-historico  {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 80%;
+    height: 50%;
+    background-color: hsla(218, 17%, 71%, 0.796);
+    border-radius: 40px;
+    color: white;
+}
+
