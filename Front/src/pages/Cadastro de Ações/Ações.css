@@ -42,6 +42,7 @@ input{
     font-size: 1.5em;
     text-align: center;
     font-weight: bold;
+    padding: 0.5em;
     
     
 }
@@ -66,7 +67,7 @@ input::placeholder{
     padding: 0.5em 1.5em; 
     cursor: pointer;
     transition: 0.25s;
-    margin-right: 25%;
+    margin-right: 15%;
 }
 
 .buy-button:hover{
@@ -87,7 +88,7 @@ input::placeholder{
     padding: 0.5em 2em; 
     cursor: pointer;
     transition: 0.25s;
-    margin-right: 20%;
+    margin-right: 30%;
     
 }
 
@@ -116,3 +117,11 @@ input::placeholder{
     justify-content: space-between;
 }
 
+.date-input{
+    margin-left: 40%;
+    display: flex;
+    width: 80%;
+    border: none;
+    border-radius: 40px;
+    margin-right: 60%; 
+}
