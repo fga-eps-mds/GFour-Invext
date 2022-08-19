@@ -24,7 +24,9 @@
     color: white;
     gap:1.25em;
 }
-
+div{
+    width: 100%;
+}
 .titulo {
     text-align: center;
     font-size: 2.5em;
@@ -33,7 +35,10 @@
     color: white;
     font-weight: bold;
 }
-
+.linebox {
+    display: flex;
+    justify-content: space-between;
+}
 input{
     background-color:white;
     color:black;
@@ -59,8 +64,7 @@ input::placeholder{
     margin-right: 0%;
 }
 
-.buy-button {
-    background-color:#47B802;
+button{
     color:white;
     border: none;
     border-radius:70px;
@@ -68,35 +72,22 @@ input::placeholder{
     text-align: center;
     padding: 0.5em 1.5em; 
     cursor: pointer;
-    transition: 0.25s;
-    margin-right: 15%;
+    transition: 0.25s;  
 }
-
-.buy-button:hover{
+button:hover{
     float: left;
     background: white;
     color: black;
     align-items: left;
     justify-items: left;
 }
+.buy-button {
+    background-color:#47B802;
+}
 
 .sell-button {
     background-color:#9F0303;
-    color:white;
-    border: none;
-    border-radius:70px;
-    font-size: 1.5em;
-    text-align: center;
     padding: 0.5em 2em; 
-    cursor: pointer;
-    transition: 0.25s;
-    margin-right: 30%;
-    
-}
-
-.sell-button:hover{
-    background: white;
-    color: black;
 }
 
 .error{
@@ -110,15 +101,10 @@ input::placeholder{
 
 .buttonBox{
     display: flex;
-    margin-top: 5.75%;
-    margin-right: 5%;   
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
 }
-
-.linebox {
-    display: flex;
-    justify-content: space-between;
-}
-
 .date-input{
     margin-left: 40%;
     display: flex;
