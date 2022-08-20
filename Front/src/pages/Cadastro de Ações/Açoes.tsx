@@ -8,6 +8,10 @@ import Axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../services/Provider';
 
+//templante da função onde será feita a busca de ativos que verei com o luciano
+const buscaAtivos = function(value:string) {
+    return
+}
 
 export const CadastroAcoes = () => {
 
