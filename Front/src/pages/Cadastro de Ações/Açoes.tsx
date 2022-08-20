@@ -7,11 +7,11 @@ import { parseISO } from 'date-fns';
 import Axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../services/Provider';
+import {BuscaAtivo} from './Busca';
+
 
 //templante da função onde será feita a busca de ativos que verei com o luciano
-const buscaAtivos = function(value:string) {
-    return
-}
+
 
 export const CadastroAcoes = () => {
 
@@ -83,7 +83,9 @@ export const CadastroAcoes = () => {
                         value={assets}
                         onChange={(e) => setAssets(e.target.value)}
                     />
-                {/*A ideia é alinhar eles na mesma linha */}
+                    <div className='busca-result'><BuscaAtivo assets={assets} /></div>
+                
+
                 <div className="linebox"> 
 
                     <IMaskInput
