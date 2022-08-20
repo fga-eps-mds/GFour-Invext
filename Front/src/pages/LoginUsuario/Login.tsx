@@ -15,8 +15,6 @@ const LoginUsuario = () => {
     let location = useLocation();
     let auth = useAuth();
 
-    let from = location.state?.from?.pathname || "/index";
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -29,7 +27,7 @@ const LoginUsuario = () => {
             const token = response.data.token;  
 
             auth.login(token, () => {
-                navigate(from, { replace: true });
+                navigate("/index", { replace: true });
             });
 
         }).catch(function (response) {
