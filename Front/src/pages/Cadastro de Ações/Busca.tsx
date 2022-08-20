@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import Select from 'react-select';
+import './Busca.css';
+
 
 const AtivosExample = [
     "AMERICANAS - AMER3",
@@ -12,31 +15,27 @@ const AtivosExample = [
     "BRADESCO - BBDC4",
     "BBSEGURIDADE - BBSE3"
 ]
-interface Opcao{
-    value: string,
-    label: string
-}
 interface Props{
-    assets: string
+    setValue: Function
 }
 // Fazer o props para pergar o assets para pesquisa
-export const BuscaAtivo = ({assets}:Props) => {
-    var result : Opcao;
-    const buscaAtivos = (search:string) => {
-        return AtivosExample.map((ativos) => {result.value = ativos; result.label = ativos})
+export const BuscaAtivo = (props:Props) => {
+
+    const Options  = () => {
+        return AtivosExample.map((ativos) => ({value: ativos, label: ativos}))
     }
-    console.log(buscaAtivos(assets));
 
     return(
-        <Select options={buscaAtivos(assets)} />
-        // <>
-        //     {assets && S
-        //     <ul>
-        //         {buscaAtivos(assets).map((item) => (
-        //             <li key={item.indexOf(item)}>{item}</li>
-        //             ))}
-        //     </ul>
-        //     }
-        // </>
+        <Select
+        options={Options()}
+        placeholder="Busque seu ativo"
+        classNamePrefix='react-select'
+        className='select'
+        noOptionsMessage={()=>"Ativo não encontrado"}
+        isClearable
+        components={{ DropdownIndicator:() => null, IndicatorSeparator: () => null}}
+        // Se o valor for diferente de null, colocamos o valor dele, caso contrário colocamos ''
+        onChange={e => e ? props.setValue(e.value) : props.setValue('')}
+        />
     );
 }

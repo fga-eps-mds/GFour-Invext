@@ -59,11 +59,6 @@ input::placeholder{
     font-size: 1em;
 }
 
-.busca-input{
-    width: 97%;
-    margin-right: 0%;
-}
-
 button{
     color:white;
     border: none;

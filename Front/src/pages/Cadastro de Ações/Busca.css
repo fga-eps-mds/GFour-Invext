@@ -1,0 +1,33 @@
+.select{
+    display: flex;
+    text-align: center;
+    color:black;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    
+}
+.react-select__control{
+    border-radius: 40px !important;
+    padding: 0.25em;
+}
+
+.react-select__value-container{
+    margin-left: 10%;
+    width: 90%;
+    cursor: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.react-select__indicators{
+    width: 10%;
+   
+}
+.react-select__indicator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -3,14 +3,9 @@
 import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
-import { parseISO } from 'date-fns';
 import Axios from "axios";
-import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../services/Provider';
 import {BuscaAtivo} from './Busca';
-
-
-//templante da função onde será feita a busca de ativos que verei com o luciano
 
 
 export const CadastroAcoes = () => {
@@ -21,16 +16,17 @@ export const CadastroAcoes = () => {
     const [date, setDate] = useState("");
     const [quantity,setQuantity] = useState("");
 
+    const auth = useAuth();
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        const navigate = useNavigate();
-        const auth = useAuth();
+       
         e.preventDefault();
 
         setError("");
-        // Transforma a data de compra em um objeto Date
-        const parsedDate = parseISO(date);  
-        
-        if (quantity.length < 0 ){
+        if (!assets){
+            setError("Selecione um ativo")
+
+        }else if (quantity.length < 0 ){
             setError("É necessário inserir uma quantidade válida")
         
         }else if (stockPrice.length < 0 ) {
@@ -74,17 +70,11 @@ export const CadastroAcoes = () => {
             <h1 className="titulo">Compra/Venda de Ativos</h1>
             <div className="div-cadastro">
                 <form onSubmit={handleSubmit} className="form-cadastro">
-                    <input
-                        type="text"
-                        name="ativo"
-                        className="busca-input"
-                        required
-                        placeholder="Busque seu ativo"
-                        value={assets}
-                        onChange={(e) => setAssets(e.target.value)}
+                   
+                   <BuscaAtivo 
+                    setValue={setAssets}
                     />
-                    <div className='busca-result'><BuscaAtivo assets={assets} /></div>
-                
+            
 
                 <div className="linebox"> 
 
