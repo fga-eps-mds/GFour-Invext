@@ -7,11 +7,14 @@ import Axios from "axios";
 import { useAuth } from '../../services/Provider';
 import {BuscaAtivo} from './Busca';
 
-
+interface Assets{
+    name: string,
+    initials: string
+}
 export const CadastroAcoes = () => {
 
     const [error, setError] = useState("");
-    const [assets,setAssets] = useState(""); //Assets é os ativos
+    const [assets,setAssets] = useState<Assets>(); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
     const [quantity,setQuantity] = useState("");
@@ -37,7 +40,8 @@ export const CadastroAcoes = () => {
             Axios.post("http://localhost:3000/ativo/cadastrar", 
             {
                 token: token,
-                nomeAtivo: assets,
+                nomeAtivo: assets.name,
+                sigla: assets.initials,
                 preco: stockPrice,
                 quantidade: quantity,
                 data: date
@@ -74,7 +78,6 @@ export const CadastroAcoes = () => {
                    <BuscaAtivo 
                     setValue={setAssets}
                     />
-            
 
                 <div className="linebox"> 
 

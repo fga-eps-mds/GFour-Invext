@@ -2,19 +2,19 @@ import { useState } from 'react';
 import Select from 'react-select';
 import './Busca.css';
 
-
+interface Assets{
+    name: string,
+    initials: string
+}
 const AtivosExample = [
-    "AMERICANAS - AMER3",
-    "ELETROBRAS - ELET3",
-    "EMBRAER - EMBRAER",
-    "ITAUUNIBANCO - ITUB4",
-    "PETROBRAS - PETR4",
-    "RAIADROGASIL - RADL3",
-    "VIAVAREJO - VVAR3",
-    "CIELO - CIEL3",
-    "BRADESCO - BBDC4",
-    "BBSEGURIDADE - BBSE3"
+    {name: "AMERICANAS", sigla: "AMER3"},
+    {name: "ELETROBRAS", sigla: "ELET3"},
+    {name: "EMBRAER", sigla: "EMBRAER"},
+    {name: "ITAUUNIBANCO", sigla: "ITUB4"},
+    {name: "PETROBRAS", sigla: "ITUB4"},
+    {name: "RAIADROGASIL", sigla: "RADL3"}
 ]
+
 interface Props{
     setValue: Function
 }
@@ -22,7 +22,7 @@ interface Props{
 export const BuscaAtivo = (props:Props) => {
 
     const Options  = () => {
-        return AtivosExample.map((ativos) => ({value: ativos, label: ativos}))
+        return AtivosExample.map((ativos) => ({value: ativos, label: ativos.name.concat(' - ',ativos.sigla)}))
     }
 
     return(
