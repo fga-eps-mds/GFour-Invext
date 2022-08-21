@@ -1,3 +1,7 @@
+.container{
+  position: absolute;
+  z-index: 10;
+}
 .sidebar {
   background-color: #060b26;
   height: 60px;

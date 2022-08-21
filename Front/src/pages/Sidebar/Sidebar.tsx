@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Sidebar.css'
 import { IconContext } from 'react-icons';
-
 
 
 export const Sidebar = () => {
@@ -15,6 +14,8 @@ export const Sidebar = () => {
 
     return (
       <>
+      <div className="container">
+
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='sidebar'>
           <Link to='#' className='menu-bars'>
@@ -30,7 +31,7 @@ export const Sidebar = () => {
             </li>
             {SidebarData.map((item, index) => {
               return (
-                <li key={index} className={item.cName}>
+                <li key={index} className='nav-text'>
                   <Link to={item.path}>
                     {item.icon}
                     <span>{item.title}</span>
@@ -41,6 +42,8 @@ export const Sidebar = () => {
           </ul>
         </nav>
       </IconContext.Provider>
+      </div>
+      <Outlet/>
     </>
   );
 }
