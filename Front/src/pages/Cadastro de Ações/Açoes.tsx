@@ -17,9 +17,12 @@ export const CadastroAcoes = () => {
     const [date, setDate] = useState("");
     const [quantity,setQuantity] = useState("");
 
+    const navigate = useNavigate();
+    const auth = useAuth();
+    const token = auth.getToken();
+    
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        const navigate = useNavigate();
-        const auth = useAuth();
+       
         e.preventDefault();
 
         setError("");
@@ -33,7 +36,6 @@ export const CadastroAcoes = () => {
             setError("É necessário inserir um valor válido")
             
         } else {
-            const token = auth.getToken();
             Axios.post("http://localhost:3000/ativo/cadastrar", 
             {
                 token: token,
@@ -42,15 +44,14 @@ export const CadastroAcoes = () => {
                 quantidade: quantity,
                 data: date
             }).then(function (response) {
-                console.log(response);
                 alert(response.data.message);
                 // descomentar a linha abaixo para o usuario ser redirecionado para o historico
                 // de acoes
                 // navigate("/historico");
 
-            }).catch(function (response) {
-                const message = response.data.message;
-                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+                const message = error.response.data.message;
                 setError(message);
             })
         }

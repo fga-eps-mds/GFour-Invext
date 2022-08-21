@@ -46,14 +46,11 @@ app.post("/cadastrar", auth, async (req, res) => {
     // caso nao ache o nome da empresa,
     // o ativo nao eh cadastrado
     if (!novo_ativo.sigla) {
-        return res.json({
+        return res.status(400).json({
             erro: true,
             message: "Ativo nao listado na B3!"
         })
     }
-
-    const ativos = await Ativo.findOne({ where: { nomeAtivo: novo_ativo.nomeAtivo}  });
-
     
     await Ativo.create(novo_ativo)
     .then(() => {
