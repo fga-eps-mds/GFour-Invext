@@ -50,3 +50,20 @@ table td {
     background-color: hsla(218, 17%, 71%, 0.7);
     color: #0c0c0c;
 }
+.buttonBox{
+    display: flex;
+    margin-top: 6%;
+}
+.select-button {
+    background-color:#3f413ee1;
+    color:white;
+    border: #000000;
+    border-color: #000000;
+    border-radius: 10cm;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.1mm 0.5cm; 
+    cursor:pointer;
+    transition: 0.25s;
+    margin-right: 25%;
+}
