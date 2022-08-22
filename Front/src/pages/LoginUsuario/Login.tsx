@@ -15,27 +15,19 @@ const LoginUsuario = () => {
     let location = useLocation();
     let auth = useAuth();
 
-    let from = location.state?.from?.pathname || "/index";
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         setError("");
 
-        const user = {
-            email,
-            password,
-        }
-
         Axios.post("http://localhost:3000/usuario/login", {
             email: email,
             senha: password
         }).then(function (response) {
-            const message = response.data.message;
             const token = response.data.token;  
 
             auth.login(token, () => {
-                navigate(from, { replace: true });
+                navigate("/index", { replace: true });
             });
 
         }).catch(function (response) {

@@ -4,9 +4,12 @@ import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
 import { parseISO } from 'date-fns';
+import Axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../services/Provider';
 
 
-const CadastroAcoes = () => {
+export const CadastroAcoes = () => {
 
     const [error, setError] = useState("");
     const [assets,setAssets] = useState(""); //Assets é os ativos
@@ -15,19 +18,49 @@ const CadastroAcoes = () => {
     const [quantity,setQuantity] = useState("");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        const navigate = useNavigate();
+        const auth = useAuth();
         e.preventDefault();
 
         setError("");
         // Transforma a data de compra em um objeto Date
-        const parsedBirth = parseISO(date); //vamos validar somente os anos de compra e venda ?
+        const parsedDate = parseISO(date);  
+        
+        if (quantity.length < 0 ){
+            setError("É necessário inserir uma quantidade válida")
+        
+        }else if (stockPrice.length < 0 ) {
+            setError("É necessário inserir um valor válido")
+            
+        } else {
+            const token = auth.getToken();
+            Axios.post("http://localhost:3000/ativo/cadastrar", 
+            {
+                token: token,
+                nomeAtivo: assets,
+                preco: stockPrice,
+                quantidade: quantity,
+                data: date
+            }).then(function (response) {
+                console.log(response);
+                alert(response.data.message);
+                // descomentar a linha abaixo para o usuario ser redirecionado para o historico
+                // de acoes
+                // navigate("/historico");
 
-
-        //p fazer as máscaras depois
-        {/*const nameMask = function (value: string) {
-            var pattern = new RegExp(/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/);
-            return pattern.test(value);
-        };*/}
+            }).catch(function (response) {
+                const message = response.data.message;
+                console.log(response);
+                setError(message);
+            })
+        }
     }
+
+    //mascara para quantidade
+    const quantityMask = function (value: string) {
+        var pattern = new RegExp(/^[0-9]+$/);
+        return pattern.test(value);
+    };
 
     //p formatar data
     const [inputType, setInputType] = useState("text");
@@ -36,7 +69,7 @@ const CadastroAcoes = () => {
         <div className="background-img">
             <h1 className="titulo">Compra/Venda de Ativos</h1>
             <div className="div-cadastro">
-                <form onSubmit={handleSubmit} className="form-login">
+                <form onSubmit={handleSubmit} className="form-cadastro">
                     <input
                         type="text"
                         name="ativo"
@@ -47,49 +80,52 @@ const CadastroAcoes = () => {
                         onChange={(e) => setAssets(e.target.value)}
                     />
                 {/*A ideia é alinhar eles na mesma linha */}
-                <div className="columnBox"> 
-                    <input
-                        type="number"
+                <div className="linebox"> 
+
+                    <IMaskInput
+                        mask={Number}
+                        scale= {2}
                         name="preco"
+                        max= {999.99}
+                        padFractionalZeros= {true}
                         required
                         placeholder="Preço da Ação"
                         value={stockPrice}
-                        onChange={(e) => setStockPrice(e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                            setStockPrice(e.target.value)}
                     />
-                    <input
-                        type="number"
+                    <IMaskInput
+                        type="text"
                         name="quantidade"
                         required
+                        mask={quantityMask}
                         placeholder="Quantidade"
                         value={quantity}
-                        onChange={(e) => setQuantity(e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                            setQuantity(e.target.value)}
                         />
                 </div >
                 <div className="date-input">
                     <input
-                        type="date"
+                        type={inputType}
                         name="date"
                         required
                         placeholder="Data"
                         value={date}
-                        onChange={(e) => setDate(e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                            setDate(e.currentTarget.value)}
                         onFocus={() => setInputType("date")}
                         onBlur={() => setInputType("text")}
                     />
                 </div>
                     <div className="buttonBox">
                         <button className='buy-button'>Comprou</button>
-                        {error && <p className="error"> {error}</p>}
-
-
                         <button className='sell-button'>Vendeu</button>
-                        {error && <p className="error"> {error}</p>}
                     </div>
+                    {error && <p className="error"> {error}</p>}
                 </form>
             </div>
         </div>
-    )
+    );
 }
 
-
-export default CadastroAcoes;
