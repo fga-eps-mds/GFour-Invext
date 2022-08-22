@@ -6,11 +6,8 @@ var novaTabela = document.createElement("table");
 
 const HistoricoDeAcoes = () => {
 
-    const strings = ['Ativo', 'Sigla', 'Ordem', 'Quantidade', 'Valor'];
-    const listItems = strings.map((strings) =>
-      <li>{strings}</li>
-    );
 
+    
 return (
 
     <body>
