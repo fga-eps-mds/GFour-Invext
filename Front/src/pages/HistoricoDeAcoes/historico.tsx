@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom';
 import './historico.css';
-var novaTabela = document.createElement("table");
-
-
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
 
 const HistoricoDeAcoes = () => {
-
-
     
 return (
 
@@ -24,6 +21,9 @@ return (
                     <th>Ordem</th>
                     <th>Quant.</th>
                     <th>Valor</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                    <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -33,22 +33,12 @@ return (
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
-                    </tr>
-                    <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
                     <td>--</td>
                     <td>--</td>
                     </tr>
                     <tr>
                     <td>--</td>
                     <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    </tr>
-                    <tr>
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
@@ -61,22 +51,12 @@ return (
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
-                    </tr>
-                    <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
                     <td>--</td>
                     <td>--</td>
                     </tr>
                     <tr>
                     <td>--</td>
                     <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    </tr>
-                    <tr>
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
@@ -89,22 +69,12 @@ return (
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
-                    </tr>
-                    <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
                     <td>--</td>
                     <td>--</td>
                     </tr>
                     <tr>
                     <td>--</td>
                     <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    </tr>
-                    <tr>
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
@@ -117,22 +87,12 @@ return (
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
-                    </tr>
-                    <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
                     <td>--</td>
                     <td>--</td>
                     </tr>
                     <tr>
                     <td>--</td>
                     <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    </tr>
-                    <tr>
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
@@ -145,22 +105,12 @@ return (
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
-                    </tr>
-                    <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
                     <td>--</td>
                     <td>--</td>
                     </tr>
                     <tr>
                     <td>--</td>
                     <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
-                    </tr>
-                    <tr>
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
@@ -173,6 +123,17 @@ return (
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
                     </tr>
                     <tr>
                     <td>--</td>
@@ -180,8 +141,93 @@ return (
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
                     </tr>
                     <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <tr>
+                    <td>--</td>
+                    <td>--</td>
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
