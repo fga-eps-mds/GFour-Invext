@@ -215,7 +215,7 @@ Back-end:
          - Puxar a parte do histórico --> Leonardo e Josué
          - Criar a parte de "Editar" e "Excluir" --> Lucas Gomes e Abritta
          - Implementar os testes --> Abritta e Josué
-         - Como fazer os indiciadores com a bolsa de valores? --> Lucas Gomes e Leonardo
+         - Como fazer os indiciadores com a bolsa de valores? --> Lucas Gomes e Leonardo 
   
 Todos:
          
