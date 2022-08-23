@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Select from 'react-select';
 import './Busca.css';
+//caso a conexão seja via post
+import Axios from "axios";
+
 
 interface Assets{
     name: string,
