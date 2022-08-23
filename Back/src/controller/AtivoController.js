@@ -166,5 +166,4 @@ app.post("/venda", auth, async (req,res) => {
     }
 })
 
-
 module.exports = app;
