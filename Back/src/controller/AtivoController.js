@@ -8,7 +8,7 @@ const Ativo = require("../models/Ativo");
 
 router.post("/cadastrar", auth, async (req, res) => {
     const novo_ativo = {
-        // id_usuario: "token",
+        id_usuario: req.usuario.id,
         nomeAtivo: req.body.nomeAtivo,
         sigla: req.body.sigla,
         preco: req.body.preco,
@@ -69,7 +69,7 @@ router.post("/vender", auth, async (req,res) => {
     const totalQuantidade = ativo_comprado[0].total - ativo_vendido[0].total;
 
     const novo_ativo = {
-        // id_usuario: "token",
+        id_usuario: req.usuario.id,
         nomeAtivo: req.body.nomeAtivo,
         sigla: req.body.sigla,
         preco: req.body.preco,
