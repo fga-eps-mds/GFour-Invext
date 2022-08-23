@@ -106,6 +106,28 @@ router.post("/vender", auth, async (req,res) => {
 
 });
 
+// Rota que envia o historico da acao do usuario
+router.get("/historico", auth, async (req,res) => {
+
+    const dadoHistorico = await Ativo.findAll({
+        attributes: [
+            "id_usuario",
+            "nomeAtivo",
+            "sigla",
+            "preco",
+            "quantidade",
+            "data",
+            "execucao",
+            ],
+        raw: true,
+        where: {
+            "id_usuario": req.usuario.id
+        },
+    })
+    console.log(dadoHistorico);
+
+})
+
 router.post("/editar", auth, async (req,res) => {
     const { id } = req.body;
     const { sigla } = req.body;
