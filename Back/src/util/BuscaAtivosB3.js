@@ -1,21 +1,16 @@
-const { QueryTypes } = require('sequelize');
-const Sequelize = require('sequelize');
+const AtivosB3 = require("../models/AtivosB3");
 
-const sequelize = new Sequelize("usuario", "root", "12345678", {
-    host: 'localhost',
-    dialect: 'mysql'
-});
-
-exports.buscaPorCaractere =  function (caracter) {
-    sequelize.query(`SELECT * FROM b3_ativos WHERE (nome_empresa LIKE '${caracter}%' OR codigo_acao LIKE '${caracter}%');`, { type: QueryTypes.SELECT }).
+exports.buscaPorCaractere =  async function (caracter) {
+    var lista = [];
+    await AtivosB3.findAll().
     then(function(res) {
-        var lista_ativos = [];
         for (let ativo of res) {
             const { nome_empresa } = ativo;
             const { codigo_acao } = ativo;
-            const linha_ativo = `${nome_empresa} - ${codigo_acao}`
-            lista.push(linha_ativo);
+            lista.push(nome_empresa, codigo_acao);
         }
-        return lista_ativos;
-    })
+        return lista;
+    }).catch(() => {
+        return lista;
+    });
 }

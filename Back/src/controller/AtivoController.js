@@ -1,65 +1,27 @@
 const express = require("express");
-const Ativo = require("../models/Ativo");
-const app = express();
-const sequelize = require('sequelize');
+const router = express().Router();
 const Axios = require("axios");
-const linkApi = ("https://api-cotacao-b3.labdo.it/api/carteira");
+const sequelize = require('sequelize');
+
 const auth = require("../middleware/auth");
+const Ativo = require("../models/Ativo");
 
-app.post("/cadastrar", auth, async (req, res) => {
-    let sigla =  null;
-    
-    // verifica na API da B3 qual eh a sigla do ativo que o
-    // usuario deseja cadastrar
-    await Axios.get(linkApi, {
-        
-    }).then(function(res){
-        const { nomeAtivo } = req.body;
-        const data = res.data;
-        
-        for(let ativo of data){
-            const { nm_empresa } = ativo;
-            const { cd_acao } = ativo; 
-            //console.log(nm_empresa, cd_acao);
-            
-            if(nm_empresa === nomeAtivo) {
-                sigla = cd_acao;
-            }
-        }
-    }).catch(function(err){
-        console.log(err);
-    });
-    
-
-    
-
+router.post("/cadastrar", auth, async (req, res) => {
     const novo_ativo = {
-        id_usuario: req.usuario.id,
+        // id_usuario: "token",
         nomeAtivo: req.body.nomeAtivo,
-        sigla: sigla,
+        sigla: req.body.sigla,
         preco: req.body.preco,
         quantidade: req.body.quantidade,
         data: req.body.data,
-        execucao: req.body.execucao
+        execucao: "compra"
     };
 
-    // caso nao ache o nome da empresa,
-    // o ativo nao eh cadastrado
-    if (!novo_ativo.sigla) {
-        return res.json({
-            erro: true,
-            message: "Ativo nao listado na B3!"
-        })
-    }
-
-    const ativos = await Ativo.findOne({ where: { nomeAtivo: novo_ativo.nomeAtivo}  });
-
-    
     await Ativo.create(novo_ativo)
     .then(() => {
         return res.json({
             erro: false,
-            message: "Ativo cadastrado com sucesso!"
+            message: "Compra de ativo cadastrada com sucesso!"
         })
     }).catch((error) => {
         console.log(error);
@@ -68,9 +30,9 @@ app.post("/cadastrar", auth, async (req, res) => {
             message: error.message
         })
     });
-})
+});
 
-app.post("/venda", auth, async (req,res) => {
+router.post("/vender", auth, async (req,res) => {
 
     // filtro que soma a quantidade de compra do ativo
     const ativo_comprado = await Ativo.findAll({
@@ -106,68 +68,89 @@ app.post("/venda", auth, async (req,res) => {
     
     const totalQuantidade = ativo_comprado[0].total - ativo_vendido[0].total;
 
-    let sigla =  null;
-    
-    // verifica na API da B3 qual eh a sigla do ativo que o
-    // usuario deseja cadastrar
-    await Axios.get(linkApi, {
-        
-    }).then(function(res){
-        const { nomeAtivo } = req.body;
-        const data = res.data;
-        
-        for(let ativo of data){
-            const { nm_empresa } = ativo;
-            const { cd_acao } = ativo; 
-            //console.log(nm_empresa, cd_acao);
-            
-            if(nm_empresa === nomeAtivo) {
-                sigla = cd_acao;
-            }
-        }
-    }).catch(function(err){
-        console.log(err);
-    });
-
-    const nova_venda = {
-        id_usuario: req.usuario.id,
+    const novo_ativo = {
+        // id_usuario: "token",
         nomeAtivo: req.body.nomeAtivo,
-        sigla: sigla,
+        sigla: req.body.sigla,
         preco: req.body.preco,
         quantidade: req.body.quantidade,
         data: req.body.data,
-        execucao: req.body.execucao
+        execucao: "venda"
     };
 
-    if (!nova_venda.sigla) {
-        return res.json({
-            erro: true,
-            message: "Ativo nao listado na B3!"
-        })
-    }
-
-    if (req.body.quantidade <= totalQuantidade) {
-
-        await Ativo.create(nova_venda)
+    await Ativo.create(novo_ativo)
     .then(() => {
         return res.json({
             erro: false,
-            message: "Ativo vendido com sucesso!"
+            message: "Venda de ativo cadastrada com sucesso!"
         })
     }).catch((error) => {
         console.log(error);
         return res.status(400).json({
             erro: true,
-            message: "Erro na venda do ativo"
+            message: error.message
         })
     });
-    } else {
+});
+
+router.post("/editar", auth, async (req,res) => {
+    const { id } = req.body;
+    const { sigla } = req.body;
+    const { preco } = req.body;
+    const { quantidade } = req.body;
+
+    try {
+        if (sigla !== null) {
+            await Ativo.update(
+                { sigla: sigla },
+                { where: {id: id}}
+            );     
+        }
+    
+        if (preco !== null) {
+            await Ativo.update(
+                { preco: preco },
+                { where: {id: id}}
+            )    
+        }
+    
+        if (quantidade !== null) {
+            await Ativo.update(
+                { quantidade: quantidade },
+                { where: {id: id}}
+            );     
+        }
+        
+        return res.json({
+            erro: false,
+            message: "Ativo editado com sucesso!"
+        });
+
+    } catch (error) {
         return res.status(400).json({
             erro: true,
-            message: "Erro na venda do ativo"
-        })
+            message: error.message
+        });
     }
-})
+});
 
+router.post("/excluir", auth, async (req,res) => {
+    const { id } = req.body;
+      
+    await Ativo.destroy({ 
+        where: { id: id } 
+    }).then(() => {
+        return res.json({
+            erro: false,
+            message: `Ativo ${id} excluido com sucesso!`
+        })
+    }).catch((error) => {
+        console.log(error);
+        return res.status(400).json({
+            erro: true,
+            message: error.message
+        })
+    });
+});
 
-module.exports = app;
+module.exports = router;
