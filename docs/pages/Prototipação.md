@@ -39,3 +39,10 @@
     Essa é a tela de Cadastro de Ações.
     <img src="/GFour-Invext/assets/menu4Proto.png" width="750" height="500" />
     
+6. ### _**Sidebar**_
+
+    Exemplo da Sidebar fechada.
+    <img src="/GFour-Invext/assets/menu3Proto.png" width="750" height="500" />
+    
+    Exemplo da Sidebar aberta.
+    <img src="/GFour-Invext/assets/menu3ProtoOpen.png" width="750" height="500" />
