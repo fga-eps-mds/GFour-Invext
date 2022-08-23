@@ -40,7 +40,7 @@ app.post("/cadastrar", auth, async (req, res) => {
         preco: req.body.preco,
         quantidade: req.body.quantidade,
         data: req.body.data,
-        execucao: req.body.execucao
+        execucao: "compra"
     };
 
     // caso nao ache o nome da empresa,
@@ -56,7 +56,7 @@ app.post("/cadastrar", auth, async (req, res) => {
     .then(() => {
         return res.json({
             erro: false,
-            message: "Ativo cadastrado com sucesso!"
+            message: "Ativo comprado com sucesso!"
         })
     }).catch((error) => {
         console.log(error);
@@ -133,7 +133,7 @@ app.post("/venda", auth, async (req,res) => {
         preco: req.body.preco,
         quantidade: req.body.quantidade,
         data: req.body.data,
-        execucao: req.body.execucao
+        execucao: "venda"
     };
 
     if (!nova_venda.sigla) {
@@ -161,7 +161,7 @@ app.post("/venda", auth, async (req,res) => {
     } else {
         return res.status(400).json({
             erro: true,
-            message: "Erro na venda do ativo"
+            message: "Erro: Quantidade de venda menor que disponível"
         })
     }
 })

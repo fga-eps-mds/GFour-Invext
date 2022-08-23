@@ -12,58 +12,62 @@ import { useAuth } from '../../services/Provider';
 export const CadastroAcoes = () => {
 
     const [error, setError] = useState("");
-    const [assets,setAssets] = useState(""); //Assets é os ativos
+    const [assets, setAssets] = useState(""); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
-    const [quantity,setQuantity] = useState("");
+    const [quantity, setQuantity] = useState("");
+
+    // Altera o handleSubmit, a depender do butão que é acionado
+    const [buttonSubmit, setButtonSubmit] = useState("");
+    // Link para o request do backend
+    const [linkBackend, setLinkBackend] = useState("");
 
     const navigate = useNavigate();
     const auth = useAuth();
     const token = auth.getToken();
-    
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-       
+
         e.preventDefault();
 
         setError("");
-        // Transforma a data de compra em um objeto Date
-        const parsedDate = parseISO(date);  
+        // Altera o request do backend, a depender do butão que é clicado
+        if(buttonSubmit == "compra") {
+            setLinkBackend("http://localhost:3000/ativo/cadastrar");
         
-        if (quantity.length < 0 ){
-            setError("É necessário inserir uma quantidade válida")
-        
-        }else if (stockPrice.length < 0 ) {
-            setError("É necessário inserir um valor válido")
-            
-        } else {
-            Axios.post("http://localhost:3000/ativo/cadastrar", 
-            {
-                token: token,
-                nomeAtivo: assets,
-                preco: stockPrice,
-                quantidade: quantity,
-                data: date
-            }).then(function (response) {
-                alert(response.data.message);
-                // descomentar a linha abaixo para o usuario ser redirecionado para o historico
-                // de acoes
-                // navigate("/historico");
+        }else if(buttonSubmit == "venda") {
+            setLinkBackend("http://localhost:3000/ativo/venda");
+        }
 
-            }).catch(function (error) {
-                console.log(error);
-                const message = error.response.data.message;
-                setError(message);
-            })
+        // Validações dos inputs antes de fazer o request ao backend
+        if (parseInt(quantity) <= 0) {
+            setError("É necessário inserir uma quantidade válida")
+
+        } else if (parseInt(stockPrice) <= 0) {
+            setError("É necessário inserir um valor válido")
+
+        } else {
+            Axios.post(linkBackend,
+                {
+                    token: token,
+                    nomeAtivo: assets,
+                    preco: stockPrice,
+                    quantidade: quantity,
+                    data: date
+                }).then(function (response) {
+                    alert(response.data.message);
+                    // descomentar a linha abaixo para o usuario ser redirecionado para o historico
+                    // de acoes
+                    // navigate("/historico");
+
+                }).catch(function (error) {
+                    const message = error.response.data.message;
+                    setError(message);
+                })
         }
     }
 
-    //mascara para quantidade
-    const quantityMask = function (value: string) {
-        var pattern = new RegExp(/^[0-9]+$/);
-        return pattern.test(value);
-    };
-
-    //p formatar data
+    //para a formatar a data
     const [inputType, setInputType] = useState("text");
 
     return (
@@ -80,48 +84,58 @@ export const CadastroAcoes = () => {
                         value={assets}
                         onChange={(e) => setAssets(e.target.value)}
                     />
-                {/*A ideia é alinhar eles na mesma linha */}
-                <div className="linebox"> 
 
-                    <IMaskInput
-                        mask={Number}
-                        scale= {2}
-                        name="preco"
-                        max= {999.99}
-                        padFractionalZeros= {true}
-                        required
-                        placeholder="Preço da Ação"
-                        value={stockPrice}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                            setStockPrice(e.target.value)}
-                    />
-                    <IMaskInput
-                        type="text"
-                        name="quantidade"
-                        required
-                        mask={quantityMask}
-                        placeholder="Quantidade"
-                        value={quantity}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                            setQuantity(e.target.value)}
+                    <div className="linebox">
+                        <IMaskInput
+                            mask={Number}
+                            scale={2}
+                            name="preco"
+                            max={999.99}
+                            radix="."
+                            mapToRadix={[',']}
+                            padFractionalZeros={true}
+                            required
+                            placeholder="Preço da Ação"
+                            value={stockPrice}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setStockPrice(e.target.value)}
                         />
-                </div >
-                <div className="date-input">
-                    <input
-                        type={inputType}
-                        name="date"
-                        required
-                        placeholder="Data"
-                        value={date}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                            setDate(e.currentTarget.value)}
-                        onFocus={() => setInputType("date")}
-                        onBlur={() => setInputType("text")}
-                    />
-                </div>
+                        <IMaskInput
+                            mask={Number}
+                            scale={0}
+                            thousandsSeparator=' '
+                            name="quantidade"
+                            required
+                            placeholder="Quantidade"
+                            value={quantity}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setQuantity(e.target.value)}
+                        />
+                    </div >
+                    <div className="date-input">
+                        <input
+                            type={inputType}
+                            name="date"
+                            required
+                            placeholder="Data"
+                            value={date}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setDate(e.currentTarget.value)}
+                            onFocus={() => setInputType("date")}
+                            onBlur={() => setInputType("text")}
+                        />
+                    </div>
                     <div className="buttonBox">
-                        <button className='buy-button'>Comprou</button>
-                        <button className='sell-button'>Vendeu</button>
+                        <button
+                            className='buy-button'
+                            onClick={() => setButtonSubmit("compra")}>
+                            Comprou
+                        </button>
+                        <button
+                            className='sell-button'
+                            onClick={() => setButtonSubmit("venda")}>
+                            Vendeu
+                        </button>
                     </div>
                     {error && <p className="error"> {error}</p>}
                 </form>
