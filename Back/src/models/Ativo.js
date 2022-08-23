@@ -60,7 +60,7 @@ const Ativo = db.define('ativo', {
     },
     execucao: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
     }
 });
 
