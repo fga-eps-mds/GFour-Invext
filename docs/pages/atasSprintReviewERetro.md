@@ -226,5 +226,52 @@
 6. ### _**Participantes**_
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
 |--|--|--|--|--|--|--|--|
-|❓|✔️|✔️|✔️|✔️|❓|✔️|✔️
+|❓|✔️|✔️|✔️|✔️|❓|✔️|✔️|
+
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     22 / 08
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+ * Bug da sidebar está corrigido! --> Criar spam para sair da tela.
+ * O protótipo foi atualizado!
+ * A pesquisa sobre o Middleware foi feita e explicada para o time.
+ * Implementar os testes no back-end.
+
+2. ### _**Itens de ação**_
+
+ * Ainda está fechando a parte do buscar o ativo no Front, mesclar com o back-end.
+ * A tela de histórico está ainda em construção, tudo encaminha para finalizar no final da sprint.
+ * Atualizar a página da prototipação do nosso GitPages.
+ * O histórico de dados, será finalizado no final da sprint. 
+ * O edit e delet de dados, será finalizado no final da sprint. 
+ * Implementar os testes no front-end.
+ * Os indiciadores com a bolsa de valores, será finalizado no final da sprint.
+ * Tela Cadastrar/Vender: Autenticação Front + Back será finalizado no final da sprint.
+   
+3. ### _**Dúvidas**_
+
+ * A professora vai descontar na nota final caso decidírmos continuar construíndo o projeto na semana universitária? 
+   
+4. ### _**Comunicados finais**_
+
+ * Ter mais atenção com a PR para não atrasar as outras partes do projeto.
+ * A parte do tempo de permanência do usuário na aplicação, foi retirada por motivos de muitos problemas. 
+
+5. ### _**Retrospect**_
+  * Perguntas:
+         - O que gostamos e queremos continuar fazendo na próxima sprint?
+         - O que aprendemos nessa sprint e devemos aplicar na próxima?
+         - O que erramos e temos que melhorar para a próxima sprint?
+ 
+   
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
    
