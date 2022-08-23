@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express().Router();
+const router = express.Router();
 const Axios = require("axios");
 const sequelize = require('sequelize');
 
@@ -65,10 +65,14 @@ router.post("/vender", auth, async (req,res) => {
             "execucao" : "venda"
         },
     })
-    
-    const totalQuantidade = ativo_comprado[0].total - ativo_vendido[0].total;
 
-    const novo_ativo = {
+    if (ativo_vendido[0] == null) {
+        var totalQuantidade = ativo_comprado[0].total - 0;
+    } else {
+        var totalQuantidade = ativo_comprado[0].total - ativo_vendido[0].total;
+    }
+
+    const nova_venda = {
         id_usuario: req.usuario.id,
         nomeAtivo: req.body.nomeAtivo,
         sigla: req.body.sigla,
@@ -78,19 +82,28 @@ router.post("/vender", auth, async (req,res) => {
         execucao: "venda"
     };
 
-    await Ativo.create(novo_ativo)
+    if (req.body.quantidade <= totalQuantidade) {
+
+        await Ativo.create(nova_venda)
     .then(() => {
         return res.json({
             erro: false,
-            message: "Venda de ativo cadastrada com sucesso!"
+            message: "Ativo vendido com sucesso!"
         })
     }).catch((error) => {
         console.log(error);
         return res.status(400).json({
             erro: true,
-            message: error.message
+            message: "Erro na venda do ativo"
         })
     });
+    } else {
+        return res.status(400).json({
+            erro: true,
+            message: "Erro na venda do ativo"
+        })
+    }
+
 });
 
 router.post("/editar", auth, async (req,res) => {
