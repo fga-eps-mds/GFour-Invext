@@ -16,8 +16,8 @@ export const CadastroAcoes = () => {
     const [date, setDate] = useState("");
     const [quantity, setQuantity] = useState("");
 
-    // Link para o request do backend
-    const [linkBackend, setLinkBackend] = useState("");
+    // Define qual tipo de operação será efetuada no request (compra/venda)
+    const [requestType, setRequestType] = useState("");
 
     const navigate = useNavigate();
     const auth = useAuth();
@@ -37,7 +37,7 @@ export const CadastroAcoes = () => {
             setError("É necessário inserir um valor válido")
 
         } else {
-            Axios.post(linkBackend,
+            Axios.post("/ativo/"+requestType,
                 {
                     token: token,
                     nomeAtivo: assets,
@@ -118,12 +118,12 @@ export const CadastroAcoes = () => {
                     <div className="buttonBox">
                         <button
                             className='buy-button'
-                            onClick={() => setLinkBackend("http://localhost:3000/ativo/cadastrar")}>
+                            onClick={() => setRequestType("cadastrar")}>
                             Comprou
                         </button>
                         <button
                             className='sell-button'
-                            onClick={() => setLinkBackend("http://localhost:3000/ativo/venda")}>
+                            onClick={() => setRequestType("venda")}>
                             Vendeu
                         </button>
                     </div>
