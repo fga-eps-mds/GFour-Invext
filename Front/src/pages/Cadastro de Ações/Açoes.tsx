@@ -3,7 +3,6 @@
 import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
-import { parseISO } from 'date-fns';
 import Axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../services/Provider';
@@ -17,8 +16,6 @@ export const CadastroAcoes = () => {
     const [date, setDate] = useState("");
     const [quantity, setQuantity] = useState("");
 
-    // Altera o handleSubmit, a depender do butão que é acionado
-    const [buttonSubmit, setButtonSubmit] = useState("");
     // Link para o request do backend
     const [linkBackend, setLinkBackend] = useState("");
 
@@ -31,13 +28,6 @@ export const CadastroAcoes = () => {
         e.preventDefault();
 
         setError("");
-        // Altera o request do backend, a depender do butão que é clicado
-        if(buttonSubmit == "compra") {
-            setLinkBackend("http://localhost:3000/ativo/cadastrar");
-        
-        }else if(buttonSubmit == "venda") {
-            setLinkBackend("http://localhost:3000/ativo/venda");
-        }
 
         // Validações dos inputs antes de fazer o request ao backend
         if (parseInt(quantity) <= 0) {
@@ -128,12 +118,12 @@ export const CadastroAcoes = () => {
                     <div className="buttonBox">
                         <button
                             className='buy-button'
-                            onClick={() => setButtonSubmit("compra")}>
+                            onClick={() => setLinkBackend("http://localhost:3000/ativo/cadastrar")}>
                             Comprou
                         </button>
                         <button
                             className='sell-button'
-                            onClick={() => setButtonSubmit("venda")}>
+                            onClick={() => setLinkBackend("http://localhost:3000/ativo/venda")}>
                             Vendeu
                         </button>
                     </div>
