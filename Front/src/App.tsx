@@ -7,7 +7,6 @@ import { AuthProvider} from './services/Provider';
 import { RequireAuth } from './services/requireAuth';
 import { Sidebar } from './pages/Sidebar/Sidebar';
 import { PublicRoute } from './services/publicRoute';
-import { AvisoSair } from './components/AvisoSair/avisoSair';
 
 function App() {
 
@@ -27,7 +26,6 @@ function App() {
             </RequireAuth>
           }>
             <Route path="/index/acoes" element={<CadastroAcoes />} />
-            <Route path="/index/sair" element={<AvisoSair/>} />
           </Route> 
         </Routes>
       </AuthProvider>
