@@ -181,7 +181,13 @@ Todos:
 
 | Finalizados | Não finalizados |
 |--|--|
-|--|--|
+|Continuar a tela de "Comprar/Vender" (Front-end)|Como funcionar a questão do tempo do usuário logado (deslogar depois de quanto tempo?)|
+|Finalizar o design e aplicar no código|Integração da tela Cadastrar/Vender do Front/Back|
+|Finalizar a parte de busca dentro da API|Puxar a parte do histórico|
+|Aperfeiçoar o banco de dados|Tela Cadastrar/Vender: Autenticação Front + Back|
+|Continuar a tela de "Comprar/Vender" (Back-end)|--|
+|Trazer na Sprint Review o que fez na semana|--|
+|Pesquisa para fazer os Testes |--|
    
 ### _**Participantes de Acordo e Cientes**_
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
@@ -224,13 +230,46 @@ Todos:
 
 | Finalizados | Não finalizados |
 |--|--|
-|Continuar a tela de "Comprar/Vender" (Front-end)|Como funcionar a questão do tempo do usuário logado (deslogar depois de quanto tempo?)|
-|Finalizar o design e aplicar no código|Integração da tela Cadastrar/Vender do Front/Back|
-|Finalizar a parte de busca dentro da API|Puxar a parte do histórico|
-|Aperfeiçoar o banco de dados|Tela Cadastrar/Vender: Autenticação Front + Back|
-|Continuar a tela de "Comprar/Vender" (Back-end)|--|
-|Trazer na Sprint Review o que fez na semana|--|
-|Pesquisa para fazer os Testes |--|
+|--|--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 11
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     24/08 à 31/08
+ </h1>
+</p>
+
+Front-end:
+         
+         - Criar a tela de "Histŕorico" --> (Decidir as duplas)
+         - Começar a tela de "Meu Perfil" --> (Decidir as duplas)
+         - Implementar a parte dos testes --> (Decidir as duplas)
+         - Estudar como fazer a parte do gráfico da tela "Minha Carteira" --> (Decidir as duplas) --> Lembrando que o estudo já deve ser seguido com a implementação.
+
+Back-end:
+        
+         - Criar a parte de dados do "Meu perfil" --> (Decidir as duplas)
+         - Estudar como fazer a parte do gráfico da tela "Minha Carteira" --> (Decidir as duplas) --> Lembrando que o estudo já deve ser seguido com a implementação.
+         - Implementar a parte dos testes --> (Decidir as duplas)
+  
+Todos:
+         
+         - Tela Cadastrar/Vender: Autenticação Front + Back.
+         - Tela "Histórico": Autenticação Front + Back.
+         
+| Finalizados | Não finalizados |
+|--|--|
    
 ### _**Participantes de Acordo e Cientes**_
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
