@@ -5,6 +5,7 @@ const sequelize = require('sequelize');
 
 const auth = require("../middleware/auth");
 const Ativo = require("../models/Ativo");
+const AtivosB3 = require("../models/AtivosB3");
 
 router.post("/cadastrar", auth, async (req, res) => {
     const novo_ativo = {
@@ -187,5 +188,30 @@ router.post("/excluir", auth, async (req,res) => {
         })
     });
 });
+
+router.get("/buscaativos", auth, async (req,res) => {
+    var lista = [];
+    var linha = [];
+    await AtivosB3.findAll().
+    then(function(response) {
+        for (let ativo of response) {
+            const { nome_empresa } = ativo;
+            const { codigo_acao } = ativo;
+            linha = [nome_empresa, codigo_acao]
+            lista.push(linha);
+        }
+        
+        return res.json({
+            erro: false,
+            lista: lista
+        });
+        
+    }).catch(() => {
+        return res.status(400).json({
+            erro: true,
+            lista: lista
+        });
+    });
+}); 
 
 module.exports = router;
