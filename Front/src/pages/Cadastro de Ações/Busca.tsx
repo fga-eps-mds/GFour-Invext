@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import Select from 'react-select';
-import './Busca.css';
-//caso a conexão seja via post
-import Axios from "axios";
-
+import './Busca.css';  
+import { buscaPorCaractere } from "../../../../Back/src/util/BuscaAtivosB3.js";
 
 interface Assets{
     name: string,
     initials: string
 }
+
 const AtivosExample = [
     {name: "AMERICANAS", sigla: "AMER3"},
     {name: "ELETROBRAS", sigla: "ELET3"},
@@ -21,11 +20,14 @@ const AtivosExample = [
 interface Props{
     setValue: Function
 }
+
 // Fazer o props para pergar o assets para pesquisa
 export const BuscaAtivo = (props:Props) => {
 
+    const busca = buscaPorCaractere("");
+
     const Options  = () => {
-        return AtivosExample.map((ativos) => ({value: ativos, label: ativos.name.concat(' - ',ativos.sigla)}))
+        return busca.map((ativos) => ({value: ativos, label: ativos.nome.concat(' - ',ativos.sigla)}))
     }
 
     return(
@@ -42,3 +44,5 @@ export const BuscaAtivo = (props:Props) => {
         />
     );
 }
+
+
