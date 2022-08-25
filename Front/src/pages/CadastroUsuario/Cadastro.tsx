@@ -72,17 +72,17 @@ const CadastroUsuario = () => {
 
     return (
         <body>
-            <div className="background-img">
+            <div className="background-img"> 
                 <div className="div-cadastro">
-                    <Link to="/">
-                        <IoMdArrowBack
-                            title="Voltar ao menu principal"
-                            className="icone-voltar"
-                        />
+                     <Link to="/">
+                            <IoMdArrowBack
+                             className="icone-voltar"
+                             title="Voltar ao menu principal"
+                            />
                     </Link>
-                    <h1 className="titulo">Cadastrar</h1>
 
                     <form onSubmit={handleSubmit} className="form-cadastro">
+                    <h1 className="titulo">Cadastrar</h1>
 
                         <IMaskInput
                             mask={nameMask}
@@ -145,8 +145,8 @@ const CadastroUsuario = () => {
                                 setConfirmPassword(e.target.value)}
                         />
 
-                        <button className='submit-button'>Cadastrar</button>
                         {error && <p className="error"> {error}</p>}
+                        <button className='submit-button'>Cadastrar</button>
                     </form>
                 </div>
             </div >
