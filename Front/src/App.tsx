@@ -19,6 +19,7 @@ function App() {
           <Route element={<PublicRoute />}>
             <Route path="/" element={<LoginUsuario />} />
             <Route path="/cadastro" element={<CadastroUsuario />} /> 
+            <Route path="/historico" element={<HistoricoDeAcoes />} />
           </Route>
 
           <Route path="/index" element={
@@ -26,10 +27,8 @@ function App() {
               <Sidebar />
             </RequireAuth>
           }  >
-              <Route path="/index/acoes" element={<CadastroAcoes />} />
-              <Route path="/index/historico" element={<HistoricoDeAcoes />} />
           </Route>
-          
+            <Route path="/index/acoes" element={<CadastroAcoes />} />
         </Routes>
       </AuthProvider>
     </div>
