@@ -5,6 +5,7 @@ import { IMaskInput } from "react-imask";
 import { useState } from "react";
 import Axios from "axios";
 import { useAuth } from '../../services/Provider';
+import { useNavigate } from 'react-router-dom';
 import {BuscaAtivo} from './Busca';
 
 interface Assets{
@@ -34,7 +35,7 @@ export const CadastroAcoes = () => {
         if (!assets){
             setError("Selecione um ativo")
 
-        }else if (quantity.length < 0 ){
+        }else if (parseInt(quantity) <= 0 ){
             setError("É necessário inserir uma quantidade válida")
 
         } else if (parseInt(stockPrice) <= 0) {

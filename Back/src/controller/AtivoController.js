@@ -197,7 +197,7 @@ router.get("/buscaativos", async (req,res) => {
         for (let ativo of response) {
             const { nome_empresa } = ativo;
             const { codigo_acao } = ativo;
-            linha = [nome_empresa, codigo_acao]
+            linha = {nome: nome_empresa, sigla: codigo_acao};
             lista.push(linha);
         }
         

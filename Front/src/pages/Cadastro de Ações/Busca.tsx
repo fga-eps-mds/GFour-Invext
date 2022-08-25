@@ -1,21 +1,11 @@
-import { useState } from 'react';
-import Select from 'react-select';
+import axios from 'axios';
+import AsyncSelect from 'react-select';
 import './Busca.css';  
-import { buscaPorCaractere } from "../../../../Back/src/util/BuscaAtivosB3.js";
 
 interface Assets{
-    name: string,
-    initials: string
+    nome: string,
+    sigla: string
 }
-
-const AtivosExample = [
-    {name: "AMERICANAS", sigla: "AMER3"},
-    {name: "ELETROBRAS", sigla: "ELET3"},
-    {name: "EMBRAER", sigla: "EMBRAER"},
-    {name: "ITAUUNIBANCO", sigla: "ITUB4"},
-    {name: "PETROBRAS", sigla: "ITUB4"},
-    {name: "RAIADROGASIL", sigla: "RADL3"}
-]
 
 interface Props{
     setValue: Function
@@ -23,16 +13,22 @@ interface Props{
 
 // Fazer o props para pergar o assets para pesquisa
 export const BuscaAtivo = (props:Props) => {
-
-    const busca = buscaPorCaractere("");
-
+    
     const Options  = () => {
-        return busca.map((ativos) => ({value: ativos, label: ativos.nome.concat(' - ',ativos.sigla)}))
+        const ativos:Assets[] = [];
+        axios.get("/ativo/buscaativos")
+        .then(function(response){
+           ativos.push.apply(ativos, response.data.lista);
+    
+        }).catch(function(error){
+            console.log(error);
+        });
+        return ativos.map((ativos) => ({value: ativos, label: ativos.nome.concat(' - ', ativos.sigla)}))
     }
 
     return(
-        <Select
-        options={Options()}
+        <AsyncSelect
+        loadOptions={Options()}
         placeholder="Busque seu ativo"
         classNamePrefix='react-select'
         className='select'
