@@ -17,12 +17,17 @@ export const CadastroAcoes = () => {
     const [assets,setAssets] = useState<Assets>(); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
-    const [quantity,setQuantity] = useState("");
+    const [quantity, setQuantity] = useState("");
 
+    // Define qual tipo de operação será efetuada no request (compra/venda)
+    const [requestType, setRequestType] = useState("");
+
+    const navigate = useNavigate();
     const auth = useAuth();
+    const token = auth.getToken();
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-       
+
         e.preventDefault();
 
         setError("");
@@ -31,10 +36,10 @@ export const CadastroAcoes = () => {
 
         }else if (quantity.length < 0 ){
             setError("É necessário inserir uma quantidade válida")
-        
-        }else if (stockPrice.length < 0 ) {
+
+        } else if (parseInt(stockPrice) <= 0) {
             setError("É necessário inserir um valor válido")
-            
+
         } else {
             const token = auth.getToken();
             Axios.post("http://localhost:3000/ativo/cadastrar", 
@@ -52,21 +57,14 @@ export const CadastroAcoes = () => {
                 // de acoes
                 // navigate("/historico");
 
-            }).catch(function (response) {
-                const message = response.data.message;
-                console.log(response);
-                setError(message);
-            })
+                }).catch(function (error) {
+                    const message = error.response.data.message;
+                    setError(message);
+                })
         }
     }
 
-    //mascara para quantidade
-    const quantityMask = function (value: string) {
-        var pattern = new RegExp(/^[0-9]+$/);
-        return pattern.test(value);
-    };
-
-    //p formatar data
+    //para a formatar a data
     const [inputType, setInputType] = useState("text");
 
     return (
@@ -79,47 +77,57 @@ export const CadastroAcoes = () => {
                     setValue={setAssets}
                     />
 
-                <div className="linebox"> 
-
-                    <IMaskInput
-                        mask={Number}
-                        scale= {2}
-                        name="preco"
-                        max= {999.99}
-                        padFractionalZeros= {true}
-                        required
-                        placeholder="Preço da Ação"
-                        value={stockPrice}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                            setStockPrice(e.target.value)}
-                    />
-                    <IMaskInput
-                        type="text"
-                        name="quantidade"
-                        required
-                        mask={quantityMask}
-                        placeholder="Quantidade"
-                        value={quantity}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                            setQuantity(e.target.value)}
+                    <div className="linebox">
+                        <IMaskInput
+                            mask={Number}
+                            scale={2}
+                            name="preco"
+                            max={999.99}
+                            radix="."
+                            mapToRadix={[',']}
+                            padFractionalZeros={true}
+                            required
+                            placeholder="Preço da Ação"
+                            value={stockPrice}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setStockPrice(e.target.value)}
                         />
-                </div >
-                <div className="date-input">
-                    <input
-                        type={inputType}
-                        name="date"
-                        required
-                        placeholder="Data"
-                        value={date}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                            setDate(e.currentTarget.value)}
-                        onFocus={() => setInputType("date")}
-                        onBlur={() => setInputType("text")}
-                    />
-                </div>
+                        <IMaskInput
+                            mask={Number}
+                            scale={0}
+                            thousandsSeparator=' '
+                            name="quantidade"
+                            required
+                            placeholder="Quantidade"
+                            value={quantity}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setQuantity(e.target.value)}
+                        />
+                    </div >
+                    <div className="date-input">
+                        <input
+                            type={inputType}
+                            name="date"
+                            required
+                            placeholder="Data"
+                            value={date}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                setDate(e.currentTarget.value)}
+                            onFocus={() => setInputType("date")}
+                            onBlur={() => setInputType("text")}
+                        />
+                    </div>
                     <div className="buttonBox">
-                        <button className='buy-button'>Comprou</button>
-                        <button className='sell-button'>Vendeu</button>
+                        <button
+                            className='buy-button'
+                            onClick={() => setRequestType("cadastrar")}>
+                            Comprou
+                        </button>
+                        <button
+                            className='sell-button'
+                            onClick={() => setRequestType("venda")}>
+                            Vendeu
+                        </button>
                     </div>
                     {error && <p className="error"> {error}</p>}
                 </form>
