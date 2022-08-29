@@ -1,0 +1,66 @@
+.background-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('../../assets/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titulo-historico{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em; 
+    color: white;
+    font-weight: bold;
+    margin-top: 2.5%;         
+}
+
+.div-historico ul {
+    color: #000000;
+    padding-right: 10px;
+    display: flex;
+}
+.div-historico li{
+    padding: 10px;
+}
+.div-historico  {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 80%;
+    background-color: #dadadace;
+    border-radius: 0.5cm;
+    color: white;
+}
+.div-historico table {
+    background-color: #dadada4d;
+    width: 100%;
+}
+.div-historico table th {
+    background-color: #181f33d2;
+    color: #fff;
+   
+}
+.div-historico table td {
+    background-color: #dadada4d;
+    color: #0c0c0c;
+}
+.buttonBox{
+    display: flex;
+    margin-top: 6%;
+}
+.select-button {
+    background-color:#181f33d2;
+    color:white; 
+    border-radius: 10cm;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0.1mm 0.5cm; 
+    cursor:pointer;
+    transition: 0.25s;
+    margin-right: 25%;
+}

@@ -10,28 +10,33 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-.div-cadastro{
+.div-acoes{
     display: flex;
-    width: 60%;
-    height: 60%;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(10, 17, 79, 0.8);
     border-radius: 40px;
+    width: 65%;
 }
-.form-cadastro{
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-    color: white;
-    gap:1.25em;
-}
-div{
+.div-acoes div{
     width: 100%;
 }
-.titulo {
+.form-acoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap:1.25em;
+    padding: 5%;
+    padding-bottom: 7.5%;
+}
+
+.titulo-acoes {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 0.5em; 
-    align-items: center;
     color: white;
     font-weight: bold;
 }
@@ -39,7 +44,7 @@ div{
     display: flex;
     justify-content: space-between;
 }
-input{
+.form-acoes input{
     background-color:white;
     color:black;
     width: 45%;
@@ -50,21 +55,19 @@ input{
     font-weight: bold;
     padding: 0.5em;
     
-    
 }
 
-input::placeholder{
+.form-acoes input::placeholder{
     color:gray;
     font-family: 'Roboto';
     font-size: 1em;
 }
 
-.busca-input{
+.form-acoes .busca-input{
     width: 97%;
-    margin-right: 0%;
 }
 
-button{
+.div-acoes button{
     color:white;
     border: none;
     border-radius:70px;
@@ -74,7 +77,7 @@ button{
     cursor: pointer;
     transition: 0.25s;  
 }
-button:hover{
+.div-acoes button:hover{
     float: left;
     background: white;
     color: black;
@@ -105,12 +108,4 @@ button:hover{
     align-items: center;
     gap: 2.5em;
     margin-top: 1.75em;
-}
-.date-input{
-    margin-left: 40%;
-    display: flex;
-    width: 80%;
-    border: none;
-    border-radius: 40px;
-    margin-right: 60%; 
 }

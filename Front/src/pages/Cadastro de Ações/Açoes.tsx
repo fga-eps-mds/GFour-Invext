@@ -46,9 +46,7 @@ export const CadastroAcoes = () => {
                     data: date
                 }).then(function (response) {
                     alert(response.data.message);
-                    // descomentar a linha abaixo para o usuario ser redirecionado para o historico
-                    // de acoes
-                    // navigate("/historico");
+                    navigate("../historico");
 
                 }).catch(function (error) {
                     const message = error.response.data.message;
@@ -62,9 +60,9 @@ export const CadastroAcoes = () => {
 
     return (
         <div className="background-img">
-            <h1 className="titulo">Compra/Venda de Ativos</h1>
-            <div className="div-cadastro">
-                <form onSubmit={handleSubmit} className="form-cadastro">
+            <h1 className="titulo-acoes">Compra/Venda de Ativos</h1>
+            <div className="div-acoes">
+                <form onSubmit={handleSubmit} className="form-acoes">
                     <input
                         type="text"
                         name="ativo"
