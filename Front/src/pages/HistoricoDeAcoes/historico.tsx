@@ -7,9 +7,8 @@ const HistoricoDeAcoes = () => {
     
 return (
 
-    <body>
         <div className="background-img">        
-            <h1 className='titulo'>Invext - Histórico de ações  </h1>
+            <h1 className='titulo'>Histórico de Ativos</h1>
             <div className="div-historico">
                 <div id="test">
                 <Link to='/historico'/>  
@@ -242,8 +241,6 @@ return (
                 </div>
             </div>
         </div>
-    </body>
-
 )
 
 }

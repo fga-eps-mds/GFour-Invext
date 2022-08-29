@@ -14,7 +14,8 @@ body {
 }
 
 .titulo {
-    font-size: 2.5em;           
+    font-size: 2.5em;
+    margin-top: 2.5%;         
 }
 
 ul {
@@ -30,7 +31,6 @@ li{
     flex-direction: column;
     padding: 2%;
     width: 80%;
-    height: 70%;
     background-color: #dadadace;
     border-radius: 0.5cm;
     color: white;
