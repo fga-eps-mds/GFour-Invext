@@ -10,14 +10,14 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-.div-cadastro{
+.div-acoes{
     display: flex;
     width: 60%;
     height: 60%;
     background-color: rgba(10, 17, 79, 0.8);
     border-radius: 40px;
 }
-.form-cadastro{
+.form-acoes{
     display: flex;
     flex-direction: column;
     padding: 2%;
@@ -27,11 +27,10 @@
 div{
     width: 100%;
 }
-.titulo {
+.titulo-acoes {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 0.5em; 
-    align-items: center;
     color: white;
     font-weight: bold;
 }
@@ -39,7 +38,7 @@ div{
     display: flex;
     justify-content: space-between;
 }
-input{
+.form-acoes input{
     background-color:white;
     color:black;
     width: 45%;
@@ -50,10 +49,9 @@ input{
     font-weight: bold;
     padding: 0.5em;
     
-    
 }
 
-input::placeholder{
+.form-acoes input::placeholder{
     color:gray;
     font-family: 'Roboto';
     font-size: 1em;
@@ -64,7 +62,7 @@ input::placeholder{
     margin-right: 0%;
 }
 
-button{
+.div-acoes button{
     color:white;
     border: none;
     border-radius:70px;
@@ -74,7 +72,7 @@ button{
     cursor: pointer;
     transition: 0.25s;  
 }
-button:hover{
+.div-acoes button:hover{
     float: left;
     background: white;
     color: black;
