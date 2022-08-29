@@ -10,19 +10,23 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 .div-cadastro{
     display: flex;
-    flex-direction: column;
-    padding: 2%;
     width: 60%;
     height: 60%;
     background-color: rgba(10, 17, 79, 0.8);
     border-radius: 40px;
-    color: white;
-    
 }
-
+.form-cadastro{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    color: white;
+    gap:1.25em;
+}
+div{
+    width: 100%;
+}
 .titulo {
     text-align: center;
     font-size: 2.5em;
@@ -31,17 +35,21 @@
     color: white;
     font-weight: bold;
 }
-
+.linebox {
+    display: flex;
+    justify-content: space-between;
+}
 input{
     background-color:white;
     color:black;
     width: 45%;
-    padding: 0.5em;
     border: none;
-    border-radius: 40px;
+    border-radius: 40px;    
     font-size: 1.5em;
     text-align: center;
     font-weight: bold;
+    padding: 0.5em;
+    
     
 }
 
@@ -52,11 +60,11 @@ input::placeholder{
 }
 
 .busca-input{
-    width: 85%;
+    width: 97%;
+    margin-right: 0%;
 }
 
-.buy-button {
-    background-color:#47B802;
+button{
     color:white;
     border: none;
     border-radius:70px;
@@ -64,35 +72,22 @@ input::placeholder{
     text-align: center;
     padding: 0.5em 1.5em; 
     cursor: pointer;
-    transition: 0.25s;
-    margin-right: 25%;
+    transition: 0.25s;  
 }
-
-.buy-button:hover{
+button:hover{
     float: left;
     background: white;
     color: black;
     align-items: left;
     justify-items: left;
 }
+.buy-button {
+    background-color:#47B802;
+}
 
 .sell-button {
     background-color:#9F0303;
-    color:white;
-    border: none;
-    border-radius:70px;
-    font-size: 1.5em;
-    text-align: center;
     padding: 0.5em 2em; 
-    cursor: pointer;
-    transition: 0.25s;
-    margin-right: 20%;
-    
-}
-
-.sellbutton:hover{
-    background: white;
-    color: black;
 }
 
 .error{
@@ -106,24 +101,16 @@ input::placeholder{
 
 .buttonBox{
     display: flex;
-    margin-top: 6.75%;
-       
-}
-
-.columnBox {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+    margin-top: 1.75em;
 }
 .date-input{
-    float: left;
-    background-color:white;
-    color:gray;
-    width: 45%;
-    padding: 0.5em;
+    margin-left: 40%;
+    display: flex;
+    width: 80%;
     border: none;
     border-radius: 40px;
-    font-size: 1.05em;
-    text-align: center;
-    margin-right: 50%;
-       
+    margin-right: 60%; 
 }

@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import { CadastroAcoes } from './pages/Cadastro de Ações/Açoes';
 import { AuthProvider} from './services/Provider';
 import { RequireAuth } from './services/requireAuth';
-import { Sidebar } from './pages/Componentes/Sidebar';
+import { Sidebar } from './pages/Sidebar/Sidebar';
 import { PublicRoute } from './services/publicRoute';
 
 function App() {
@@ -26,9 +26,9 @@ function App() {
             <RequireAuth>
               <Sidebar />
             </RequireAuth>
-          }  >
-          </Route>
+          }>
             <Route path="/index/acoes" element={<CadastroAcoes />} />
+          </Route> 
         </Routes>
       </AuthProvider>
     </div>

@@ -42,7 +42,7 @@ const CadastroUsuario = () => {
             setError("As senhas precisam ser iguais");
 
         } else {
-            Axios.post("http://localhost:3000/usuario/cadastrar", {
+            Axios.post("/usuario/cadastrar", {
                 nomeCompleto: displayName,
                 dataNascimento: birth,
                 telefone: phone,

@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require("../models/User");
 const app = express();
+const AtivosB3 = require("../util/AtivosB3Util");
 
 // funciona
 app.post("/cadastrar", async (req, res) => {
@@ -65,9 +66,13 @@ app.post("/login", async (req, res) => {
             const token = jwt.sign({id: usuario.id}, "INVEXTGFOURD62ST92Y7A6V7K5C6W9ZU6W8KS3", {
                 // expiresIn: 600 //10 min
                 // expiresIn: '7d' // 7 dia
-                expiresIn: 1800 //30 min
+                // expiresIn: 1800 //30 min
             });
         
+            // Quando o usuario fizer login, o banco de dados 
+            // com todos os ativos eh atualizado
+            AtivosB3.updateAtivosB3();
+
             return res.json({
                 erro: false,
                 message: "Login realizado com sucesso!",
