@@ -276,3 +276,42 @@ Todos:
 |--|--|--|--|--|--|--|--|
 |✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
 -----------------------------------------------------------------------------------------------------------
+
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 11
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     29/08 à 05/09
+ </h1>
+</p>
+
+Front-end:
+         
+         - Criar a tela "Carteira" --> Lucas Felipe e Amanda (Se precisarem de ajuda, chamar o Luciano e o Antônio)
+         - Finalizar a tela de "Histórico" --> Amanda e Antônio (Luciano para fazer a integração) 
+         - Finalizar um bug da barra de pesquisa --> Lucas Felipe e Luciano 
+
+Back-end:
+        
+         - Pesquisar e a implementação dos gráficos de rentabilidade --> Leonardo e Lucas Gomes
+         - Testes de implementação do Back-end --> Josué e Abritta
+         - Criar as implementações da parte de "Patrimônio" --> Leonardo e Josué (Se precisarem de ajuda, chamar a Abritta e o Gomes)
+  
+Todos:
+    
+         - Tela "Histórico": Autenticação Front + Back.
+         - Front: Ficar mais atentos com um o CSS.
+         
+| Finalizados | Não finalizados |
+|--|--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
