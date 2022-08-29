@@ -58,6 +58,8 @@
 
 .nav-menu-items {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-toggle {
