@@ -66,7 +66,7 @@ router.post("/login", async (req, res) => {
             const token = jwt.sign({id: usuario.id}, "INVEXTGFOURD62ST92Y7A6V7K5C6W9ZU6W8KS3", {
                 // expiresIn: 600 //10 min
                 // expiresIn: '7d' // 7 dia
-                expiresIn: 1800 //30 min
+                // expiresIn: 1800 //30 min
             });
         
             // Quando o usuario fizer login, o banco de dados 

@@ -2,6 +2,7 @@ import React from 'react'
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
 import * as IoIcons from 'react-icons/io'
+import * as CgIcons from "react-icons/cg";
 
 export const SidebarData = [
     {
@@ -22,7 +23,7 @@ export const SidebarData = [
     {
         title:'Perfil',
         path:'perfil',
-        icon: <AiIcons.AiFillProfile/>,
+        icon: <CgIcons.CgProfile/>,
     },
     {
         title:'Sair',

@@ -20,7 +20,7 @@ const LoginUsuario = () => {
 
         setError("");
 
-        Axios.post("http://localhost:3000/usuario/login", {
+        Axios.post("/usuario/login", {
             email: email,
             senha: password
         }).then(function (response) {
