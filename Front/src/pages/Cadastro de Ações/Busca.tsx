@@ -1,34 +1,43 @@
 import axios from 'axios';
-import AsyncSelect from 'react-select';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import Select from 'react-select';
 import './Busca.css';  
 
 interface Assets{
     nome: string,
     sigla: string
 }
-
+interface Option{
+    value: Assets,
+    label: string
+}
 interface Props{
     setValue: Function
 }
 
 // Fazer o props para pergar o assets para pesquisa
-export const BuscaAtivo = (props:Props) => {
+export const  BuscaAtivo = (props:Props) => {
+    const [options, setOptions] = useState<Option[]>();
     
-    const Options  = () => {
-        const ativos:Assets[] = [];
+    useEffect(() => {
         axios.get("/ativo/buscaativos")
-        .then(function(response){
-           ativos.push.apply(ativos, response.data.lista);
+        .then(async function(response){
+            const ativos:Assets[] = await response.data.lista;
+            var array = ativos.map((ativos) => ({value: ativos, label: ativos.nome.concat(' - ', ativos.sigla)}));
+            setOptions(array);
     
         }).catch(function(error){
             console.log(error);
         });
-        return ativos.map((ativos) => ({value: ativos, label: ativos.nome.concat(' - ', ativos.sigla)}))
-    }
-
+       
+    }, []);
+       
+    
+    
     return(
-        <AsyncSelect
-        loadOptions={Options()}
+        <Select
+        options={options}
         placeholder="Busque seu ativo"
         classNamePrefix='react-select'
         className='select'
