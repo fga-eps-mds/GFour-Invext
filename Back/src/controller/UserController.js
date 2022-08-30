@@ -1,13 +1,13 @@
 const express = require("express");
+const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken');
 
 const User = require("../models/User");
-const app = express();
 const AtivosB3 = require("../util/AtivosB3Util");
 
 // funciona
-app.post("/cadastrar", async (req, res) => {
+router.post("/cadastrar", async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     
     const novo_usuario = {
@@ -43,7 +43,7 @@ app.post("/cadastrar", async (req, res) => {
 })
 
 //funciona
-app.post("/login", async (req, res) => {
+router.post("/login", async (req, res) => {
     const usuario = await User.findOne({
         attributes: ["id", "email", "senha"],
         where: {
@@ -71,25 +71,32 @@ app.post("/login", async (req, res) => {
         
             // Quando o usuario fizer login, o banco de dados 
             // com todos os ativos eh atualizado
-            AtivosB3.updateAtivosB3();
-
-            return res.json({
-                erro: false,
-                message: "Login realizado com sucesso!",
-                token
+            await AtivosB3.updateAtivosB3().
+            then(async () => {
+                return res.json({
+                    erro: false,
+                    message: "Login realizado com sucesso!",
+                    token
+                });
+            }).catch(async () => {
+                return res.status(400).json({
+                    erro: true,
+                    message: "Login nao realizado com sucesso!!"
+                });
             });
+
         }
     }
 });
 
 // nao funciona -> somente o usuario logado deve conseguir atualizar suas infos
-app.post("/atualizar", async (req, res) => {
+router.post("/atualizar", async (req, res) => {
 
 })
 
 // nao funciona -> somente o usuario logado deve conseguir deletar sua conta
-app.post("/deletar", async (req, res) => {
+router.post("/deletar", async (req, res) => {
 
 })
 
-module.exports = app;
+module.exports = router;

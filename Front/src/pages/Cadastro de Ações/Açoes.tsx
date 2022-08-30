@@ -42,6 +42,7 @@ export const CadastroAcoes = () => {
             setError("É necessário inserir um valor válido")
 
         } else {
+<<<<<<< HEAD
             const token = auth.getToken();
             Axios.post("http://localhost:3000/ativo/cadastrar", 
             {
@@ -57,6 +58,18 @@ export const CadastroAcoes = () => {
                 // descomentar a linha abaixo para o usuario ser redirecionado para o historico
                 // de acoes
                 // navigate("/historico");
+=======
+            Axios.post("/ativo/"+requestType,
+                {
+                    token: token,
+                    nomeAtivo: assets,
+                    preco: stockPrice,
+                    quantidade: quantity,
+                    data: date
+                }).then(function (response) {
+                    alert(response.data.message);
+                    navigate("../historico");
+>>>>>>> Develop
 
                 }).catch(function (error) {
                     const message = error.response.data.message;
@@ -70,12 +83,26 @@ export const CadastroAcoes = () => {
 
     return (
         <div className="background-img">
+<<<<<<< HEAD
             <h1 className="titulo">Compra/Venda de Ativos</h1>
             <div className="div-cadastro">
                 <form onSubmit={handleSubmit} className="form-cadastro">
                    
                    <BuscaAtivo 
                     setValue={setAssets}
+=======
+            <h1 className="titulo-acoes">Compra/Venda de Ativos</h1>
+            <div className="div-acoes">
+                <form onSubmit={handleSubmit} className="form-acoes">
+                    <input
+                        type="text"
+                        name="ativo"
+                        className="busca-input"
+                        required
+                        placeholder="Busque seu ativo"
+                        value={assets}
+                        onChange={(e) => setAssets(e.target.value)}
+>>>>>>> Develop
                     />
 
                     <div className="linebox">

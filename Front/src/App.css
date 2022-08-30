@@ -4,19 +4,3 @@
     font-style: normal;
     font-weight: 400;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.carteira,
-.acoes,
-.historico,
-.perfil {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-};
