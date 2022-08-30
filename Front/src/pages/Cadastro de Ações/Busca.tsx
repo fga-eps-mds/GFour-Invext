@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import Select from 'react-select';
+import WindowedSelect from "react-windowed-select";
+import { createFilter } from 'react-windowed-select';
 import './Busca.css';  
 
 interface Assets{
@@ -33,11 +34,13 @@ interface Props{
        
     }, []);
        
-    
+    console.log(options);
     
     return(
-        <Select
+        <WindowedSelect
+        windowThreshold={5}
         options={options}
+        filterOption={createFilter({ ignoreAccents: false})}
         placeholder="Busque seu ativo"
         classNamePrefix='react-select'
         className='select'
