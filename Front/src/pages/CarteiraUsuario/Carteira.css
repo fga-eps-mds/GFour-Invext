@@ -1,0 +1,78 @@
+.background-img-carteira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('../../assets/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Flex';
+    
+}
+
+
+.div-patrimonio{
+    display: flex;
+    flex-direction: column;
+    padding: 2.5%;
+    width: 60%;
+    height: 25%;
+    background-color: #cacaca;
+    border-radius: 40px;
+    color: white;
+    margin-bottom: 1.2%;
+}  
+
+.titulo-carteira{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em; 
+    color: white;
+    font-weight: bold;
+    margin-top: 2.5%;         
+}
+
+.div-titulo-patrimonio{
+    margin-top: -1.6em;
+    margin-left: 2.5em;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;       
+}
+
+.div-ativos{
+    color: black;
+    margin-left: 0.5em;
+    display: flex;
+    flex-direction: row;
+    padding: 2.5%;
+    margin-top: 1.4em;
+    width: 55   em;
+    height: 9em;
+    background-color: #D9D9D9;
+    border-radius: 40px;
+}  
+
+.div-barra { 
+    background-color: #241453;
+    margin-top: -1.4em;
+    margin-left: -2.6em;
+    width: 0.5em;
+    height: 11.9em;
+}
+
+.div-rentabilidade{
+    display: flex;
+    flex-direction: column;
+    padding: 2.5%;
+    width: 60%;
+    height: 25%;
+    background-color: #cacaca;
+    border-radius: 40px;
+    color: white;
+}  
