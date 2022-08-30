@@ -16,14 +16,14 @@ interface Props{
     setValue: Function
 }
 
-// Fazer o props para pergar o assets para pesquisa
-export const  BuscaAtivo = (props:Props) => {
+// Fazer o props para pegar o assets para pesquisa
+ export const  BuscaAtivo =  (props:Props) => {
     const [options, setOptions] = useState<Option[]>();
     
     useEffect(() => {
         axios.get("/ativo/buscaativos")
-        .then(async function(response){
-            const ativos:Assets[] = await response.data.lista;
+        .then( function(response){
+            const ativos:Assets[] = response.data.lista;
             var array = ativos.map((ativos) => ({value: ativos, label: ativos.nome.concat(' - ', ativos.sigla)}));
             setOptions(array);
     
