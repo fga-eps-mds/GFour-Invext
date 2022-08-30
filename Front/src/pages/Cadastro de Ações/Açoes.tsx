@@ -6,16 +6,16 @@ import { useState } from "react";
 import Axios from "axios";
 import { useAuth } from '../../services/Provider';
 import { useNavigate } from 'react-router-dom';
-import {BuscaAtivo} from './Busca';
+import { BuscaAtivo } from './Busca';
 
-interface Assets{
+interface Assets {
     name: string,
     initials: string
 }
 export const CadastroAcoes = () => {
 
     const [error, setError] = useState("");
-    const [assets,setAssets] = useState<Assets>(); //Assets é os ativos
+    const [assets, setAssets] = useState<Assets>(); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
     const [quantity, setQuantity] = useState("");
@@ -32,44 +32,27 @@ export const CadastroAcoes = () => {
         e.preventDefault();
 
         setError("");
-        if (!assets){
+        if (!assets) {
             setError("Selecione um ativo")
 
-        }else if (parseInt(quantity) <= 0 ){
+        } else if (parseInt(quantity) <= 0) {
             setError("É necessário inserir uma quantidade válida")
 
         } else if (parseInt(stockPrice) <= 0) {
             setError("É necessário inserir um valor válido")
 
         } else {
-<<<<<<< HEAD
-            const token = auth.getToken();
-            Axios.post("http://localhost:3000/ativo/cadastrar", 
-            {
-                token: token,
-                nomeAtivo: assets.name,
-                sigla: assets.initials,
-                preco: stockPrice,
-                quantidade: quantity,
-                data: date
-            }).then(function (response) {
-                console.log(response);
-                alert(response.data.message);
-                // descomentar a linha abaixo para o usuario ser redirecionado para o historico
-                // de acoes
-                // navigate("/historico");
-=======
-            Axios.post("/ativo/"+requestType,
+            Axios.post("/ativo/" + requestType,
                 {
                     token: token,
-                    nomeAtivo: assets,
+                    nomeAtivo: assets.name,
+                    sigla: assets.initials,
                     preco: stockPrice,
                     quantidade: quantity,
                     data: date
                 }).then(function (response) {
                     alert(response.data.message);
                     navigate("../historico");
->>>>>>> Develop
 
                 }).catch(function (error) {
                     const message = error.response.data.message;
@@ -83,26 +66,11 @@ export const CadastroAcoes = () => {
 
     return (
         <div className="background-img">
-<<<<<<< HEAD
-            <h1 className="titulo">Compra/Venda de Ativos</h1>
-            <div className="div-cadastro">
-                <form onSubmit={handleSubmit} className="form-cadastro">
-                   
-                   <BuscaAtivo 
-                    setValue={setAssets}
-=======
             <h1 className="titulo-acoes">Compra/Venda de Ativos</h1>
             <div className="div-acoes">
                 <form onSubmit={handleSubmit} className="form-acoes">
-                    <input
-                        type="text"
-                        name="ativo"
-                        className="busca-input"
-                        required
-                        placeholder="Busque seu ativo"
-                        value={assets}
-                        onChange={(e) => setAssets(e.target.value)}
->>>>>>> Develop
+                    <BuscaAtivo
+                        setValue={setAssets}
                     />
 
                     <div className="linebox">
@@ -160,7 +128,7 @@ export const CadastroAcoes = () => {
                     {error && <p className="error"> {error}</p>}
                 </form>
             </div>
-        </div>
+        </div >
     );
 }
 
