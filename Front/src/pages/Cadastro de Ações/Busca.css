@@ -2,7 +2,6 @@
     display: flex;
     text-align: center;
     color:black;
-    width: 100%;
     font-size: 1.5em;
     text-align: center;
     font-weight: bold;
@@ -15,7 +14,7 @@
 
 .react-select__value-container{
     margin-left: 10%;
-    width: 90%;
+    width: 90% !important;
     cursor: text;
     display: flex;
     justify-content: center;
@@ -23,7 +22,7 @@
 }
 
 .react-select__indicators{
-    width: 10%;
+    width: 10% !important;
    
 }
 .react-select__indicator{
