@@ -20,7 +20,6 @@ function App() {
           <Route element={<PublicRoute />}>
             <Route path="/" element={<LoginUsuario />} />
             <Route path="/cadastro" element={<CadastroUsuario />} /> 
-            <Route path="/carteira" element={<CarteiraUsuario/>} />
           </Route>
 
           <Route path="/index" element={
@@ -30,6 +29,7 @@ function App() {
           }>
             <Route path="/index/acoes" element={<CadastroAcoes />} />
             <Route path="/index/historico" element={<HistoricoDeAcoes />} />
+            <Route path="/index/carteira" element={<CarteiraUsuario/>} />
           </Route> 
         </Routes>
       </AuthProvider>
