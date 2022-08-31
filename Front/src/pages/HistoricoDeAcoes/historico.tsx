@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import './historico.css';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as React from 'react';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
@@ -30,7 +29,12 @@ const rows = [
   { id: 11, ativo: 'Petrobras', sigla: 'PETR4', ordem: 'Venda', quantidade:'3', negociação:'07/05/2021', valor:'R$95,73'},
 ];
 
+
+
 const HistoricoDeAcoes = () => {
+
+
+  
     
 return (
 
