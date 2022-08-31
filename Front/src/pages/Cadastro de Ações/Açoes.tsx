@@ -4,14 +4,18 @@ import './Ações.css';
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
 import Axios from "axios";
-import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../services/Provider';
+import { useNavigate } from 'react-router-dom';
+import { BuscaAtivo } from './Busca';
 
-
+interface Assets {
+    name: string,
+    initials: string
+}
 export const CadastroAcoes = () => {
 
     const [error, setError] = useState("");
-    const [assets, setAssets] = useState(""); //Assets é os ativos
+    const [assets, setAssets] = useState<Assets>(); //Assets é os ativos
     const [stockPrice, setStockPrice] = useState(""); //preço das ações
     const [date, setDate] = useState("");
     const [quantity, setQuantity] = useState("");
@@ -28,19 +32,21 @@ export const CadastroAcoes = () => {
         e.preventDefault();
 
         setError("");
+        if (!assets) {
+            setError("Selecione um ativo")
 
-        // Validações dos inputs antes de fazer o request ao backend
-        if (parseInt(quantity) <= 0) {
+        } else if (parseInt(quantity) <= 0) {
             setError("É necessário inserir uma quantidade válida")
 
         } else if (parseInt(stockPrice) <= 0) {
             setError("É necessário inserir um valor válido")
 
         } else {
-            Axios.post("/ativo/"+requestType,
+            Axios.post("/ativo/" + requestType,
                 {
                     token: token,
-                    nomeAtivo: assets,
+                    nomeAtivo: assets.name,
+                    sigla: assets.initials,
                     preco: stockPrice,
                     quantidade: quantity,
                     data: date
@@ -63,14 +69,8 @@ export const CadastroAcoes = () => {
             <h1 className="titulo-acoes">Compra/Venda de Ativos</h1>
             <div className="div-acoes">
                 <form onSubmit={handleSubmit} className="form-acoes">
-                    <input
-                        type="text"
-                        name="ativo"
-                        className="busca-input"
-                        required
-                        placeholder="Busque seu ativo"
-                        value={assets}
-                        onChange={(e) => setAssets(e.target.value)}
+                    <BuscaAtivo
+                        setValue={setAssets}
                     />
 
                     <div className="linebox">
@@ -128,7 +128,7 @@ export const CadastroAcoes = () => {
                     {error && <p className="error"> {error}</p>}
                 </form>
             </div>
-        </div>
+        </div >
     );
 }
 
