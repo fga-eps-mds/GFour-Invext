@@ -1,3 +1,5 @@
+//Amanda disse que vai implementar o esquema de tabela p dentro da div ver com ela dps.
+//O CSS vai ter que ser um pouco refatorado pois estamos usando muito em e isso pode dar ruim dependendo da tela.
 import './Carteira.css';
 
 const Carteira = () => {
