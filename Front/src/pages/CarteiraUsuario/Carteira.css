@@ -55,13 +55,12 @@
     font-weight: bold;       
 }
 
-.div-ativos {    
+.div-ativos-patrimonio {    
     margin-left: 0.5em;
     display: flex;
     flex-direction: row;
     padding: 1.5%;
-    margin-top: 1.4em;
-    width: 55   em;
+    margin-top: 1.4em;  
     height: 20em;
     background-color: #dcdcdc;
     border: 2px solid;
@@ -70,10 +69,11 @@
 
 }  
 
-.barra { 
+.barra-patrimonio { 
     background-color: #241453;
     margin-top: 0.4em;
     margin-left: -2.6em;
+    margin-right: 5%;
     width: 0.5em;
     height: 95%;
 }
@@ -88,3 +88,29 @@
     border-radius: 40px;
     color: white;
 }  
+
+
+.div-titulo-rentabilidade{
+    margin-top: -1.6em;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;       
+}
+
+.div-ativos-rentabilidade {    
+    margin-left: 66%;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5%;
+    margin-top: 1.4em;  
+    width: 30%;
+    height: 100%;
+    background-color: #dcdcdc;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 40px;
+}  
+
