@@ -9,8 +9,8 @@ import { useNavigate } from 'react-router-dom';
 import { BuscaAtivo } from './Busca';
 
 interface Assets {
-    name: string,
-    initials: string
+    nome: string,
+    sigla: string
 }
 export const CadastroAcoes = () => {
 
@@ -45,8 +45,8 @@ export const CadastroAcoes = () => {
             Axios.post("/ativo/" + requestType,
                 {
                     token: token,
-                    nomeAtivo: assets.name,
-                    sigla: assets.initials,
+                    nomeAtivo: assets.nome,
+                    sigla: assets.sigla,
                     preco: stockPrice,
                     quantidade: quantity,
                     data: date
@@ -121,7 +121,7 @@ export const CadastroAcoes = () => {
                         </button>
                         <button
                             className='sell-button'
-                            onClick={() => setRequestType("venda")}>
+                            onClick={() => setRequestType("vender")}>
                             Vendeu
                         </button>
                     </div>

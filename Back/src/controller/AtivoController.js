@@ -101,7 +101,7 @@ router.post("/vender", auth, async (req,res) => {
     } else {
         return res.status(400).json({
             erro: true,
-            message: "Erro na venda do ativo"
+            message: "Quantidade maior do que disponivel para venda!"
         })
     }
 
