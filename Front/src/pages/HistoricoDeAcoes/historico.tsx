@@ -1,8 +1,12 @@
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import './historico.css';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import { DataGrid, GridColDef} from '@mui/x-data-grid';
+import { useAuth } from '../../services/Provider';
+import { useEffect, useState} from 'react';
+import Axios from 'axios';
+import { capitalize } from '@mui/material';
+import { format } from 'date-fns';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -12,49 +16,86 @@ const columns: GridColDef[] = [
   { field: 'quantidade', headerName: 'Quantidade', width: 130 },
   { field: 'negociação', headerName: 'Negociação', width: 130 },
   { field: 'valor', headerName: 'Valor', width: 130 },
-  
+
 ];
 
-const rows = [
-  { id: 1, ativo: 'Americanas', sigla: 'AMER3', ordem: 'Compra', quantidade:'1', negociação:'06/05/2021', valor:'R$16,82'},
-  { id: 2, ativo: 'Magazine Luiza', sigla: 'MGLU3', ordem: 'Venda' , quantidade:'2', negociação:'06/05/2021', valor:'R$8,96'},
-  { id: 3, ativo: 'Itaú', sigla: 'ITUB4', ordem: 'Compra' , quantidade:'5', negociação:'07/05/2021', valor:'R$131,55'},
-  { id: 4, ativo: 'Oi', sigla: 'OIBR3', ordem: 'Compra' , quantidade:'6', negociação:'09/09/2021', valor:'R$3,18'},
-  { id: 5, ativo: 'Petrobras', sigla: 'PETR4', ordem: 'Venda' , quantidade:'7', negociação:'09/10/2021', valor:'R$223,37'},
-  { id: 6, ativo: 'Vale', sigla: 'VALE3', ordem: 'Compra' , quantidade:'5', negociação:'15/11/2021', valor:'R$326,20'},
-  { id: 7, ativo: 'Ambev', sigla: 'ABEV3', ordem: 'Venda' , quantidade:'4', negociação:'06/12/2021', valor:'R$61,56'},
-  { id: 8, ativo: 'Vale', sigla: 'VALE3', ordem: 'Venda', quantidade:'3', negociação:'07/05/2021', valor:'R$195,72'},
-  { id: 9, ativo: 'Americanas', sigla: 'AMER3', ordem: 'Compra' , quantidade:'1', negociação:'06/01/2022', valor:'R$16,82'},
-  { id: 10, ativo: 'Vale', sigla: 'VALE3', ordem: 'Venda', quantidade:'3', negociação:'07/05/2021', valor:'R$195,72'}, 
-  { id: 11, ativo: 'Petrobras', sigla: 'PETR4', ordem: 'Venda', quantidade:'3', negociação:'07/05/2021', valor:'R$95,73'},
-];
-
-
-
-const HistoricoDeAcoes = () => {
-
-
-  
-    
-return (
-
-        <div className="background-img">        
-            <h1 className='titulo-historico'>Histórico de Ativos</h1>
-            <div className="div-historico">
-                 <div style={{ height: 400, width: '100%' }}>
-                    <DataGrid
-                        rows={rows}
-                        columns={columns}
-                        pageSize={10}
-                        rowsPerPageOptions={[10]}
-                        checkboxSelection
-                          />
-                </div>
-            </div>
-        </div>
-)
-
+// São os registros que vem do banco de dados
+interface DBHistoric {
+  id: number,
+  nomeAtivo: string,
+  sigla: string,
+  execucao: string,
+  quantidade: number,
+  data: string,
+  preco: number
 }
 
-export default HistoricoDeAcoes;
+// Registro que sera mostrado para o usuario
+interface Historic {
+  id: number,
+  ativo: string, // == nomeAtivo
+  sigla: string,
+  ordem: string, // == execucao
+  quantidade: number,
+  negociação: string, // == data
+  valor: string // == preco
+}
 
+export const HistoricoDeAcoes = () => {
+  
+  const auth = useAuth();
+  const token = auth.getToken();
+  const [historic, setHistoric] = useState<Historic[]>(); 
+
+  // Altera a forma de visualização dos dados que vem do banco
+  const refactorHistoric = (dbHistoric: DBHistoric[]) => {
+    if(dbHistoric){
+      return dbHistoric.map((ativo:DBHistoric) => ({
+        id: ativo.id,
+        ativo: ativo.nomeAtivo,
+        sigla: ativo.sigla,
+        ordem: capitalize(ativo.execucao),
+        quantidade: ativo.quantidade,
+        negociação: format(new Date(ativo.data), 'dd/MM/yyyy'),
+        valor: `R$ ${ativo.preco.toFixed(2)}` 
+      }))
+     
+    } else{
+      return [];
+    }
+  }
+
+  const getHistoric = () => {
+     Axios.post("/ativo/historico",{
+      token: token
+     }
+      ).then(function(response){
+        setHistoric(refactorHistoric(response.data.historico));
+      }).catch(function (error) {
+        console.log(error);
+    })
+  }
+
+  useEffect(() => {
+    getHistoric();
+  }, [ ])
+
+  return (
+    <div className="background-img">
+      <h1 className='titulo-historico'>Histórico de Ativos</h1>
+      <div className="div-historico">
+        <div style={{ height: 400, width: '100%' }}> 
+          {historic ? 
+          <DataGrid
+          rows={historic}
+          columns={columns}
+          pageSize={10}
+          rowsPerPageOptions={[10]}
+          checkboxSelection
+          />
+          :null}
+        </div>
+      </div>
+    </div>
+  )
+}
