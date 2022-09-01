@@ -132,7 +132,7 @@ router.get("/historico", auth, async (req,res) => {
 })
 
 // Rota que envia o patrimonio do usuario
-router.get("/patrimonio", auth, async (req, res) => {
+router.post("/patrimonio", auth, async (req, res) => {
     await Ativo.findAll({
         attributes: [
             [sequelize.fn('DISTINCT', sequelize.col('sigla')), 'sigla'],

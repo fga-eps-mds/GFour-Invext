@@ -54,11 +54,19 @@
     color: rgb(255, 255, 255);
     font-weight: bold;       
 }
-
-.div-ativos-patrimonio {    
-    margin-left: 0.5em;
+.div-ativos-patrimonio ul {
+    color: #000000;
+    padding-right: 10px;
     display: flex;
-    flex-direction: row;
+}
+.div-ativos-patrimonio li{
+    padding: 10px;
+}
+
+.div-grid-patrimonio {   
+    height: 100px; 
+    width: 100%;
+    margin-left: 0.5em;
     padding: 1.5%;
     margin-top: 1.0em;  
     height: 22em;
