@@ -7,6 +7,8 @@ const auth = require("../middleware/auth");
 const Ativo = require("../models/Ativo");
 const AtivosB3 = require("../models/AtivosB3");
 
+const ativosB3Util = require("../util/AtivosB3Util");
+
 router.post("/cadastrar", auth, async (req, res) => {
     const novo_ativo = {
         id_usuario: req.usuario.id,
@@ -128,6 +130,37 @@ router.get("/historico", auth, async (req,res) => {
     console.log(dadoHistorico);
 
 })
+
+// Rota que envia o patrimonio do usuario
+router.get("/patrimonio", auth, async (req, res) => {
+    await Ativo.findAll({
+        attributes: [
+            [sequelize.fn('DISTINCT', sequelize.col('sigla')), 'sigla'],
+        ],
+        where: {
+            "id_usuario": req.usuario.id
+        },
+    }).then(async (ativos) => {
+        let siglas = []
+        for (let ativo of ativos) {
+            siglas.push(ativo.dataValues.sigla);
+        }
+        
+        const patrimonio = await ativosB3Util.calculaPatrimonio(siglas, req.usuario.id);
+        
+        return res.json({
+            erro: false,
+            ativos: patrimonio
+        });
+
+    }).catch((error) => {
+        console.log(error);
+        return res.status(400).json({
+            erro: true,
+            ativos: []
+        })
+    });
+});
 
 router.post("/editar", auth, async (req,res) => {
     const { id } = req.body;
