@@ -71,8 +71,8 @@ router.post("/login", async (req, res) => {
         
             // Quando o usuario fizer login, o banco de dados 
             // com todos os ativos eh atualizado
-            await AtivosB3.updateAtivosB3().
-            then(async () => {
+            //await AtivosB3.updateAtivosB3().
+            /*then(async () => {
                 return res.json({
                     erro: false,
                     message: "Login realizado com sucesso!",
@@ -83,8 +83,14 @@ router.post("/login", async (req, res) => {
                     erro: true,
                     message: "Login nao realizado com sucesso!!"
                 });
-            });
+            });*/
 
+            AtivosB3.updateAtivosB3();
+            return res.json({
+                erro: false,
+                message: "Login realizado com sucesso!",
+                token
+            });
         }
     }
 });
