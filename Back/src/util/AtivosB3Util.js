@@ -1,6 +1,7 @@
 const Axios = require("axios");
 const AtivosB3 = require("../models/AtivosB3")
 const Ativo = require("../models/Ativo");
+const sequelize = require('sequelize');
 
 exports.updateAtivosB3 = async function () {
     let dt_ultimo_pregao;
@@ -43,6 +44,7 @@ exports.updateAtivosB3 = async function () {
 
 exports.calculaPatrimonio = async function (siglas, id_usuario) {
     var lista = [];
+    var vTotal = 0;
     for (let sigla of siglas) {
         await Ativo.findAll({
             attributes: [
@@ -58,8 +60,15 @@ exports.calculaPatrimonio = async function (siglas, id_usuario) {
                 "sigla": sigla
             },
         }).then(async (res) => {
-            let pPrecoMedio = 0, pQuantidade = 0, pTotal = 0;
+            let pPrecoMedio = 0, pQuantidade = 0, pTotal = 0, pDiferenca = 0, pTotalatt = 0;
             let pNomeAtivo, pSigla;
+            const precoAtual = await AtivosB3.findAll({
+                attributes: ['valor_fechamento'],
+                where: {
+                "codigo_acao": sigla
+                }
+            });
+            precoAtt = precoAtual[0].valor_fechamento;
             for (let result of res) {
                 const { nomeAtivo } = result;
                 const { sigla } = result;
@@ -71,33 +80,36 @@ exports.calculaPatrimonio = async function (siglas, id_usuario) {
                 pNomeAtivo = nomeAtivo;
                 pSigla = sigla;
                 if (execucao === "compra") {
-                    pTotal += parseFloat(preco) * parseInt(quantidade); 
+                    pTotal += parseFloat(preco) * parseInt(quantidade);
+                    pTotalatt += parseFloat(precoAtt) * parseInt(quantidade);
                     pQuantidade += parseInt(quantidade);
                 } else {
-                    pTotal += (-1) * parseFloat(preco) * quantidade; 
+                    pTotal += (-1) * parseFloat(preco) * parseInt(quantidade);
+                    pTotalatt += (-1) * parseFloat(preco) * parseInt(quantidade);
                     pQuantidade += (-1) * parseInt(quantidade);
                 }
                 pPrecoMedio = pTotal / pQuantidade;
             }
-
-            const precoAtual = await AtivosB3.findAll({
-                attributes: ['valor_fechamento'],
-                where: {
-                "codigo_acao": sigla
-                }
-            });
+            vTotal += pTotalatt;
             
             const patrimonio = {
                 nomeAtivo: pNomeAtivo,
                 sigla: pSigla,
-                porcentagem: 0, // falta calcular
+                porcentagem: ((pTotalatt / vTotal)*100).toFixed(2), // falta calcular
                 quantidade: pQuantidade,
                 precoAtual: precoAtual[0].valor_fechamento,
                 precoMedio: parseFloat(pPrecoMedio.toFixed(2)),
-                diferenca: 0, // falta calcular
-                valorTotal: pTotal
+                diferenca: (pTotalatt - pTotal).toFixed(2),
+                valorTotal: pTotalatt
             }
+
             lista.push(patrimonio);
+
+            // Percorre os valores da lista e calcula a porcentagem.
+            for (let x of lista) {
+                const calculo = ((x.valorTotal / vTotal)*100).toFixed(2);
+                x.porcentagem = calculo;
+            }
         });
     }
     return lista;
