@@ -10,14 +10,14 @@ import { useAuth } from "../../services/Provider";
 //base da tabela...estou usando tudo que tava no prototipo
 const columns: GridColDef[] = [
   //{ field: "id", headerName: "ID", width: 35 },
-  { field: "nomeAtivo", headerName: "Ações", width: 100 },
-  { field: "sigla", headerName: "Sigla", width: 100 },
-  { field: "porcentagem", headerName: "Porc.", width: 100 },
-  { field: "quantidade", headerName: "Quantidade", width: 100 },
+  { field: "nomeAtivo", headerName: "Ações", width: 80 },
+  { field: "sigla", headerName: "Sigla", width: 80 },
+  { field: "porcentagem", headerName: "Porc.", width: 80 },
+  { field: "quantidade", headerName: "Quant.", width: 80 },
   { field: "precoAtual", headerName: "Preço atual", width: 100 },
   { field: "precoMedio", headerName: "Preço médio", width: 100 },
-  { field: "diferenca", headerName: "Diferença", width: 100 },
-  { field: "valorTotal", headerName: "Valor total", width: 100 },
+  { field: "diferenca", headerName: "Diferença", width: 80 },
+  { field: "valorTotal", headerName: "Valor total", width: 80 },
 ];
 
 // São os registros que vem do banco de dados
@@ -100,8 +100,8 @@ export const Carteira = () => {
             <DataGrid
             rows={carteir}
             columns={columns}
-            pageSize={10}
-            rowsPerPageOptions={[10]}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
             />
             ) : null}
           
