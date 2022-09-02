@@ -7,12 +7,12 @@ export const SidebarData = [
     {
         title:'Patrimônio',
         path:'patrimonio',
-        icon: <AiIcons.AiFillWallet/>,
+        icon: <FaIcons.FaMoneyBillWave/>,
     },
     {
         title:'Rentabilidade',
         path:'rentabilidade',
-        icon: <AiIcons.AiFillWallet/>,
+        icon: <AiIcons.AiOutlineRise/>,
     },
     {
         title:'Ações',
