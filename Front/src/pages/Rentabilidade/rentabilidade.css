@@ -1,0 +1,56 @@
+.background-img-rentabilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('../../assets/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Flex';   
+}
+
+.div-rentabilidade{
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5%;
+    width: 70%;
+    height: 55%;
+    background-color: #A9A9A9;
+    border-radius: 40px;
+    margin-bottom: 1.2%;
+}  
+
+.titulo-rentabilidade{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em; 
+    color: white;
+    font-weight: bold;        
+}
+
+.div-grid-rentabilidade {   
+    height: 100%; 
+    width: 40%;
+    height: 20em;
+    margin-left: 1.5em;
+    padding: 2.0%;
+    margin-top: 0.5em;  
+    background-color: #dcdcdc;
+    border: 2px solid;
+    border-color: #0000;
+    border-radius: 25px;
+
+}  
+
+.barra-rentabilidade { 
+    background-color: #241453;
+    margin-top: 0.4em;
+    margin-left: -2.6em;
+    margin-right: 5%;
+    width: 0.5em;
+    height: 95%;
+}
