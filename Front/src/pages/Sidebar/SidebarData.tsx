@@ -5,8 +5,13 @@ import * as IoIcons from 'react-icons/io'
 
 export const SidebarData = [
     {
-        title:'Carteira',
-        path:'carteira',
+        title:'Patrimônio',
+        path:'patrimonio',
+        icon: <AiIcons.AiFillWallet/>,
+    },
+    {
+        title:'Rentabilidade',
+        path:'rentabilidade',
         icon: <AiIcons.AiFillWallet/>,
     },
     {
