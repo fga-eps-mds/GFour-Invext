@@ -1,4 +1,4 @@
-import "./Carteira.css";
+import "./Patrimonio.css";
 import { useState, useEffect } from "react";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
@@ -20,20 +20,8 @@ const columns: GridColDef[] = [
   { field: "valorTotal", headerName: "Valor total", width: 80 },
 ];
 
-// São os registros que vem do banco de dados
-interface DBHistoric {
-  //trouxe da tela de historico
-  id: number;
-  nomeAtivo: string;
-  sigla: string;
-  execucao: string;
-  quantidade: number;
-  data: string;
-  preco: number;
-}
-
 //passo tudo que esta em field para essa interface...verificar se esta ok os nomes e os tipos.
-interface Carteir {
+interface Ativo {
   id: number;
   nomeAtivo: string;
   sigla: string;
@@ -45,22 +33,22 @@ interface Carteir {
   valorTotal: number;
 }
 
-export const Carteira = () => {
+export const Patrimonio = () => {
   const auth = useAuth();
   const token = auth.getToken();
-  const [carteir, setCarteir] = useState<Carteir[]>();
+  const [patrimonio, setPatrimonio] = useState<Ativo[]>();
 
   //vamos ter que mexer na forma como esses dados vem do banco...estou um pouco incerto dessa parte
 
   
 
-  const getCarteir = () => {
+  const getPatrimonio = () => {
     //estou puxando os mesmos dados do historico
     Axios.post("/ativo/patrimonio", {
       token: token,
     })
       .then(function (response) {
-        setCarteir(response.data.ativos.map((ativo:Carteir, index:number) => ({
+        setPatrimonio(response.data.ativos.map((ativo:Ativo, index:number) => ({
           id: index,
           nomeAtivo: ativo.nomeAtivo,
           sigla: ativo.sigla,
@@ -80,25 +68,21 @@ export const Carteira = () => {
   };
 
   useEffect(() => {
-    getCarteir();
+    getPatrimonio();
   }, []);
 
   return (
-    <div className="background-img-carteira">
-      <h1 className="titulo-carteira">Invext - Minha Carteira</h1>
+    <div className="background-img-patrimonio">
+      <h1 className="titulo-patrimonio">Patrimônio</h1>
       <div className="div-patrimonio">
-        <div className="div-titulo-patrimonio">
-          <FaMoneyBillWave className="icon"></FaMoneyBillWave>
-          <h2>Patrimônio</h2>
-          <BsEye className="eye"></BsEye>
-        </div>
+      
         <div className="div-ativos-patrimonio">
         <span className="barra-patrimonio"></span>
         
         <div className="div-grid-patrimonio">
-          {carteir ? (
+          {patrimonio ? (
             <DataGrid
-            rows={carteir}
+            rows={patrimonio}
             columns={columns}
             pageSize={5}
             rowsPerPageOptions={[5]}
@@ -108,17 +92,6 @@ export const Carteira = () => {
             </div>
         </div>
       </div>
-
-      <div className="div-rentabilidade">
-        <div className="div-titulo-rentabilidade">
-          <AiOutlineRise className="icon"></AiOutlineRise>
-          <h2>Rentabilidade</h2>
-          <BsEye className="eye"></BsEye>
-        </div>
-        <div className="div-ativos-rentabilidade"></div>
-      </div>
     </div>
   );
 };
-
-export default Carteira;

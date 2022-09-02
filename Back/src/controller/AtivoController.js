@@ -69,11 +69,22 @@ router.post("/vender", auth, async (req,res) => {
         },
     })
 
-    if (ativo_vendido[0] == null) {
-        var totalQuantidade = ativo_comprado[0].total - 0;
+
+    if (ativo_comprado[0] == null) {
+        return res.status(400).json({
+            erro: true,
+            message: "Não existe ativo para vender"
+        })
     } else {
-        var totalQuantidade = ativo_comprado[0].total - ativo_vendido[0].total;
+        if (ativo_vendido[0] == null) {
+            var totalQuantidade = ativo_comprado[0].total - 0;
+        } else {
+            var totalQuantidade = ativo_comprado[0].total - ativo_vendido[0].total;
+        }
     }
+
+   
+
 
     const nova_venda = {
         id_usuario: req.usuario.id,
