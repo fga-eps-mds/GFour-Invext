@@ -12,6 +12,7 @@ interface Option {
     label: string
 }
 interface Props {
+    value: Assets,
     setValue: Function
 }
 
@@ -32,8 +33,8 @@ export const BuscaAtivo = (props: Props) => {
 
     }, []);
 
-    const handleChange = (e:unknown) =>{
-        if(e){
+    const handleChange = (e: unknown) => {
+        if (e) {
             const option = e as Option;
             props.setValue(option.value);
 
@@ -53,7 +54,14 @@ export const BuscaAtivo = (props: Props) => {
             isClearable
             components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
             onChange={handleChange}
-
+            value={props.value ?
+                {
+                    value: props.value,
+                    label: props.value.nome.concat(' - ', props.value.sigla)
+                }
+                :
+                null
+            }
         />
     );
 }

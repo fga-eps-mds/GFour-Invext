@@ -14,12 +14,12 @@ import { parse } from 'date-fns/esm';
 // Registro que sera mostrado para o usuario
 interface Register {
   id: number,
-  ativo: string, // == nomeAtivo
+  nomeAtivo: string,
   sigla: string,
-  ordem: string, // == execucao
+  execucao: string, 
   quantidade: number,
-  negociação: string, // == data
-  valor: string // == preco
+  data: string,
+  preco: string 
 }
 
 export const HistoricoDeAcoes = () => {

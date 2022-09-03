@@ -6,7 +6,7 @@ import { useState } from "react";
 import Axios from "axios";
 import { useAuth } from '../../services/Provider';
 import { useNavigate } from 'react-router-dom';
-import { BuscaAtivo } from './Busca';
+import { BuscaAtivo } from '../../components/BuscaAtivos/Busca';
 
 interface Assets {
     nome: string,
@@ -70,6 +70,7 @@ export const CadastroAcoes = () => {
             <div className="div-acoes">
                 <form onSubmit={handleSubmit} className="form-acoes">
                     <BuscaAtivo
+                        value={assets!}
                         setValue={setAssets}
                     />
 
