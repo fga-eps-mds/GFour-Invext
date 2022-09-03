@@ -10,14 +10,14 @@ import { useAuth } from "../../services/Provider";
 //base da tabela...estou usando tudo que tava no prototipo
 const columns: GridColDef[] = [
   //{ field: "id", headerName: "ID", width: 35 },
-  { field: "nomeAtivo", headerName: "Ações", width: 80 },
+  { field: "nomeAtivo", headerName: "Ações", width: 100 },
   { field: "sigla", headerName: "Sigla", width: 80 },
   { field: "porcentagem", headerName: "Porc.", width: 80 },
   { field: "quantidade", headerName: "Quant.", width: 80 },
   { field: "precoAtual", headerName: "Preço atual", width: 100 },
   { field: "precoMedio", headerName: "Preço médio", width: 100 },
   { field: "diferenca", headerName: "Diferença", width: 80 },
-  { field: "valorTotal", headerName: "Valor total", width: 80 },
+  { field: "valorTotal", headerName: "Valor total", width: 150 },
 ];
 
 //passo tudo que esta em field para essa interface...verificar se esta ok os nomes e os tipos.
@@ -54,10 +54,10 @@ export const Patrimonio = () => {
           sigla: ativo.sigla,
           porcentagem: ativo.porcentagem,
           quantidade: ativo.quantidade,
-          precoAtual: ativo.precoAtual,
-          precoMedio: ativo.precoMedio,
+          precoAtual: `R$ ${ativo.precoAtual.toFixed(2)}`,
+          precoMedio: `R$ ${ativo.precoMedio.toFixed(2)}`,
           diferenca: ativo.diferenca,
-          valorTotal: ativo.valorTotal,
+          valorTotal: `R$ ${ativo.valorTotal.toFixed(2)}`,
         })));
         console.log(response.data.ativos)
       })
