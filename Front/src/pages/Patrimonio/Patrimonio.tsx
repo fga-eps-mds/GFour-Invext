@@ -10,14 +10,14 @@ import { useAuth } from "../../services/Provider";
 //base da tabela...estou usando tudo que tava no prototipo
 const columns: GridColDef[] = [
   //{ field: "id", headerName: "ID", width: 35 },
-  { field: "nomeAtivo", headerName: "Ações", width: 100 },
-  { field: "sigla", headerName: "Sigla", width: 80 },
+  { field: "nomeAtivo", headerName: "Ações", width: 120 },
+  { field: "sigla", headerName: "Sigla", width: 80},
   { field: "porcentagem", headerName: "Porc.", width: 80 },
   { field: "quantidade", headerName: "Quant.", width: 80 },
-  { field: "precoAtual", headerName: "Preço atual", width: 100 },
-  { field: "precoMedio", headerName: "Preço médio", width: 100 },
+  { field: "precoAtual", headerName: "Preço atual", width: 100, type: 'number',valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`, align: 'center'},
+  { field: "precoMedio", headerName: "Preço médio", width: 100, type: 'number', valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`, align: 'left'},
   { field: "diferenca", headerName: "Diferença", width: 80 },
-  { field: "valorTotal", headerName: "Valor total", width: 150 },
+  { field: "valorTotal", headerName: "Valor total", width: 100, type: 'number', valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`, align:'left' },
 ];
 
 //passo tudo que esta em field para essa interface...verificar se esta ok os nomes e os tipos.
@@ -33,7 +33,7 @@ interface Ativo {
   valorTotal: number;
 }
 
-export const Patrimonio = () => {
+export const Patrimonio = () =>   {
   const auth = useAuth();
   const token = auth.getToken();
   const [patrimonio, setPatrimonio] = useState<Ativo[]>();
@@ -54,10 +54,10 @@ export const Patrimonio = () => {
           sigla: ativo.sigla,
           porcentagem: ativo.porcentagem,
           quantidade: ativo.quantidade,
-          precoAtual: `R$ ${ativo.precoAtual.toFixed(2)}`,
-          precoMedio: `R$ ${ativo.precoMedio.toFixed(2)}`,
+          precoAtual: ativo.precoAtual,
+          precoMedio: ativo.precoMedio,
           diferenca: ativo.diferenca,
-          valorTotal: `R$ ${ativo.valorTotal.toFixed(2)}`,
+          valorTotal: ativo.valorTotal,
         })));
         console.log(response.data.ativos)
       })
@@ -73,9 +73,9 @@ export const Patrimonio = () => {
 
   return (
     <div className="background-img-patrimonio">
+      
       <h1 className="titulo-patrimonio">Patrimônio</h1>
       <div className="div-patrimonio">
-      
         <div className="div-ativos-patrimonio">
         <span className="barra-patrimonio"></span>
         
