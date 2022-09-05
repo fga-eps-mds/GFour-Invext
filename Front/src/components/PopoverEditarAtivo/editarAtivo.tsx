@@ -1,7 +1,9 @@
 import { Dialog, DialogContent, Button, Select, MenuItem } from "@mui/material"
+import axios from "axios";
 import { useState } from "react";
 import { IMaskInput } from "react-imask";
 import { Register } from "../../pages/HistoricoDeAcoes/historico";
+import { returnToken } from "../../services/authToken";
 import { BuscaAtivo } from "../BuscaAtivos/Busca"
 import './editarAtivo.css'
 interface Assets {
@@ -17,7 +19,10 @@ interface Props {
 }
 export const EditarAtivo = (p: Props) => {
 
-    const initialAssets:Assets = {nome: p.initialValues.nomeAtivo, sigla:p.initialValues.sigla};
+    const token = returnToken();
+    const [error, setError] = useState("");
+
+    const initialAssets: Assets = { nome: p.initialValues.nomeAtivo, sigla: p.initialValues.sigla };
     const [assets, setAssets] = useState<Assets>(initialAssets); // É o ativo
     const [stockPrice, setStockPrice] = useState(p.initialValues.preco.toString()); //preço das ações
     const [date, setDate] = useState(p.initialValues.data);
@@ -25,14 +30,50 @@ export const EditarAtivo = (p: Props) => {
     const [type, setType] = useState(p.initialValues.execucao); // compra ou venda
     //para a formatar a data
     const [inputType, setInputType] = useState("text");
-    
+
     const closeModal = () => {
         p.setIsOpen(false);
     }
+
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        setError("");
+        if (!assets) {
+            setError("Selecione um ativo");
+
+        } else if (parseInt(quantity) <= 0) {
+            setError("É necessário inserir uma quantidade válida");
+
+        } else if (parseInt(stockPrice) <= 0) {
+            setError("É necessário inserir um valor válido");
+
+        } else{
+            axios.post("/ativo/editar",
+                {
+                    token: token,
+                    id: p.initialValues.id,
+                    sigla: assets.sigla,
+                    preco: stockPrice,
+                    quantidade: quantity
+        
+                }).then(function (response) {
+                    alert(response.data.message);
+                    p.callback();
+                    closeModal();   
+
+                }).catch(function (error) {
+                    const message = error.response.data.message;
+                    setError(message);
+                })
+        }
+    }
+
     return (
         <Dialog open={p.isOpen} onClose={closeModal} maxWidth="md">
             <DialogContent>
-                <form onSubmit={closeModal} className='modalEdit'>
+                <form onSubmit={handleSubmit} className='modalEdit'>
                     <h2>Editar Ativo</h2>
                     <div className="busca-ativo">
                         <BuscaAtivo
@@ -84,16 +125,16 @@ export const EditarAtivo = (p: Props) => {
                             value={type}
                             onChange={(e) => setType(e.target.value)}
                             placeholder="Ordem"
-
                         >
                             <MenuItem value='compra'>Compra</MenuItem>
                             <MenuItem value='venda'>Venda</MenuItem>
                         </Select>
                     </div>
                     <div className="buttonBox">
-                        <Button onClick={closeModal}>Cancelar</Button>
-                        <Button type="submit">Alterar</Button>  
+                        <Button type="button" onClick={closeModal}>Cancelar</Button>
+                        <Button type="submit">Alterar</Button>
                     </div>
+                    {error && <p className="error"> {error}</p>}
                 </form>
             </DialogContent>
 
