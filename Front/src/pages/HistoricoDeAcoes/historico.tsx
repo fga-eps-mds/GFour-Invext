@@ -8,18 +8,19 @@ import Axios from 'axios';
 import { format } from 'date-fns';
 import { excluirAtivo } from './excluirAtivo';
 import { parse } from 'date-fns/esm';
+import { EditarAtivo } from '../../components/PopoverEditarAtivo/editarAtivo';
 
 
 
 // Registro que sera mostrado para o usuario
-interface Register {
+export interface Register {
   id: number,
   nomeAtivo: string,
   sigla: string,
-  execucao: string, 
+  execucao: string,
   quantidade: number,
   data: string,
-  preco: string 
+  preco: string
 }
 
 export const HistoricoDeAcoes = () => {
@@ -31,6 +32,8 @@ export const HistoricoDeAcoes = () => {
   // Dita quando o historico deve ser puxado do backend
   const [renderData, setRenderData] = useState(true);
 
+  const [openEditModal, setEditModalOpen] = useState(false);
+  const [selectedRow, setSelectedRow] = useState<Register>();
 
   // Pega o historico do usuario do backend
   useEffect(() => {
@@ -45,7 +48,7 @@ export const HistoricoDeAcoes = () => {
         console.log(error);
       })
     }
-  },[renderData])
+  }, [renderData])
 
 
   const columns: GridColDef[] = [
@@ -58,12 +61,12 @@ export const HistoricoDeAcoes = () => {
       field: 'data',
       headerName: 'Negociação',
       width: 130,
-      valueFormatter: (params) => format(parse(params.value,'yyyy-MM-dd',new Date),"dd/MM/yyyy")
+      valueFormatter: (params) => format(parse(params.value, 'yyyy-MM-dd', new Date), "dd/MM/yyyy")
     },
-    { 
-      field: 'preco', 
+    {
+      field: 'preco',
       type: 'number',
-      headerName: 'Valor', 
+      headerName: 'Valor',
       width: 130,
       valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`
     },
@@ -78,7 +81,10 @@ export const HistoricoDeAcoes = () => {
           <GridActionsCellItem
             icon={<BiEdit />}
             label='Editar'
-            onClick={() => null}
+            onClick={() => {
+              setSelectedRow(params.row);
+              setEditModalOpen(true);
+            }}
           />
           <GridActionsCellItem
             icon={<RiDeleteBinLine />}
@@ -94,21 +100,30 @@ export const HistoricoDeAcoes = () => {
   ];
 
   return (
-    <div className="background-img">
-      <h1 className='titulo-historico'>Histórico de Ativos</h1>
-      <div className="div-historico">
-        <div style={{ height: 400, width: '100%' }}>
-          {historic ?
-            <DataGrid
-              rows={historic}
-              columns={columns}
-              pageSize={10}
-              rowsPerPageOptions={[10]}
-              isRowSelectable={() => false}
-            />
-            : null}
+    <>
+      <div className="background-img">
+        <h1 className='titulo-historico'>Histórico de Ativos</h1>
+        <div className="div-historico">
+          <div style={{ height: 400, width: '100%' }}>
+            {historic ?
+              <DataGrid
+                rows={historic}
+                columns={columns}
+                pageSize={10}
+                rowsPerPageOptions={[10]}
+                isRowSelectable={() => false}
+              />
+              : null}
+          </div>
         </div>
       </div>
-    </div>
+      {openEditModal &&
+        <EditarAtivo
+          isOpen={openEditModal}
+          setIsOpen={setEditModalOpen}
+          initialValues={selectedRow!}
+          callback={() => setRenderData(true)}
+        />}
+    </>
   )
 }

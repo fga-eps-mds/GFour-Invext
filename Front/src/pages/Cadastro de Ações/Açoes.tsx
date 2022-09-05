@@ -101,7 +101,7 @@ export const CadastroAcoes = () => {
                                 setQuantity(e.target.value)}
                         />
                     </div >
-                    <div className="date-input">
+                    <div>
                         <input
                             type={inputType}
                             name="date"
