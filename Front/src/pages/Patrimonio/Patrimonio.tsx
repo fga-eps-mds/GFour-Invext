@@ -1,8 +1,5 @@
 import "./Patrimonio.css";
 import { useState, useEffect } from "react";
-import { FaMoneyBillWave } from "react-icons/fa";
-import { BsEye, BsEyeSlash } from "react-icons/bs";
-import { AiOutlineRise } from "react-icons/ai";
 import Axios from "axios";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { useAuth } from "../../services/Provider";
@@ -77,18 +74,16 @@ export const Patrimonio = () =>   {
       <h1 className="titulo-patrimonio">Patrimônio</h1>
       <div className="div-patrimonio">
         <div className="div-ativos-patrimonio">
-        <span className="barra-patrimonio"></span>
-        
-        <div className="div-grid-patrimonio">
-          {patrimonio ? (
-            <DataGrid
-            rows={patrimonio}
-            columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[5]}
-            />
-            ) : null}
-          
+          <div className="div-grid-patrimonio">
+            {patrimonio ? (
+              <DataGrid
+              rows={patrimonio}
+              columns={columns}
+              pageSize={5}
+              rowsPerPageOptions={[5]}
+              />
+              ) : null}
+            
             </div>
         </div>
       </div>
