@@ -15,9 +15,6 @@
     margin-left: 10%;
     width: 90% !important;
     cursor: text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .react-select__indicators{

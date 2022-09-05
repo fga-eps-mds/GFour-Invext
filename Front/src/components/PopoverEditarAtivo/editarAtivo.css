@@ -2,7 +2,6 @@
     background-color: #060b26;
     display: flex;    
     flex-direction: column;
-    padding: 10%;
    
 }
 
@@ -14,7 +13,7 @@
     color: white;
     gap:1.25em;
     padding: 2.5% 5%;
-    padding-bottom: 7.5%;
+    padding-bottom: 5%;
 }
 .modalEdit h2{
     width: 100%;
@@ -24,9 +23,9 @@
     font-weight: bold;
 }
 .busca-ativo{
-    width: 100%;
-    font-size: 1em;
-    color:gray;
+    display: block !important;
+    width: 100% !important;
+    font-size: 0.8em !important;
     font-family: 'Roboto';
 }
 .modalEdit-linebox {
