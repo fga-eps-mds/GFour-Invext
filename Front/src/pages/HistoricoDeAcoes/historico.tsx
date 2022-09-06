@@ -75,7 +75,7 @@ export const HistoricoDeAcoes = () => {
       headerName: ' ',
       sortable: false,
       disableColumnMenu: true,
-      width: 80,
+      width: 60,
       renderCell: (params) => [
         <div key={params.id}>
           <GridActionsCellItem
