@@ -1,5 +1,6 @@
 import "./rentabilidade.css";
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { VictoryChart, VictoryLine, VictoryTheme} from 'victory';
 
 const columns: GridColDef[] = [
   { field: 'ativo', headerName: 'Ativo', width:120},
@@ -19,6 +20,26 @@ export const Rentabilidade = () => {
         <div className="background-img-rentabilidade">
           <h1 className="titulo-rentabilidade">Rentabilidade</h1>
           <div className="div-rentabilidade">
+            <div className ="div-chart-rentabilidade">
+            <div style={{ height: 350, width: '100%' }}>
+              <VictoryChart
+                theme={VictoryTheme.material}
+                >
+                <VictoryLine
+                  style={{
+                    data: { stroke: "#fafafa" },
+                  }}
+                  data={[
+                    { x: 0, y: 0 },
+                    { x: 5, y: 10},
+                    { x: 6, y: 20},
+                    { x: 10, y: 30},
+                    { x: 1, y: 40 }
+                  ]}
+                  />
+              </VictoryChart>
+            </div>
+            </div>
              <div className="div-grid-rentabilidade">
                <div style={{ height: 350, width: '100%' }}>
                 <DataGrid

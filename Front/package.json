@@ -24,7 +24,8 @@
     "react-router-dom": "^6.3.0",
     "react-select": "^5.4.0",
     "react-window": "^1.8.7",
-    "react-windowed-select": "^5.1.0"
+    "react-windowed-select": "^5.1.0",
+    "victory": "^36.6.6"
   },
   "devDependencies": {
     "@types/module-alias": "^2.0.1",
