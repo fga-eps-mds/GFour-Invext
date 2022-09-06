@@ -274,4 +274,87 @@
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
 |--|--|--|--|--|--|--|--|
 |✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     05 / 09
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+ * Alterações na tela de Carteira: Dividida em duas telas, patrimônio e rentabilidade
+ * Patrimônio foi feita e tela de Rentabilidade já está encaminhada
+ * Tela de Histórico praticamente finalizada, com os botões de excluir e editar ativo
+ * Parte do Patrimônio já realizada no backend
+ * Índices da B3 já realizados no Front
+
+2. ### _**Itens de ação**_
+
+ * Ver bug da tela de Patrimônio (Frontend)
+ * Alterar editar ativo para só conseguir editar quantidade, preço e data (Backend e Frontend)
+ * Criar validação de excluir ativo (Backend)
+ * Ver questão dos testes (Backend)
    
+3. ### _**Dúvidas**_
+
+ * 
+   
+4. ### _**Comunicados finais**_
+
+ * Colocar alterações do código no github até quarta para o Fork
+
+5. ### _**Retrospect**_
+  * Perguntas:
+         - O que gostamos e queremos continuar fazendo na próxima sprint?
+         - O que aprendemos nessa sprint e devemos aplicar na próxima?
+         - O que erramos e temos que melhorar para a próxima sprint?
+
+
+Léo
+1. Organização da equipe
+2. Dar Pull Request nas alterações feitas
+3. Esquecer de dar o pull request e não apagar as branchs antigas
+
+Amanda
+1. Organização, comunicação e ajudar o outro
+2. Biblioteca para gráfico/tabela/outros 
+3. Esquecer de apagar as branchs
+
+Lucas Gomes
+1. Organização
+2. Apagar as branchs antigas
+3. Não apagar as branchs
+
+Josué
+1. Organização do grupo, desenvolvendo bem as tarefas
+2. Aprender sobre testes, e a dificuldade de aplicar
+3. Branchs e poucos comentários nas issues
+
+Abritta
+1. Acho que estamos andando muito bem nessa reta final e acho que somos uma equipe MUITO boa!
+2. Aprendi a mexer na parte de testes no back-end, e agradecer ao Josué por ter me ensinado bastante coisa
+3. Acho que errei em contar em fazer muita coisa nessa semana e ter recebido um wi-fi limitado aqui no hotel.
+
+Antônio
+1. Melhor grupo
+2. Aprendeu sobre datagrid e css
+3. Poucos comentários nas issues e Pull Requests
+
+Lucas Felipe
+1. Empenho da galera do frontend nas entregas, e de forma geral todo mundo do grupo muito empenhado
+2. Aprender sobre Datagrid
+3. Problemas com Pull Request
+
+Luciano
+1. Entregas da semana, e projeto como um todo
+2. Adiar reunião não dá certo
+3. Separar backend e frontend não é tão eficaz
+
+
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+
