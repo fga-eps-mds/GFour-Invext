@@ -26,6 +26,7 @@ export const Rentabilidade = () => {
                 theme={VictoryTheme.material}
                 >
                 <VictoryLine
+                interpolation={'natural'}
                   style={{
                     data: { stroke: "#fafafa" },
                   }}
