@@ -8,6 +8,8 @@ import { AuthProvider } from './services/Provider';
 import { RequireAuth } from './services/requireAuth';
 import { Sidebar } from './pages/Sidebar/Sidebar';
 import { PublicRoute } from './services/publicRoute';
+import { Rentabilidade } from './pages/Rentabilidade/rentabilidade';
+import { Patrimonio } from './pages/Patrimonio/Patrimonio';
 
 function App() {
 
@@ -28,7 +30,9 @@ function App() {
           }>
             <Route path="/index/acoes" element={<CadastroAcoes />} />
             <Route path="/index/historico" element={<HistoricoDeAcoes />} />
-          </Route>
+            <Route path="/index/rentabilidade" element={<Rentabilidade />} /> 
+            <Route path="/index/patrimonio" element={<Patrimonio />} /> 
+          </Route> 
         </Routes>
       </AuthProvider>
     </div>

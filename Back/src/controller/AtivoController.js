@@ -7,6 +7,8 @@ const auth = require("../middleware/auth");
 const Ativo = require("../models/Ativo");
 const AtivosB3 = require("../models/AtivosB3");
 
+const ativosB3Util = require("../util/AtivosB3Util");
+
 router.post("/cadastrar", auth, async (req, res) => {
     const novo_ativo = {
         id_usuario: req.usuario.id,
@@ -67,11 +69,22 @@ router.post("/vender", auth, async (req,res) => {
         },
     })
 
-    if (ativo_vendido[0] == null) {
-        var totalQuantidade = ativo_comprado[0].total - 0;
+
+    if (ativo_comprado[0] == null) {
+        return res.status(400).json({
+            erro: true,
+            message: "Não existe ativo para vender"
+        })
     } else {
-        var totalQuantidade = ativo_comprado[0].total - ativo_vendido[0].total;
+        if (ativo_vendido[0] == null) {
+            var totalQuantidade = ativo_comprado[0].total - 0;
+        } else {
+            var totalQuantidade = ativo_comprado[0].total - ativo_vendido[0].total;
+        }
     }
+
+   
+
 
     const nova_venda = {
         id_usuario: req.usuario.id,
@@ -130,6 +143,37 @@ router.post("/historico", auth, async (req,res) => {
     })
 
 })
+
+// Rota que envia o patrimonio do usuario
+router.post("/patrimonio", auth, async (req, res) => {
+    await Ativo.findAll({
+        attributes: [
+            [sequelize.fn('DISTINCT', sequelize.col('sigla')), 'sigla'],
+        ],
+        where: {
+            "id_usuario": req.usuario.id
+        },
+    }).then(async (ativos) => {
+        let siglas = []
+        for (let ativo of ativos) {
+            siglas.push(ativo.dataValues.sigla);
+        }
+        
+        const patrimonio = await ativosB3Util.calculaPatrimonio(siglas, req.usuario.id);
+        
+        return res.json({
+            erro: false,
+            ativos: patrimonio
+        });
+
+    }).catch((error) => {
+        console.log(error);
+        return res.status(400).json({
+            erro: true,
+            ativos: []
+        })
+    });
+});
 
 router.post("/editar", auth, async (req,res) => {
     const { id } = req.body;
