@@ -16,15 +16,16 @@
 .div-patrimonio{
     display: flex;
     flex-direction: column;
-    padding: 2.5%;
-    width: 60%;
-    height: 50%;
+    padding: 1.0%;
+    width: 70%;
+    height: 70%;
     background-color: rgba(10, 17, 79, 0.904);
     border-radius: 40px;
 }  
 
 .titulo-patrimonio{
     text-align: center;
+    margin-top: 1.0em;
     font-size: 2.5em;
     margin-bottom: 0.5em; 
     color: white;
@@ -32,21 +33,20 @@
 }
 
 .div-ativos-patrimonio ul {
+    margin-top: auto;
     color: #000000;
-    padding-right: 10px;
+    padding-right: 5px;
     display: flex;
 }
 .div-ativos-patrimonio li{
-    padding: 10px;
+    padding: 5px;
 }
 
 .div-grid-patrimonio {      
-    border: 2px solid;
-    border-color: black;
+    border-color: #ffff;
     height: 60%; 
-    width: 70%;
+    width: 85%;
     margin-left: 50%;
-    margin-top: 3%;
     transform: translate(-50%);
     padding: 2.0%; 
     height: 25em;
