@@ -38,16 +38,16 @@
     margin-left: 65%;
     margin-top: 2%;
     padding: 2.0%; 
-    background-color: #dcdcdc;
-    border: 2px solid black;
-    border-color:black;
-    border-radius: 15%;
+    background-color: #dcdcdcd3;
+    border: 1px solid;
+    border-color:#fff;
+    border-radius: 1cm;
 }  
 
 .barra-rentabilidade { 
     background-color: #241453;
     margin-top: 2em;
-    margin-left: -5%;
+    margin-left: -50%;
     width: 0.5em;
     height: 15em;
 }
