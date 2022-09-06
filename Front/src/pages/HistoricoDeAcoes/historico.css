@@ -31,36 +31,8 @@
     display: flex;
     flex-direction: column;
     padding: 2%;
-    width: 80%;
-    background-color: #dadadace;
+    width: 72%;
+    background-color: #cacacaf1;
     border-radius: 0.5cm;
     color: white;
-}
-.div-historico table {
-    background-color: #dadada4d;
-    width: 100%;
-}
-.div-historico table th {
-    background-color: #181f33d2;
-    color: #fff;
-   
-}
-.div-historico table td {
-    background-color: #dadada4d;
-    color: #0c0c0c;
-}
-.buttonBox{
-    display: flex;
-    margin-top: 6%;
-}
-.select-button {
-    background-color:#181f33d2;
-    color:white; 
-    border-radius: 10cm;
-    font-size: 0.8em;
-    text-align: center;
-    padding: 0.1mm 0.5cm; 
-    cursor:pointer;
-    transition: 0.25s;
-    margin-right: 25%;
 }
