@@ -114,3 +114,55 @@ exports.calculaPatrimonio = async function (siglas, id_usuario) {
     }
     return lista;
 }
+
+exports.calculaRentabilidade = async function (datas, id_usuario) {
+    const sc = new sequelize("usuario", "root", "12345678", {
+        host: 'localhost',
+        dialect: 'mysql'
+    });
+
+    var lista = [];
+    for (let data of datas) {
+        var vTotal = 0;
+        await sc.query(`SELECT * FROM ativos WHERE data LIKE '${data}%' AND id_usuario = ${id_usuario}`).then(async (res) => {
+            // console.log(res);
+            let pTotal = 0, pTotalatt = 0;
+            for (var i = 0; i < res.length; i++) {
+                for (let result of res[i]) {
+                    // console.log(result, i);
+                    const { sigla } = result;
+                    const { preco } = result;
+                    const { quantidade } = result;
+                    const { execucao } = result;
+                    
+                    let precoAtual = await AtivosB3.findAll({
+                        attributes: ['valor_fechamento'],
+                        where: {
+                        "codigo_acao": sigla
+                        }
+                    });
+                    precoAtual = precoAtual[0].valor_fechamento;
+
+                    if (execucao === "compra") {
+                        pTotal = parseFloat(preco) * parseInt(quantidade);
+                        pTotalatt = parseFloat(precoAtual) * parseInt(quantidade);
+                    } else {
+                        pTotal = (-1) * parseFloat(preco) * parseInt(quantidade);
+                        pTotalatt = (-1) * parseFloat(precoAtual) * parseInt(quantidade);
+                    }
+                    vTotal += pTotal;
+                    // console.log(execucao, preco, quantidade, precoAtual, vTotal);
+                }
+                // console.log(vTotal, data, i);
+            }
+            
+            const rentabilidade = {
+                data: data,
+                valor: vTotal,
+            }
+
+            lista.push(rentabilidade);
+        });
+    }
+    return lista;
+}
