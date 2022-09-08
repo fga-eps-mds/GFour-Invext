@@ -309,9 +309,56 @@ Todos:
          
 | Finalizados | Não finalizados |
 |--|--|
+|Página Histórico|Ajustar o editar ativo(frontend)|
+|Página Patrimônio|validação de excluir ativo (backend)|
+|Editar ativo (backend)|--|
+|Bug da barra de pesquisa finalizada|--|
+|Testes no backend inicializado|--|
    
 ### _**Participantes de Acordo e Cientes**_
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
 |--|--|--|--|--|--|--|--|
 |✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 12
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     07/09 à 14/09
+ </h1>
+</p>
+
+Front-end:
+         
+         - Refatorar editar ativo - Luciano
+         - Finalizar a tela de Rentabilidade - Todos do Front
+
+Back-end:
+        
+         - Realizar as coberturas de testes - Josué e Abritta
+         - Finalizar rentabilidade - Gomes e Léo
+  
+Todos:
+    Revisar:
+         - Diagrama de bancos - Léo
+         - Diagrama de classes - Gomes
+         - Diagrama de pacotes - Josué
+    
+    - Revisar o protótipo e colocar no gitpages - Antônio
+    - Revisar requisitos do doc de visão - Lucas Felipe
+    - Revisar documento de arquitetura - Luciano
+         
+| Finalizados | Não finalizados |
+|--|--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|❓|✔️|✔️|✔️|✔️|❓|✔️|✔️|
 -----------------------------------------------------------------------------------------------------------
