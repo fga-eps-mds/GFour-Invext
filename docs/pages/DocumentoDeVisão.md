@@ -160,7 +160,7 @@
       - Vincular seus dados financeiros na plataforma como forma de armazenamento de seus dados e coleta de dados elaborados diretamente pela plataforma.
       - Visualização de dados e gráficos acerca de sua situação financeira.
       - Visualização acerca de seus lucros, prejuízos, investimentos e estimativas sobre sua conta mediante ao seu histórico de variação nos últimos períodos.
-      - Possibilidade de visualização de dados com diferentes tipos de moeda, tais quais: **Real, Euro** e **Dólar**.
+      - Possibilidade de visualização de dados com diferentes tipos de moeda, tais quais: **Real.
       - Acesso aos mais variados recursos da plataforma de forma totalmente grátis, isto é, sem nenhum acréscimo de valor mediante a quaisquer funcionalidade da plataforma.
 
    ### 5.2. **_Usuário_**
@@ -193,9 +193,7 @@
 - RF4: Deve ser possível inserir itens, editar lista e excluir da Rentabilidade.
 - RF5: Deve ser possível realizar a busca de investimentos no sistema por valor, quantidade ou descrição.
 - RF6: Deve ser possível realizar a busca de melhores investimentos no sistema pela sua rentabilidade.
-- RF7: Deve ser possível realizar visualização de notícias do mercado de Investimentos (consumir alguma API, inserir algumas notícias específicas no banco de dados ou minerar essas notícias de algum site (infomoney, xp, …).
-- RF8: Deve ser possível buscar a cotação das principais moedas
-- RF9: Deve ser possível classificar a carteira por setorização
+
 
    ## **Requisitos Não Funcionais**
 
@@ -204,4 +202,4 @@
 - RNF3: O software deve ser desenvolvido Base de dados: MySQL.
 - RNF4: A interação com o usuário deve ser feita por meio de interface gráfica.
 - RNF5: O software desenvolvido será para ambiente web.
-- RFN6: O valor dos produtos devem estar em Real, Dólar e Euro.
+
