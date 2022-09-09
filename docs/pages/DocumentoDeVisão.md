@@ -151,7 +151,7 @@
    O Software em questão tem como objetivo de retornar dados simplificados acerca da situação financeira anteriormente cadastrada por parte do usuário. Fazendo-se assim, que o usuário tenha um melhor entendimento acerca de sua “carteira”.
 
    ### 4.3. **_Suposições e dependências_**
-   O Software em questão demanda de alguns dados a serem consumidos de uma interface de programação de aplicativos (API) denominada XXX. Essa aplicação tende a ter um dado prazo de validade à medida que os dados da API não sejam mais atualizados. O aplicativo em questão vai demandar que o usuário tenha acesso a um aparelho e internet para que possa acessar devidamente o aplicativo web.
+   O Software em questão demanda de alguns dados a serem consumidos de uma interface de programação de aplicativos (API) denominada B3. Essa aplicação tende a ter um dado prazo de validade à medida que os dados da API não sejam mais atualizados. O aplicativo em questão vai demandar que o usuário tenha acesso a um aparelho e internet para que possa acessar devidamente o aplicativo web.
 
 5. ## **Recursos do Produto**
 
