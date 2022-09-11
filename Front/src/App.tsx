@@ -10,6 +10,7 @@ import { Sidebar } from './pages/Sidebar/Sidebar';
 import { PublicRoute } from './services/publicRoute';
 import { Rentabilidade } from './pages/Rentabilidade/rentabilidade';
 import { Patrimonio } from './pages/Patrimonio/Patrimonio';
+import { PageNotFound } from './components/PageNotFound/PageNotFound';
 
 function App() {
 
@@ -23,16 +24,18 @@ function App() {
             <Route path="/cadastro" element={<CadastroUsuario />} />
           </Route>
 
-          <Route path="/index" element={
+          <Route element={
             <RequireAuth>
               <Sidebar />
             </RequireAuth>
           }>
-            <Route path="/index/acoes" element={<CadastroAcoes />} />
-            <Route path="/index/historico" element={<HistoricoDeAcoes />} />
-            <Route path="/index/rentabilidade" element={<Rentabilidade />} /> 
-            <Route path="/index/patrimonio" element={<Patrimonio />} /> 
-          </Route> 
+            <Route path="/acoes" element={<CadastroAcoes />} />
+            <Route path="/historico" element={<HistoricoDeAcoes />} />
+            <Route path="/rentabilidade" element={<Rentabilidade />} />
+            <Route path="/patrimonio" element={<Patrimonio />} />
+          </Route>
+
+            <Route path='/*' element={<PageNotFound />} />
         </Routes>
       </AuthProvider>
     </div>
