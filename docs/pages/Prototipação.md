@@ -27,17 +27,17 @@
     <img src="/GFour-Invext/assets/meuPerfil2Proto.png" width="750" height="500" />
 
 5. ### _**Menu**_
-    Essa é a tela da Carteira.
+    Essa é a tela do Patrimônio.
     <img src="/GFour-Invext/assets/menu1Proto.png" width="750" height="500" />
-    
-    Essa é a tela do Histórico de ações.
+
+    Essa é a tela da Rentabilidade.
     <img src="/GFour-Invext/assets/menu2Proto.png" width="750" height="500" />
     
-    Essa é a tela de Comprar/Vender.
-    <img src="/GFour-Invext/assets/menu3Proto.png" width="750" height="500" />
+    Essa é a tela do Histórico de Ativos.
+    <img src="/GFour-Invext/assets/menuHistorico.png" width="750" height="500" />
     
-    Essa é a tela de Cadastro de Ações.
-    <img src="/GFour-Invext/assets/menu4Proto.png" width="750" height="500" />
+    Essa é a tela de Compra/Venda Ativos.
+    <img src="/GFour-Invext/assets/menu3Proto.png" width="750" height="500" />
     
 6. ### _**Sidebar**_
 
