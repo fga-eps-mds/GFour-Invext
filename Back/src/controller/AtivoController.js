@@ -175,16 +175,44 @@ router.post("/patrimonio", auth, async (req, res) => {
     });
 });
 
+// Rota que envia a Rentabilidade do usuario
+router.post("/rentabilidade", auth, async (req, res) => {
+    const sc = new sequelize("usuario", "root", "12345678", {
+        host: 'localhost',
+        dialect: 'mysql'
+    });
+
+    await sc.query(`SELECT DISTINCT(SUBSTRING_INDEX(data, '-', 2)) as data FROM ativos WHERE id_usuario = ${req.usuario.id}`).then(async (results) => {
+        let datas = []
+        for (let data of results[0]) {
+            datas.push(data.data);
+        }
+        const rentabilidade = await ativosB3Util.calculaRentabilidade(datas, req.usuario.id);
+        
+        return res.json({
+            erro: false,
+            rentabilidade: rentabilidade
+        });
+
+    }).catch((error) => {
+        console.log(error);
+        return res.status(400).json({
+            erro: true,
+            ativos: []
+        })
+    });
+});
+
 router.post("/editar", auth, async (req,res) => {
     const { id } = req.body;
-    const { sigla } = req.body;
+    const { data } = req.body;
     const { preco } = req.body;
     const { quantidade } = req.body;
 
     try {
-        if (sigla !== null) {
+        if (data !== null) {
             await Ativo.update(
-                { sigla: sigla },
+                { data: data },
                 { where: {id: id}}
             );     
         }

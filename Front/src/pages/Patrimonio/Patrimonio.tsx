@@ -14,7 +14,7 @@ const columns: GridColDef[] = [
   { field: "precoAtual", headerName: "Preço atual", width: 100, type: 'number',valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`, align: 'center'},
   { field: "precoMedio", headerName: "Preço médio", width: 100, type: 'number', valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`, align: 'left'},
   { field: "diferenca", headerName: "Diferença", width: 80 },
-  { field: "valorTotal", headerName: "Valor total", width: 100, type: 'number', valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`, align:'left' },
+  { field: "valorTotal", headerName: "Valor total", width: 100, type: 'number', valueFormatter: (params) => `R$ ${params.value}`, align:'left' },
 ];
 
 //passo tudo que esta em field para essa interface...verificar se esta ok os nomes e os tipos.

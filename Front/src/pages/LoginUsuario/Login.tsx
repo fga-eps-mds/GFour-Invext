@@ -27,7 +27,7 @@ const LoginUsuario = () => {
             const token = response.data.token;  
 
             auth.login(token, () => {
-                navigate("/index", { replace: true });
+                navigate("/patrimonio", { replace: true });
             });
 
         }).catch(function (response) {
