@@ -42,14 +42,14 @@ export const Sidebar = () => {
               {SidebarData.map((item, index) => {
                 return item.path === "sair" ? (
                   <li key={index} className="nav-text" onClick={() => logout()}>
-                    <div className="nav-link">
+                    <div className={item.className}>
                       {item.icon}
                       <span>{item.title}</span>
                     </div>
                   </li>
                 ) : (
                   <li key={index} className="nav-text">
-                    <Link to={item.path} className="nav-link">
+                    <Link to={item.path} className={item.className}>
                       {item.icon}
                       <span>{item.title}</span>
                     </Link>

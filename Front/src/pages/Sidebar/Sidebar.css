@@ -58,6 +58,11 @@
   background-color: #1a83ff;
 }
 
+.nav-link.disabled{
+  pointer-events: none;
+  color: gray;
+}
+
 .nav-menu-items {
   width: 100%;
   display: flex;
