@@ -1,6 +1,11 @@
 import "./rentabilidade.css";
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { VictoryChart, VictoryLine, VictoryTheme } from 'victory';
+import { useAuth } from "../../services/Provider";
+import { useEffect, useState } from "react";
+import Axios from "axios";
+import {format, parse} from "date-fns";
+import ptBR from 'date-fns/locale/pt-BR';
 
 const columns: GridColDef[] = [
   { field: 'ativo', headerName: 'Ativo', width: 120 },
@@ -14,8 +19,39 @@ const rows = [
   { id: 4, ativo: 'Vale', sigla: 'VALE3' },
 ];
 
+interface Rentabilidade {
+  x: Date,
+  y: number
+}
 
 export const Rentabilidade = () => {
+
+  const token = useAuth().getToken();
+  const [data, setData] = useState<Rentabilidade[]>([]);
+
+  console.log(data);
+  const getData = () => {
+
+    Axios.post('/ativo/rentabilidade', {
+      token: token
+    }).then(function (response) {
+      setData(response.data.rentabilidade.map(
+        (item: any) => ({
+          x: format(parse(item.data, 'yyyy-MM', new Date()),"MMM/yyyy", {locale: ptBR}),
+          y: item.valor
+        }))
+      );
+
+    }).catch(function (error) {
+      console.log(error.message);
+    })
+  }
+
+  useEffect(() => {
+    getData();
+
+  }, []);
+
   return (
     <div className="background-img-rentabilidade">
       <h1 className="titulo-rentabilidade">Rentabilidade</h1>
@@ -26,17 +62,13 @@ export const Rentabilidade = () => {
               theme={VictoryTheme.material}
             >
               <VictoryLine
-                interpolation={'natural'}
+                interpolation={'linear'}
+                data={data}
                 style={{
-                  data: { stroke: "#fafafa" },
+                  data: { stroke: "#060b26" },
                 }}
-                data={[
-                  { x: 0, y: 0 },
-                  { x: 5, y: 10 },
-                  { x: 6, y: 20 },
-                  { x: 10, y: 30 },
-                  { x: 1, y: 40 }
-                ]}
+                
+
               />
             </VictoryChart>
           </div>
