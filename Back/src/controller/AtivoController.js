@@ -205,14 +205,14 @@ router.post("/rentabilidade", auth, async (req, res) => {
 
 router.post("/editar", auth, async (req,res) => {
     const { id } = req.body;
-    const { sigla } = req.body;
+    const { data } = req.body;
     const { preco } = req.body;
     const { quantidade } = req.body;
 
     try {
-        if (sigla !== null) {
+        if (data !== null) {
             await Ativo.update(
-                { sigla: sigla },
+                { data: data },
                 { where: {id: id}}
             );     
         }

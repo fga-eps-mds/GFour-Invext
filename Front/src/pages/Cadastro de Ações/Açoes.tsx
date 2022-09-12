@@ -79,7 +79,6 @@ export const CadastroAcoes = () => {
                             mask={Number}
                             scale={2}
                             name="preco"
-                            max={999.99}
                             radix="."
                             mapToRadix={[',']}
                             padFractionalZeros={true}
