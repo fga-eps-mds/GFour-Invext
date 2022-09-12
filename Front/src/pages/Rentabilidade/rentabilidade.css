@@ -14,13 +14,12 @@
 
 .div-rentabilidade{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     padding: 2%;
     width: 70%;
     height: 65%;
     background-color: #A9A9A9;
     border-radius: 1cm;
-    margin-top: 0.5%;
 }  
 
 .titulo-rentabilidade{
@@ -33,10 +32,9 @@
 }
 
 .div-grid-rentabilidade {    
-    width: 20%;
-    height: 25em;
+    width: 30%;
+    height: 90%;
     margin-top: 0cm;
-    margin-left: 70%;
     padding: 2.0%; 
     background-color: #dcdcdcd3;
     border: 1px solid;
@@ -45,10 +43,8 @@
 }  
 
 .div-chart-rentabilidade{
-    width: 50%;
+    width: 60%;
     height: -25em;
-    margin-left: 3%;
-    margin-top: 2%;
     padding: 2.0%; 
     background-color: #dcdcdcb0;
     border: 1px solid;
