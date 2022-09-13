@@ -96,6 +96,7 @@ exports.calculaPatrimonio = async function (siglas, id_usuario) {
             
             console.log(pTotalatt);
             console.log(pTotal);
+            console.log(vTotal);
 
             const patrimonio = {
                 nomeAtivo: pNomeAtivo,
@@ -110,13 +111,13 @@ exports.calculaPatrimonio = async function (siglas, id_usuario) {
 
             lista.push(patrimonio);
 
-            // Percorre os valores da lista e calcula a porcentagem.
-            for (let x of lista) {
-                const calculo = ((pTotalatt / vTotal)*100).toFixed(2);
-                x.porcentagem = calculo;
-            }
         });
     }
+    // Percorre os valores da lista e calcula a porcentagem.
+    for (let x of lista) {
+        x.porcentagem = ((x.valorTotal / vTotal)*100).toFixed(2);
+    }
+
     return lista;
 }
 
