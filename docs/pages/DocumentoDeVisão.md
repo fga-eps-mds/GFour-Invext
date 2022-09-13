@@ -202,4 +202,4 @@
 - RNF3: O software deve ser desenvolvido Base de dados: MySQL.
 - RNF4: A interação com o usuário deve ser feita por meio de interface gráfica.
 - RNF5: O software desenvolvido será para ambiente web.
-
+- RNF6: O software deve ser testado via Jest.js
