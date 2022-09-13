@@ -357,4 +357,41 @@ Luciano
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
 |--|--|--|--|--|--|--|--|
 |✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     12 / 09
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+ * Editar ativo no front
+ * Gráfico de Rentabilidade feito no front
+ * Diagrama de Bancos revisado
+ * Rentabilidade feita (backend)
+ * Revisado Documento de Visão
+ * Protótipo atualizado e já no gitpages
+
+2. ### _**Itens de ação**_
+
+ * Remover tabela da Rentabilidade - Luciano
+ * Finalizar testes do backend - Josué
+ * Diagrama de Pacotes - Léo
+ * Diagrama de classes - Luquinhas e Gomes
+ * Finalizar Rentabilidade - Gomes
+ * Revisar Documento de Arquitetura - Luciano e Amanda
+   
+3. ### _**Dúvidas**_
+
+ * Perguntar para professora se será necessário deploy do site
+   
+4. ### _**Comunicados finais**_
+
+
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|❓|✔️|❓|❓|✔️|✔️|✔️|✔️|
 
