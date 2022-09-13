@@ -9,9 +9,9 @@ describe("Testes de usuario", () => {
   beforeEach(async () => {
     console.log("Iniciando os Testes");
   });
-  afterAll(async () => {
-    db.close();
-  });
+  // afterAll(async () => {
+  //   db.close();
+  // });
   
   it("E possivel criar um novo usuario", async () => {
 
@@ -19,14 +19,14 @@ describe("Testes de usuario", () => {
       nomeCompleto: "asd",
       dataNascimento: "02/02/2002",
       telefone: "61998753416",
-      email: "asd22@gmail.com",
+      email: "asd223@gmail.com",
       senha: "123456789",
   }
   const novo_usuario2 = {
     nomeCompleto: "asd",
     dataNascimento: "02/02/2002",
     telefone: "61998753416",
-    email: "asd21@gmail.com",
+    email: "asd25@gmail.com",
     senha: "123456789",
 }
     
