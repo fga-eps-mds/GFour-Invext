@@ -155,8 +155,9 @@ exports.calculaRentabilidade = async function (datas, id_usuario) {
                         }
                     }
 
+                    // cria a string da data do pregao do mes
                     const pregao = `${data.split("-")[0]}${data.split("-")[1]}`
-                    // ultimo dia util do mes
+                    // descobre qual o preco de fechamento do ultimo dia do mes em especifico que teve pregao
                     const precoAtual = await calculaPrecoAtual(pregao, sigla);
                     
                     precoMedio = precoMedio / qtComprada;
@@ -185,7 +186,7 @@ exports.calculaRentabilidade = async function (datas, id_usuario) {
 
 async function calculaPrecoAtual(data, sigla) {
     return new Promise((resolve, reject) => {
-        Axios.get(`https://api-cotacao-b3.labdo.it/api/cotacao/cd_acao/${sigla}/100`, {
+        Axios.get(`https://api-cotacao-b3.labdo.it/api/cotacao/cd_acao/${sigla}/100`, { // devolve os ultimos 100 pregoes desse ativo
         }).then(function(res) {
             for (let pregao of res.data) {
                 const { dt_pregao } = pregao;
