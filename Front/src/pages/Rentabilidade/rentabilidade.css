@@ -31,19 +31,8 @@
     margin-top: 5%;        
 }
 
-.div-grid-rentabilidade {    
-    width: 30%;
-    height: 90%;
-    margin-top: 0cm;
-    padding: 2.0%; 
-    background-color: #dcdcdcd3;
-    border: 1px solid;
-    border-color:#fff;
-    border-radius: 1cm;
-}  
-
 .div-chart-rentabilidade{
-    width: 60%;
+    width: 100%;
     height: -25em;
     padding: 2.0%; 
     background-color: #dcdcdcb0;

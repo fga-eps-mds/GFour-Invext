@@ -1,10 +1,10 @@
 import "./rentabilidade.css";
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import { VictoryChart, VictoryLine, VictoryTheme } from 'victory';
+import { VictoryChart, VictoryLabel, VictoryLine, VictoryTheme, VictoryZoomContainer } from 'victory';
 import { useAuth } from "../../services/Provider";
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import {format, parse} from "date-fns";
+import { format, parse } from "date-fns";
 import ptBR from 'date-fns/locale/pt-BR';
 
 const columns: GridColDef[] = [
@@ -37,8 +37,8 @@ export const Rentabilidade = () => {
     }).then(function (response) {
       setData(response.data.rentabilidade.map(
         (item: any) => ({
-          x: format(parse(item.data, 'yyyy-MM', new Date()),"MMM/yyyy", {locale: ptBR}),
-          y: item.valor
+          x: parse(item.data, 'yyyy-MM', new Date(), { locale: ptBR }),
+          y: Number(item.valor)
         }))
       );
 
@@ -57,31 +57,24 @@ export const Rentabilidade = () => {
       <h1 className="titulo-rentabilidade">Rentabilidade</h1>
       <div className="div-rentabilidade">
         <div className="div-chart-rentabilidade">
-          <div style={{ height: 420, width: '100%' }}>
-            <VictoryChart
-              theme={VictoryTheme.material}
-            >
-              <VictoryLine
-                interpolation={'linear'}
-                data={data}
-                style={{
-                  data: { stroke: "#060b26" },
-                }}
-                
-
-              />
-            </VictoryChart>
-          </div>
-        </div>
-        <div className="div-grid-rentabilidade">
-          <div style={{ height: 390, width: '100%' }}>
-            <DataGrid
-              rows={rows}
-              columns={columns}
-              pageSize={5}
-              rowsPerPageOptions={[5]}
+          <VictoryChart
+            theme={VictoryTheme.material}
+            width={900}
+            height={420}
+            padding={{top: 20, bottom: 50, left: 70, right: 40}}
+            scale={{x:'time'}}
+            containerComponent={
+              <VictoryZoomContainer responsive={false}
+              />}
+          >
+            <VictoryLine
+              interpolation='linear'
+              data={data}
+              style={{
+                data: { stroke: "#060b26" },
+              }}
             />
-          </div>
+          </VictoryChart>
         </div>
       </div>
     </div>

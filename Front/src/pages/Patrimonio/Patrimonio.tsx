@@ -9,11 +9,11 @@ const columns: GridColDef[] = [
   //{ field: "id", headerName: "ID", width: 35 },
   { field: "nomeAtivo", headerName: "Ações", width: 120 },
   { field: "sigla", headerName: "Sigla", width: 80},
-  { field: "porcentagem", headerName: "Porc.", width: 80 },
   { field: "quantidade", headerName: "Quant.", width: 80 },
   { field: "precoAtual", headerName: "Preço atual", width: 100, type: 'number',valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`, align: 'center'},
   { field: "precoMedio", headerName: "Preço médio", width: 100, type: 'number', valueFormatter: (params) => `R$ ${params.value.toFixed(2)}`, align: 'left'},
   { field: "diferenca", headerName: "Diferença", width: 80 },
+  { field: "porcentagem", headerName: "Porc.", width: 80 },
   { field: "valorTotal", headerName: "Valor total", width: 100, type: 'number', valueFormatter: (params) => `R$ ${params.value}`, align:'left' },
 ];
 
