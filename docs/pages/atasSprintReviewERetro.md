@@ -377,7 +377,7 @@ Luciano
 2. ### _**Itens de ação**_
 
  * Remover tabela da Rentabilidade - Luciano
- * Finalizar testes do backend - Josué
+ * Finalizar testes do backend - Josué e Abritta
  * Diagrama de Pacotes - Léo
  * Diagrama de classes - Luquinhas e Gomes
  * Finalizar Rentabilidade - Gomes
