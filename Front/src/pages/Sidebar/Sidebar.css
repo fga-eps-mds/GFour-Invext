@@ -52,9 +52,15 @@
   align-items: center;
   padding: 0 16px;
   border-radius: 4px;
+  cursor: pointer;
 }
 .nav-link:hover {
   background-color: #1a83ff;
+}
+
+.nav-link.disabled{
+  pointer-events: none;
+  color: gray;
 }
 
 .nav-menu-items {
@@ -72,6 +78,14 @@
   align-items: center;
 }
 
-span {
+.container span {
   margin-left: 16px;
+}
+
+.icon-hover:hover{
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }

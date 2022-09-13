@@ -12,5 +12,5 @@ export const PublicRoute = ( ) => {
     }
     // Caso ele esteja logado, ele é redirecionado para o ultimo local 
     // que ele estava antes de tentar deslogar
-    return <Navigate to="/index" state={{ from: location }} replace />;
+    return <Navigate to="/patrimonio" state={{ from: location }} replace />;
   }

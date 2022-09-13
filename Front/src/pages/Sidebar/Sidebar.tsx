@@ -29,27 +29,27 @@ export const Sidebar = () => {
         <IconContext.Provider value={{ color: "#fff" }}>
           <div className="sidebar">
             <Link to="#" className="menu-bars">
-              <FaIcons.FaBars onClick={showNavbar} />
+              <FaIcons.FaBars className='icon-hover' onClick={showNavbar} />
             </Link>
           </div>
           <nav className={navbar ? "nav-menu active" : "nav-menu"}>
             <ul className="nav-menu-items" onClick={showNavbar}>
               <li className="sidebar-toggle">
                 <Link to="#" className="menu-bars">
-                  <AiIcons.AiOutlineClose />
+                  <AiIcons.AiOutlineClose className='icon-hover' />
                 </Link>
               </li>
               {SidebarData.map((item, index) => {
                 return item.path === "sair" ? (
                   <li key={index} className="nav-text" onClick={() => logout()}>
-                    <div className="nav-link">
+                    <div className={item.className}>
                       {item.icon}
                       <span>{item.title}</span>
                     </div>
                   </li>
                 ) : (
                   <li key={index} className="nav-text">
-                    <Link to={item.path} className="nav-link">
+                    <Link to={item.path} className={item.className}>
                       {item.icon}
                       <span>{item.title}</span>
                     </Link>
