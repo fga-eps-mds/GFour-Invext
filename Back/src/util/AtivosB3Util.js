@@ -189,7 +189,7 @@ exports.calculaRentabilidade = async function (datas, id_usuario) {
 
 async function calculaPrecoAtual(data, sigla) {
     return new Promise((resolve, reject) => {
-        Axios.get(`https://api-cotacao-b3.labdo.it/api/cotacao/cd_acao/${sigla}/10`, { // devolve os ultimos 100 pregoes desse ativo
+        Axios.get(`https://api-cotacao-b3.labdo.it/api/cotacao/cd_acao/${sigla}/100`, { // devolve os ultimos 100 pregoes desse ativo
         }).then(function(res) {
             for (let pregao of res.data) {
                 const { dt_pregao } = pregao;
