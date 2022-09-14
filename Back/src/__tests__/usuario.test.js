@@ -13,24 +13,23 @@ describe("Testes de usuario", () => {
   afterAll(async () => {
     db.close();
   });
-  
   it("E possivel criar um novo usuario", async () => {
-    const i = 115;
-    const novo_usuario = {
+    const i = 199;
+    var novo_usuario = {
       nomeCompleto: "asd",
       dataNascimento: "02/02/2002",
       telefone: "61998753416",
-      email: "asd"+ i +"@gmail.com",
+      email: "asd" + i + "@gmail.com",
       senha: "123456789",
-  }
-  const novo_usuario2 = {
-    nomeCompleto: "asd",
-    dataNascimento: "02/02/2002",
-    telefone: "61998753416",
-    email: "asd25@gmail.com",
-    senha: "123456789",
-}
-    
+    };
+    const novo_usuario2 = {
+      nomeCompleto: "asd",
+      dataNascimento: "02/02/2002",
+      telefone: "61998753416",
+      email: "asd25@gmail.com",
+      senha: "123456789",
+    };
+
     const response = await request(app).post("/usuario/cadastrar").send({
       nomeCompleto: novo_usuario.nomeCompleto,
       dataNascimento: novo_usuario.dataNascimento,
@@ -38,42 +37,33 @@ describe("Testes de usuario", () => {
       email: novo_usuario.email,
       senha: novo_usuario.senha,
     });
-
     const response2 = await request(app).post("/usuario/cadastrar").send({
-        nomeCompleto: novo_usuario2.nomeCompleto,
-        dataNascimento: novo_usuario2.dataNascimento,
-        telefone: novo_usuario2.telefone,
-        email: novo_usuario2.email,
-        senha: novo_usuario2.senha,
-      });
+      nomeCompleto: novo_usuario2.nomeCompleto,
+      dataNascimento: novo_usuario2.dataNascimento,
+      telefone: novo_usuario2.telefone,
+      email: novo_usuario2.email,
+      senha: novo_usuario2.senha,
+    });
 
-    // expect(response.status).toBe(200);
-
-    const usuario = await User.findOne({ where: { email: novo_usuario.email}  });
-
-  });
-
-  it("E possivel Logar", async () => {
+    const usuario = await User.findOne({
+      where: { email: novo_usuario.email },
+    });
 
     const userLogin = await request(app).post("/usuario/login").send({
-  
-      email: "teste1@gmail.com",
-      senha: "12345678",
+      email: novo_usuario.email,
+      senha: novo_usuario.senha,
     });
 
     const userLoginErr = await request(app).post("/usuario/login").send({
-  
       email: "",
-      senha: "12345678",
+      senha: novo_usuario.senha,
     });
 
     const userLoginErr2 = await request(app).post("/usuario/login").send({
-  
-      email: "teste1@gmail.com",
-      senha: "12345678910",
+      email: novo_usuario.email,
+      senha: "33625919595",
     });
-    
-    AtivosB3.updateAtivosB3();
   });
+
   
 });

@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --force-exit",
     "start": "nodemon src/server.js --ignore tests"
   },
   "repository": {

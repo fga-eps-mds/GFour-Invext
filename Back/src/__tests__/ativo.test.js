@@ -8,15 +8,11 @@ describe("Teste dos ativos", () => {
   beforeEach(async () => {
     console.log("Iniciando os Testes");
   });
-  afterAll(async () => {
-    db.close();
-  });
+  // afterAll(async () => {
+  //   db.close();
+  // });
 
   it("Deve criar um ativo", async () => {
-    const logaUsuario = await request(app).post("/usuario/login").send({
-      email: "teste1@gmail.com",
-      senha: "12345678",
-    });
 
     const ativoCadastra = await request(app).post("/ativo/cadastrar").send({
       token:
@@ -109,4 +105,6 @@ describe("Teste dos ativos", () => {
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjYzMTAyMDIxfQ.2-V1RYUu3Zlq9mmzR67YH_kmIGCMPdc-QJdxzcXC6fE",
     });
   });
+  jest.setTimeout(90000);
+  // db.close();
 });
