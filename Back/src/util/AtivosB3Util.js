@@ -94,9 +94,9 @@ exports.calculaPatrimonio = async function (siglas, id_usuario) {
             vTotal += pTotalatt;
             pPrecoMedio = pTotalPM / pQuantidadePM;
             
-            console.log(pTotalatt);
-            console.log(pTotal);
-            console.log(vTotal);
+            //console.log(pTotalatt);
+            //console.log(pTotal);
+            //console.log(vTotal);
 
             const patrimonio = {
                 nomeAtivo: pNomeAtivo,
@@ -130,7 +130,7 @@ exports.calculaRentabilidade = async function (datas, id_usuario) {
 
     let lista = [];
     for (let data of datas) {
-        let lucro = 0;
+        let lucro = 0, gastoTotal = 0;
         await sc.query(`SELECT DISTINCT(sigla) FROM ativos WHERE data LIKE '${data}%' AND id_usuario = ${id_usuario}`).then(async (res) => {
             for (let ativo of res[0]) {
                 await sc.query(`SELECT * FROM ativos WHERE data LIKE '${data}%' AND id_usuario = ${id_usuario} AND sigla = '${ativo.sigla}'`).then(async (res2) => {
@@ -147,11 +147,12 @@ exports.calculaRentabilidade = async function (datas, id_usuario) {
                         if (execucao === "compra") {
                             qtCompras++;
                             qtComprada += quantidade;
-                            pTotal = parseFloat(preco) * parseInt(quantidade);
+                            pTotal += (-1) * parseFloat(preco) * parseInt(quantidade);
+                            gastoTotal += parseFloat(preco) * parseInt(quantidade);
                             precoMedio += parseFloat(preco) * parseInt(quantidade);
                         } else {
                             qtVendida += quantidade;
-                            pTotal = (-1) * parseFloat(preco) * parseInt(quantidade);
+                            pTotal += parseFloat(preco) * parseInt(quantidade);
                         }
                     }
 
@@ -162,12 +163,14 @@ exports.calculaRentabilidade = async function (datas, id_usuario) {
                     
                     precoMedio = precoMedio / qtComprada;
                     if (qtCompras === res2[0].length) { // somente compra
+                        console.log(1);
                         lucro += qtComprada * (precoAtual - precoMedio); // somente a valorizacao do ativo
                     } else {
-                        if (qtVendida === (qtTotal - qtComprada)) { // venda total
+                        if (qtVendida === qtComprada) { // venda total
+                            console.log(2);
                             lucro += pTotal;
                         } else { // venda parcial
-                            lucro += pTotal + qtComprada * (precoAtual - precoMedio);
+                            lucro += ((qtComprada - qtVendida) * precoAtual) + pTotal;
                         }
                     }
                 });
@@ -175,7 +178,7 @@ exports.calculaRentabilidade = async function (datas, id_usuario) {
             
             const rentabilidade = {
                 data: data,
-                valor: lucro,
+                valor: ((lucro/gastoTotal)*100).toFixed(2),
             }
 
             lista.push(rentabilidade);
@@ -186,7 +189,7 @@ exports.calculaRentabilidade = async function (datas, id_usuario) {
 
 async function calculaPrecoAtual(data, sigla) {
     return new Promise((resolve, reject) => {
-        Axios.get(`https://api-cotacao-b3.labdo.it/api/cotacao/cd_acao/${sigla}/100`, { // devolve os ultimos 100 pregoes desse ativo
+        Axios.get(`https://api-cotacao-b3.labdo.it/api/cotacao/cd_acao/${sigla}/10`, { // devolve os ultimos 100 pregoes desse ativo
         }).then(function(res) {
             for (let pregao of res.data) {
                 const { dt_pregao } = pregao;
