@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "jest --force-exit",
+    "test": "jest --detectOpenHandles --maxWorkers=1",
     "start": "nodemon src/server.js --ignore tests"
   },
   "repository": {

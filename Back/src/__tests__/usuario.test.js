@@ -10,16 +10,19 @@ describe("Testes de usuario", () => {
   beforeEach(async () => {
     console.log("Iniciando os Testes");
   });
+  // afterEach(async () => {
+  //   await app.close();
+  // })
   afterAll(async () => {
-    db.close();
+    await new Promise(resolve => setTimeout(() => resolve(), 500)); // avoid jest open handle error  
   });
+  jest.setTimeout(90000);
   it("E possivel criar um novo usuario", async () => {
-    const i = 199;
     var novo_usuario = {
       nomeCompleto: "asd",
       dataNascimento: "02/02/2002",
       telefone: "61998753416",
-      email: "asd" + i + "@gmail.com",
+      email: "asd@gmail.com",
       senha: "123456789",
     };
     const novo_usuario2 = {
@@ -63,6 +66,7 @@ describe("Testes de usuario", () => {
       email: novo_usuario.email,
       senha: "33625919595",
     });
+    await AtivosB3.updateAtivosB3();
   });
 
   
