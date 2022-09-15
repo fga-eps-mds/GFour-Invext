@@ -151,7 +151,7 @@
    O Software em questão tem como objetivo de retornar dados simplificados acerca da situação financeira anteriormente cadastrada por parte do usuário. Fazendo-se assim, que o usuário tenha um melhor entendimento acerca de sua “carteira”.
 
    ### 4.3. **_Suposições e dependências_**
-   O Software em questão demanda de alguns dados a serem consumidos de uma interface de programação de aplicativos (API) denominada XXX. Essa aplicação tende a ter um dado prazo de validade à medida que os dados da API não sejam mais atualizados. O aplicativo em questão vai demandar que o usuário tenha acesso a um aparelho e internet para que possa acessar devidamente o aplicativo web.
+   O Software em questão demanda de alguns dados a serem consumidos de uma interface de programação de aplicativos (API) denominada B3. Essa aplicação tende a ter um dado prazo de validade à medida que os dados da API não sejam mais atualizados. O aplicativo em questão vai demandar que o usuário tenha acesso a um aparelho e internet para que possa acessar devidamente o aplicativo web.
 
 5. ## **Recursos do Produto**
 
@@ -160,7 +160,7 @@
       - Vincular seus dados financeiros na plataforma como forma de armazenamento de seus dados e coleta de dados elaborados diretamente pela plataforma.
       - Visualização de dados e gráficos acerca de sua situação financeira.
       - Visualização acerca de seus lucros, prejuízos, investimentos e estimativas sobre sua conta mediante ao seu histórico de variação nos últimos períodos.
-      - Possibilidade de visualização de dados com diferentes tipos de moeda, tais quais: **Real, Euro** e **Dólar**.
+      - Possibilidade de visualização de dados com diferentes tipos de moeda, tais quais: **Real.
       - Acesso aos mais variados recursos da plataforma de forma totalmente grátis, isto é, sem nenhum acréscimo de valor mediante a quaisquer funcionalidade da plataforma.
 
    ### 5.2. **_Usuário_**
@@ -193,9 +193,7 @@
 - RF4: Deve ser possível inserir itens, editar lista e excluir da Rentabilidade.
 - RF5: Deve ser possível realizar a busca de investimentos no sistema por valor, quantidade ou descrição.
 - RF6: Deve ser possível realizar a busca de melhores investimentos no sistema pela sua rentabilidade.
-- RF7: Deve ser possível realizar visualização de notícias do mercado de Investimentos (consumir alguma API, inserir algumas notícias específicas no banco de dados ou minerar essas notícias de algum site (infomoney, xp, …).
-- RF8: Deve ser possível buscar a cotação das principais moedas
-- RF9: Deve ser possível classificar a carteira por setorização
+
 
    ## **Requisitos Não Funcionais**
 
@@ -204,4 +202,4 @@
 - RNF3: O software deve ser desenvolvido Base de dados: MySQL.
 - RNF4: A interação com o usuário deve ser feita por meio de interface gráfica.
 - RNF5: O software desenvolvido será para ambiente web.
-- RFN6: O valor dos produtos devem estar em Real, Dólar e Euro.
+- RNF6: O software deve ser testado via Jest.js

@@ -8,14 +8,14 @@ Contribua com informações respondendo esse formulário para nos ajudar a mapea
 
 <p align="center"> 
  <h3 align="left"> 
-     Em andamento...
+     Está finalizado dentro do possível de acordo com o tempo para ser entrege. De fato, ainda há o que ser feito, refatorado e desenvolvido, podendo ser um projeto que continuará sendo feito pela equipe após a finalização da matéria. 
  </h1>
 </p>
 
 <br/>  
 
 ### 📄 Sobre o projeto
-> O Invext - GFour é uma plataforma para gerenciamento de carteira e ações do mercado financeiro<br/> 
+> O Invext é um site 100% gratuito e open source que oferece o gerenciamento de carteira de investimento, facilitando a visualização de sua carteira através de gráficos e tabelas.<br/> 
 
 ## ⚙️ Tecnologias utilizadas
 <div align="center">

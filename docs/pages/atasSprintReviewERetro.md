@@ -184,3 +184,214 @@
    
 -----------------------------------------------------------------------------------------------------------
 
+<p align="center"> 
+ <h3 align="left"> 
+     15 / 08
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+ * Sidebar está praticamente concluída
+ * Foi feita a estilização do projeto -> Ajuste das fontes
+ * Pesquisa sobre testes
+ * Escolhido o ambiente para testes: Jest
+
+2. ### _**Itens de ação**_
+
+ * Finalização da sidebar
+ * Finalizar a tela de compra/venda de ativos
+ * Ligação entre back e front end da compra/venda de ativos
+ * Criar banco para pegar dados diretos da api
+ * Busca de ativo por caractere
+ * Ligação entre usuario e ativos
+ * Venda de ativos
+ * Configurar o Jest no projeto
+   
+3. ### _**Dúvidas**_
+
+ * Como coordenar as branchs de desenvolvimento?
+ * Confirmar se a estilização é suficiente
+ * Issues que dependem de outras
+   
+4. ### _**Comunicados finais**_
+
+ * Colocar suas próprias issues no github nessa sprint
+
+5. ### _**Retrospect**_
+
+ <img src="/GFour-Invext/assets/retrospect15.08.png" width="450" height="400" />
+ 
+   
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|❓|✔️|✔️|✔️|✔️|❓|✔️|✔️|
+
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     22 / 08
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+ * Bug da sidebar está corrigido! --> Criar spam para sair da tela.
+ * O protótipo foi atualizado!
+ * A pesquisa sobre o Middleware foi feita e explicada para o time.
+ * Implementar os testes no back-end.
+
+2. ### _**Itens de ação**_
+
+ * Ainda está fechando a parte do buscar o ativo no Front, mesclar com o back-end.
+ * A tela de histórico está ainda em construção, tudo encaminha para finalizar no final da sprint.
+ * Atualizar a página da prototipação do nosso GitPages.
+ * O histórico de dados, será finalizado no final da sprint. 
+ * O edit e delet de dados, será finalizado no final da sprint. 
+ * Implementar os testes no front-end.
+ * Os indiciadores com a bolsa de valores, será finalizado no final da sprint.
+ * Tela Cadastrar/Vender: Autenticação Front + Back será finalizado no final da sprint.
+   
+3. ### _**Dúvidas**_
+
+ * A professora vai descontar na nota final caso decidírmos continuar construíndo o projeto na semana universitária? 
+   
+4. ### _**Comunicados finais**_
+
+ * Ter mais atenção com a PR para não atrasar as outras partes do projeto.
+ * A parte do tempo de permanência do usuário na aplicação, foi retirada por motivos de muitos problemas. 
+
+5. ### _**Retrospect**_
+  * Perguntas:
+         - O que gostamos e queremos continuar fazendo na próxima sprint?
+         - O que aprendemos nessa sprint e devemos aplicar na próxima?
+         - O que erramos e temos que melhorar para a próxima sprint?
+ 
+   
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     05 / 09
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+ * Alterações na tela de Carteira: Dividida em duas telas, patrimônio e rentabilidade
+ * Patrimônio foi feita e tela de Rentabilidade já está encaminhada
+ * Tela de Histórico praticamente finalizada, com os botões de excluir e editar ativo
+ * Parte do Patrimônio já realizada no backend
+ * Índices da B3 já realizados no Front
+
+2. ### _**Itens de ação**_
+
+ * Ver bug da tela de Patrimônio (Frontend)
+ * Alterar editar ativo para só conseguir editar quantidade, preço e data (Backend e Frontend)
+ * Criar validação de excluir ativo (Backend)
+ * Ver questão dos testes (Backend)
+   
+3. ### _**Dúvidas**_
+
+ * 
+   
+4. ### _**Comunicados finais**_
+
+ * Colocar alterações do código no github até quarta para o Fork
+
+5. ### _**Retrospect**_
+  * Perguntas:
+         - O que gostamos e queremos continuar fazendo na próxima sprint?
+         - O que aprendemos nessa sprint e devemos aplicar na próxima?
+         - O que erramos e temos que melhorar para a próxima sprint?
+
+
+Léo
+1. Organização da equipe
+2. Dar Pull Request nas alterações feitas
+3. Esquecer de dar o pull request e não apagar as branchs antigas
+
+Amanda
+1. Organização, comunicação e ajudar o outro
+2. Biblioteca para gráfico/tabela/outros 
+3. Esquecer de apagar as branchs
+
+Lucas Gomes
+1. Organização
+2. Apagar as branchs antigas
+3. Não apagar as branchs
+
+Josué
+1. Organização do grupo, desenvolvendo bem as tarefas
+2. Aprender sobre testes, e a dificuldade de aplicar
+3. Branchs e poucos comentários nas issues
+
+Abritta
+1. Acho que estamos andando muito bem nessa reta final e acho que somos uma equipe MUITO boa!
+2. Aprendi a mexer na parte de testes no back-end, e agradecer ao Josué por ter me ensinado bastante coisa
+3. Acho que errei em contar em fazer muita coisa nessa semana e ter recebido um wi-fi limitado aqui no hotel.
+
+Antônio
+1. Melhor grupo
+2. Aprendeu sobre datagrid e css
+3. Poucos comentários nas issues e Pull Requests
+
+Lucas Felipe
+1. Empenho da galera do frontend nas entregas, e de forma geral todo mundo do grupo muito empenhado
+2. Aprender sobre Datagrid
+3. Problemas com Pull Request
+
+Luciano
+1. Entregas da semana, e projeto como um todo
+2. Adiar reunião não dá certo
+3. Separar backend e frontend não é tão eficaz
+
+
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     12 / 09
+ </h1>
+</p>
+
+1. ### _**Entregas**_
+
+ * Editar ativo no front
+ * Gráfico de Rentabilidade feito no front
+ * Diagrama de Bancos revisado
+ * Rentabilidade feita (backend)
+ * Revisado Documento de Visão
+ * Protótipo atualizado e já no gitpages
+
+2. ### _**Itens de ação**_
+
+ * Remover tabela da Rentabilidade - Luciano
+ * Finalizar testes do backend - Josué e Abritta
+ * Diagrama de Pacotes - Léo
+ * Diagrama de classes - Luquinhas e Gomes
+ * Finalizar Rentabilidade - Gomes
+ * Revisar Documento de Arquitetura - Luciano e Amanda
+   
+3. ### _**Dúvidas**_
+
+ * Perguntar para professora se será necessário deploy do site
+   
+4. ### _**Comunicados finais**_
+
+
+6. ### _**Participantes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|❓|✔️|❓|❓|✔️|✔️|✔️|✔️|
+

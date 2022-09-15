@@ -20,7 +20,7 @@ Brasília, 17 de julho de 2022
 
    A Disciplina Métodos e Desenvolvimentos de Software visando a aprendizagem prática de como se dá todas as etapas de um processo da construção de software com valor de mercado. Serão feitos encontros semanais para discussão de objetivos e passos a serem tomados(Scrum). O objetivo principal do projeto é promover aos estudantes uma experiência profissional com as partes integrantes do projeto ao todo.
    
-   O Invext é um site 100% gratuito e open source que oferece o gerenciamento de carteira de investimento, facilitando a visualização de sua carteira através de gráficos, comparações com outras moedas e trazendo novidades do mercado financeiro atual.
+   O Invext é um site 100% gratuito e open source que oferece o gerenciamento de carteira de investimento, facilitando a visualização de sua carteira através de gráficos e tabelas.
   
   O tema escolhido para o estudo dessas partes foi: Com o crescente aumento no mercado financeiro atualmente e a busca pelo lucro, observamos uma grande oportunidade de desenvolver um projeto que abrange um amplo grupo de usuários que almejam entender ou até mesmo adentrar ao mundo financeiro.
    
@@ -32,7 +32,7 @@ Brasília, 17 de julho de 2022
 
 - Oferecer um entendimento maior sobre a área financeira para os usuários;
 
-- Facilitar a visualização dos investimentos através de gráficos e câmbios;
+- Facilitar a visualização dos investimentos através de gráficos e tabelas organizadas e atualizadas sobre cada ativo que o usuário possui;
 
 - Disponibilizar ao usuário de forma simples os dados do mundo financeiro;
 

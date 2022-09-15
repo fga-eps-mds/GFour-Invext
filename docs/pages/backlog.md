@@ -132,10 +132,233 @@ Todos:
 
 | Finalizados | Não finalizados |
 |--|--|
-|--|--|
+|Resolver o design da aplicação --> "deixar mais harmônico"|Pesquisa para fazer os Testes|
+|Organizar a protopiação (Excluir itens que não usaremos, reorganizar a side bar...)|--|
+|Rotas quando o usuário estiver logado ou deslogado|--|
+|Alinhamento geral|--|
+|Show de code|--|
+|Pesquisar como fazer a pesquisa/busca de dados da API e implementar|--|
+|Configuração de banco de dados (criar o data base)|--|
+|Fazer o Guia de Contribuição|--|
    
 ### _**Participantes de Acordo e Cientes**_
 | [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
 |--|--|--|--|--|--|--|--|
 |✔️|✔️|✔️|✔️|✔️|✔️|✔️|❓|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 9
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     10/08 à 17/08
+ </h1>
+</p>
+
+Front-end:
+
+         - Continuar a tela de "Comprar/Vender" (Finalizar!) --> Amanda e Antônio
+         - Finalizar o design e aplicar no código --> Amanda e Antônio 
+         - Como funcionar a questão do tempo do usuário logado (deslogar depois de quanto tempo?) --> Luciano e Lucas Felipe
+         - Integração da tela Cadastrar/Vender do Front/Back --> Luciano e Lucas Felipe
+
+Back-end:
+
+         - Continuar a parte de busca, em que o back-end percorre os dados de acordo que o front manda letra por letra, adicionada na barra de busca, e assim mandar para o front. --> Lucas Gomes e Abritta
+         - Aperfeiçoar o banco de dados --> Leonardo e Josué 
+         - Puxar a parte do histórico --> Todos
+         - Continuar a tela de "Comprar/Vender"  --> Todos
+  
+Todos:
+
+         - Trazer na Sprint Review o que fez na semana --> Seu "show de code".
+         - Pesquisa para fazer os Testes --> (Tanto no Front quanto no Back) --> Ficou para a próxima sprint(Sprint 10)
+         - Trazer como fazer os testes --> Front: Lucas Felipe e Antônio e Back: Abritta e Josué 
+
+| Finalizados | Não finalizados |
+|--|--|
+|Continuar a tela de "Comprar/Vender" (Front-end)|Como funcionar a questão do tempo do usuário logado (deslogar depois de quanto tempo?)|
+|Finalizar o design e aplicar no código|Integração da tela Cadastrar/Vender do Front/Back|
+|Finalizar a parte de busca dentro da API|Puxar a parte do histórico|
+|Aperfeiçoar o banco de dados|Tela Cadastrar/Vender: Autenticação Front + Back|
+|Continuar a tela de "Comprar/Vender" (Back-end)|--|
+|Trazer na Sprint Review o que fez na semana|--|
+|Pesquisa para fazer os Testes |--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 10
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     18/08 à 24/08
+ </h1>
+</p>
+
+Front-end:
+
+         - Finalizar o bug da sidebar --> Amanda
+         - Tela Cadastrar/Vender: Buscar --> Lucas Felipe e Luciano 
+         - Começar o design da tela ações/históricos (histórico de ações) --> Antônio
+         - Implementar a parte dos testes --> Lucas Felipe e Antônio
+         - Atualizar o protótipo --> Amanda
+         - Middleware no Front --> Luciano 
+
+Back-end:
+
+         - Puxar a parte do histórico --> Leonardo e Josué
+         - Criar a parte de "Editar" e "Excluir" --> Lucas Gomes e Abritta
+         - Implementar os testes --> Abritta e Josué
+         - Como fazer os indiciadores com a bolsa de valores? --> Lucas Gomes e Leonardo 
+  
+Todos:
+         
+         - Tela Cadastrar/Vender: Autenticação Front + Back.
+         - Trazer como fazer os testes --> Front: Lucas Felipe e Antônio e Back: Abritta e Josué --> Para cada Grupo
+
+| Finalizados | Não finalizados |
+|--|--|
+|--|--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 11
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     24/08 à 31/08
+ </h1>
+</p>
+
+Front-end:
+         
+         - Criar a tela de "Histŕorico" --> (Decidir as duplas)
+         - Começar a tela de "Meu Perfil" --> (Decidir as duplas)
+         - Implementar a parte dos testes --> (Decidir as duplas)
+         - Estudar como fazer a parte do gráfico da tela "Minha Carteira" --> (Decidir as duplas) --> Lembrando que o estudo já deve ser seguido com a implementação.
+
+Back-end:
+        
+         - Criar a parte de dados do "Meu perfil" --> (Decidir as duplas)
+         - Estudar como fazer a parte do gráfico da tela "Minha Carteira" --> (Decidir as duplas) --> Lembrando que o estudo já deve ser seguido com a implementação.
+         - Implementar a parte dos testes --> (Decidir as duplas)
+  
+Todos:
+         
+         - Tela Cadastrar/Vender: Autenticação Front + Back.
+         - Tela "Histórico": Autenticação Front + Back.
+         
+| Finalizados | Não finalizados |
+|--|--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 11
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     29/08 à 05/09
+ </h1>
+</p>
+
+Front-end:
+         
+         - Criar a tela "Carteira" --> Lucas Felipe e Amanda (Se precisarem de ajuda, chamar o Luciano e o Antônio)
+         - Finalizar a tela de "Histórico" --> Amanda e Antônio (Luciano para fazer a integração) 
+         - Finalizar um bug da barra de pesquisa --> Lucas Felipe e Luciano 
+
+Back-end:
+        
+         - Pesquisar e a implementação dos gráficos de rentabilidade --> Leonardo e Lucas Gomes
+         - Testes de implementação do Back-end --> Josué e Abritta
+         - Criar as implementações da parte de "Patrimônio" --> Leonardo e Josué (Se precisarem de ajuda, chamar a Abritta e o Gomes)
+  
+Todos:
+    
+         - Tela "Histórico": Autenticação Front + Back.
+         - Front: Ficar mais atentos com um o CSS.
+         
+| Finalizados | Não finalizados |
+|--|--|
+|Página Histórico|Ajustar o editar ativo(frontend)|
+|Página Patrimônio|validação de excluir ativo (backend)|
+|Editar ativo (backend)|--|
+|Bug da barra de pesquisa finalizada|--|
+|Testes no backend inicializado|--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|✔️|✔️|✔️|✔️|✔️|✔️|✔️|✔️|
+-----------------------------------------------------------------------------------------------------------
+
+
+<p align="center"> 
+ <h3 align="left"> 
+     Sprint 12
+ </h1>
+</p>
+
+<p align="center"> 
+ <h3 align="right"> 
+     07/09 à 14/09
+ </h1>
+</p>
+
+Front-end:
+         
+         - Refatorar editar ativo - Luciano
+         - Finalizar a tela de Rentabilidade - Todos do Front
+
+Back-end:
+        
+         - Realizar as coberturas de testes - Josué e Abritta
+         - Finalizar rentabilidade - Gomes e Léo
+  
+Todos:
+    Revisar:
+         - Diagrama de bancos - Léo
+         - Diagrama de classes - Gomes
+         - Diagrama de pacotes - Josué
+    
+    - Revisar o protótipo e colocar no gitpages - Antônio
+    - Revisar requisitos do doc de visão - Lucas Felipe
+    - Revisar documento de arquitetura - Luciano
+         
+| Finalizados | Não finalizados |
+|--|--|
+   
+### _**Participantes de Acordo e Cientes**_
+| [Maria Abritta](https://github.com/MariaAbritta) | [Luciano Freitas](https://github.com/luciano-freitas-melo) | [Amanda Noda](https://github.com/amanda-noda) | [Lucas Felipe](https://github.com/lucasfs1007) | [Antônio Júnior](https://github.com/antonioleaojr) | [Josué Teixeira](https://github.com/zjosuez) | [Lucas Gomes](https://github.com/lucasgcaldas) | [Leonardo Padre](https://github.com/LeonardoPadre) |
+|--|--|--|--|--|--|--|--|
+|❓|✔️|✔️|✔️|✔️|❓|✔️|✔️|
 -----------------------------------------------------------------------------------------------------------

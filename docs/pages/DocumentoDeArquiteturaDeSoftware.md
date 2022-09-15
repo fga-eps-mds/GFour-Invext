@@ -114,7 +114,7 @@ Descreve como os defensores do desenvolvimento estão organizados no sistema de 
 13. ### _**DIAGRAMA DE CLASSES**_
     Essa é a primeira versão das classes e métodos adotados no diagrama de classe do projeto Invext.
     
-    <img src="/GFour-Invext/assets/diagrama_de_classes.png" width="750" height="500" />
+    <img src="/GFour-Invext/assets/diagrama_classe_invext.png" width="750" height="500" />
 
 14. ### _**DIAGRAMA DE PACOTES**_
     Essa é a primeira versão da implementação do diagrama de pacotes do projeto Invext.
