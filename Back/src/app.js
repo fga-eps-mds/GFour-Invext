@@ -3,7 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const userControler = require('../src/controller/UserController.js');
+const userController = require('../src/controller/UserController.js');
+const ativoController = require('./controller/AtivoController.js');
 
 app.use(express.json());
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
     });
 });
 
-app.use('/usuario', userControler);
+app.use('/usuario', userController);
+app.use('/ativo', ativoController);
 
 module.exports = app;

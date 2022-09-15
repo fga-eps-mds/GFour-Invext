@@ -1,0 +1,38 @@
+.background-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('../../assets/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titulo-historico{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em; 
+    color: white;
+    font-weight: bold;
+    margin-top: 2.5%;         
+}
+
+.div-historico ul {
+    color: #000000;
+    padding-right: 10px;
+    display: flex;
+}
+.div-historico li{
+    padding: 10px;
+}
+.div-historico  {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 72%;
+    background-color: #cacacaf1;
+    border-radius: 0.5cm;
+    color: white;
+}

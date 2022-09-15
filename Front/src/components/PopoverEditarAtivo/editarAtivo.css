@@ -1,0 +1,77 @@
+.MuiDialogContent-root{
+    background-color: #060b26;
+    display: flex;    
+    flex-direction: column;
+   
+}
+
+.modalEdit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap:1.25em;
+    padding: 2.5% 5%;
+    padding-bottom: 5%;
+}
+.modalEdit h2{
+    font-family: 'Roboto Flex';
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+}
+
+
+.modalEdit-linebox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.modalEdit input{
+    width: 45%;
+    background-color:white;
+    color:black;
+    border: none;
+    border-radius: 40px;    
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em 0;
+    
+}
+
+.modalEdit input::placeholder{
+    color:gray;
+    font-family: 'Roboto';
+    font-size: 1em;
+}
+
+.modalEdit input:disabled{
+    background-color: lightgray;
+}
+
+.busca-ativo{
+    width: 100% !important;
+}
+
+.data-input{
+    font-size: 0.5em;
+}
+
+.modalEdit button{
+    color:white;
+    border: none;
+    border-radius:70px;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.5em 1.5em; 
+    cursor: pointer;
+    transition: 0.25s;  
+}
+.modalEdit button:hover{
+    background: white;
+    color: black;
+}

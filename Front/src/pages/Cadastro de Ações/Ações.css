@@ -1,0 +1,108 @@
+.background-img {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-image: url('../../assets/background.jpeg');
+    background-color: #232239;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.div-acoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(10, 17, 79, 0.8);
+    border-radius: 40px;
+    width: 65%;
+}
+.div-acoes div{
+    width: 100%;
+}
+.form-acoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap:1.25em;
+    padding: 5%;
+    padding-bottom: 7.5%;
+}
+
+.titulo-acoes {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em; 
+    color: white;
+    font-weight: bold;
+}
+.linebox {
+    display: flex;
+    justify-content: space-between;
+}
+.form-acoes input{
+    background-color:white;
+    color:black;
+    width: 45%;
+    border: none;
+    border-radius: 40px;    
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    
+}
+
+.form-acoes input::placeholder{
+    color:gray;
+    font-family: 'Roboto';
+    font-size: 1em;
+}
+
+
+.div-acoes button{
+    color:white;
+    border: none;
+    border-radius:70px;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5em 1.5em; 
+    cursor: pointer;
+    transition: 0.25s;  
+}
+.div-acoes button:hover{
+    float: left;
+    background: white;
+    color: black;
+    align-items: left;
+    justify-items: left;
+}
+.buy-button {
+    background-color:#47B802;
+}
+
+.sell-button {
+    background-color:#9F0303;
+    padding: 0.5em 2em; 
+}
+
+.error{
+    color:#721c24;
+    background-color: #F8D7D4;
+    border: 1px solid #F5C6CB;
+    padding: 0.5em 1.5em; 
+    border-radius: 5px;
+    
+}
+
+.buttonBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+    margin-top: 1.75em;
+}
