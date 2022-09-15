@@ -106,7 +106,7 @@
    
 - Diagrama de Banco de Dados
 
-   <img src="/GFour-Invext/assets/DiagramaDeBancoDeDados.png" width="750" height="500" />
+   <img src="/GFour-Invext/assets/DiagramaDeBancoDeDados.png" width="1000" height="500" />
 
 
 
