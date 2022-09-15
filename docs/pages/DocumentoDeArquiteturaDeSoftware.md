@@ -107,7 +107,7 @@ Descreve como os defensores do desenvolvimento estão organizados no sistema de 
    Essa visão é utilizada em projetos onde existe alguma camada de duração, geralmente, um banco de dados racional. É uma visão geral dos dados persistentes, por meio dessa, objetos são mapeados dados persistentes. Essa visão é visualizada com o Modelo Entidade Relacionamento, no caso de banco de dados relacionais.
 
 12. ### _**DIAGRAMA DE IMPLEMENTAÇÃO**_
-    Essa é a versão final da implementação do diagrama de implementação do projeto Invext.
+    Essa é a versão final do diagrama de implementação do projeto Invext.
     
     <img src="/GFour-Invext/assets/diagrama_de_implementação.png" width="750" height="500" />
 
