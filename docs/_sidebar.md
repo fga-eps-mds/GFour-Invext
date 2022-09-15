@@ -6,6 +6,7 @@
 
 - [TAP](pages/TAP.md)
 - [Documento de Visão](pages/DocumentoDeVisão.md)
+- [Post Mortem](pages/postmortem.md)
 - Arquitetura
     - [Documento de Arquitetura de Software](pages/DocumentoDeArquiteturaDeSoftware.md)
     - [Prototipação](pages/Prototipação.md)
@@ -14,7 +15,6 @@
 
 - Atas
     - [Sprint Review e Retrospect](pages/atasSprintReviewERetro.md)
-    - [Sprint Planning](pages/atasSprintPlanning.md)
 
 - [Backlog](pages/backlog.md)
 

@@ -94,9 +94,9 @@ exports.calculaPatrimonio = async function (siglas, id_usuario) {
             vTotal += pTotalatt;
             pPrecoMedio = pTotalPM / pQuantidadePM;
             
-            console.log(pTotalatt);
-            console.log(pTotal);
-            console.log(vTotal);
+            //console.log(pTotalatt);
+            //console.log(pTotal);
+            //console.log(vTotal);
 
             const patrimonio = {
                 nomeAtivo: pNomeAtivo,
@@ -122,53 +122,83 @@ exports.calculaPatrimonio = async function (siglas, id_usuario) {
 }
 
 exports.calculaRentabilidade = async function (datas, id_usuario) {
+    console.log(datas);
     const sc = new sequelize("usuario", "root", "12345678", {
         host: 'localhost',
         dialect: 'mysql'
     });
 
-    var lista = [];
+    let lista = [];
     for (let data of datas) {
-        var vTotal = 0;
-        await sc.query(`SELECT * FROM ativos WHERE data LIKE '${data}%' AND id_usuario = ${id_usuario}`).then(async (res) => {
-            // console.log(res);
-            let pTotal = 0, pTotalatt = 0;
-            for (var i = 0; i < res.length; i++) {
-                for (let result of res[i]) {
-                    // console.log(result, i);
-                    const { sigla } = result;
-                    const { preco } = result;
-                    const { quantidade } = result;
-                    const { execucao } = result;
-                    
-                    let precoAtual = await AtivosB3.findAll({
-                        attributes: ['valor_fechamento'],
-                        where: {
-                        "codigo_acao": sigla
+        let lucro = 0, gastoTotal = 0;
+        await sc.query(`SELECT DISTINCT(sigla) FROM ativos WHERE data LIKE '${data}%' AND id_usuario = ${id_usuario}`).then(async (res) => {
+            for (let ativo of res[0]) {
+                await sc.query(`SELECT * FROM ativos WHERE data LIKE '${data}%' AND id_usuario = ${id_usuario} AND sigla = '${ativo.sigla}'`).then(async (res2) => {
+                    let pTotal = 0, precoMedio = 0, sigla;
+                    let qtCompras = 0, qtVendida = 0, qtComprada = 0, qtTotal = 0;
+                    for (let result of res2[0]) {
+                        // console.log(result, i);
+                        sigla = result.sigla;
+                        const { preco } = result;
+                        const { quantidade } = result;
+                        const { execucao } = result;
+                        
+                        qtTotal += quantidade;
+                        if (execucao === "compra") {
+                            qtCompras++;
+                            qtComprada += quantidade;
+                            pTotal += (-1) * parseFloat(preco) * parseInt(quantidade);
+                            gastoTotal += parseFloat(preco) * parseInt(quantidade);
+                            precoMedio += parseFloat(preco) * parseInt(quantidade);
+                        } else {
+                            qtVendida += quantidade;
+                            pTotal += parseFloat(preco) * parseInt(quantidade);
                         }
-                    });
-                    precoAtual = precoAtual[0].valor_fechamento;
-
-                    if (execucao === "compra") {
-                        pTotal = parseFloat(preco) * parseInt(quantidade);
-                        pTotalatt = parseFloat(precoAtual) * parseInt(quantidade);
-                    } else {
-                        pTotal = (-1) * parseFloat(preco) * parseInt(quantidade);
-                        pTotalatt = (-1) * parseFloat(precoAtual) * parseInt(quantidade);
                     }
-                    vTotal += pTotal;
-                    // console.log(execucao, preco, quantidade, precoAtual, vTotal);
-                }
-                // console.log(vTotal, data, i);
+
+                    // cria a string da data do pregao do mes
+                    const pregao = `${data.split("-")[0]}${data.split("-")[1]}`
+                    // descobre qual o preco de fechamento do ultimo dia do mes em especifico que teve pregao
+                    const precoAtual = await calculaPrecoAtual(pregao, sigla);
+                    
+                    precoMedio = precoMedio / qtComprada;
+                    if (qtCompras === res2[0].length) { // somente compra
+                        console.log(1);
+                        lucro += qtComprada * (precoAtual - precoMedio); // somente a valorizacao do ativo
+                    } else {
+                        if (qtVendida === qtComprada) { // venda total
+                            console.log(2);
+                            lucro += pTotal;
+                        } else { // venda parcial
+                            lucro += ((qtComprada - qtVendida) * precoAtual) + pTotal;
+                        }
+                    }
+                });
             }
             
             const rentabilidade = {
                 data: data,
-                valor: vTotal,
+                valor: ((lucro/gastoTotal)*100).toFixed(2),
             }
 
             lista.push(rentabilidade);
         });
     }
     return lista;
+}
+
+async function calculaPrecoAtual(data, sigla) {
+    return new Promise((resolve, reject) => {
+        Axios.get(`https://api-cotacao-b3.labdo.it/api/cotacao/cd_acao/${sigla}/100`, { // devolve os ultimos 100 pregoes desse ativo
+        }).then(function(res) {
+            for (let pregao of res.data) {
+                const { dt_pregao } = pregao;
+                if (JSON.stringify(dt_pregao).includes(data)) {
+                    return resolve(pregao.vl_fechamento);
+                }
+            }
+        }).catch(function(err) {
+            console.log(err);
+        });
+    });
 }
