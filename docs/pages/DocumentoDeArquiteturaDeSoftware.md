@@ -107,29 +107,29 @@ Descreve como os defensores do desenvolvimento estão organizados no sistema de 
    Essa visão é utilizada em projetos onde existe alguma camada de duração, geralmente, um banco de dados racional. É uma visão geral dos dados persistentes, por meio dessa, objetos são mapeados dados persistentes. Essa visão é visualizada com o Modelo Entidade Relacionamento, no caso de banco de dados relacionais.
 
 12. ### _**DIAGRAMA DE IMPLEMENTAÇÃO**_
-    Essa é a primeira versão das classes e métodos adotados no diagrama de classe do projeto Invext.
+    Essa é a versão final da implementação do diagrama de implementação do projeto Invext.
     
     <img src="/GFour-Invext/assets/diagrama_de_implementação.png" width="750" height="500" />
 
 13. ### _**DIAGRAMA DE CLASSES**_
-    Essa é a primeira versão das classes e métodos adotados no diagrama de classe do projeto Invext.
+    Essa é a versão final das classes e métodos adotados no diagrama de classe do projeto Invext.
     
     <img src="/GFour-Invext/assets/diagrama_classe_invext.png" width="750" height="500" />
 
 14. ### _**DIAGRAMA DE PACOTES**_
-    Essa é a primeira versão da implementação do diagrama de pacotes do projeto Invext.
+    Essa é a versão final da implementação do diagrama de pacotes do projeto Invext.
 
     <img src="/GFour-Invext/assets/diagrama_de_pacotes.png" width="750" height="500" />
 
     <img src="/GFour-Invext/assets/diagrama_de_pacotesMVC.png" width="750" height="500" />
     
 15. ### _**DIAGRAMA DE CASOS DE USO**_
-    Essa é a primeira versão da implementação do diagrama de casos de uso do projeto Invext.
+    Essa é a versão final da implementação do diagrama de casos de uso do projeto Invext.
 
     <img src="/GFour-Invext/assets/diagramaDeCasosDeUso.png" width="750" height="500" />
     
-16. ### _**DIAGRAMA DE BANCO DE DADOS*_
-    Essa é a primeira versão da implementação do diagrama de banco de dados do projeto Invext.
+16. ### _**DIAGRAMA DE BANCO DE DADOS**_
+    Essa é a versão final da implementação do diagrama de banco de dados do projeto Invext.
 
     <img src="/GFour-Invext/assets/DiagramaDeBancoDeDados.png" width="750" height="500" />
 
