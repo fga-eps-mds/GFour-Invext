@@ -6,7 +6,7 @@
 
 <p align="center"> 
  <h3 align="left"> 
-     Está finalizado dentro do possível de acordo com o tempo para ser entrege. De fato, ainda há o que ser feito, refatorado e desenvolvido, podendo ser um projeto que continuará sendo feito pela equipe após a finalização da matéria. 
+     Está finalizado dentro do possível de acordo com o tempo para ser entregue. De fato, ainda há o que ser feito, refatorado e desenvolvido, podendo ser um projeto que continuará sendo feito pela equipe após a finalização da matéria. 
  </h1>
 </p>
 
