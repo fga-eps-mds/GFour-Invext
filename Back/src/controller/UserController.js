@@ -12,6 +12,7 @@ router.post("/cadastrar", async (req, res) => {
     
     const novo_usuario = {
         nomeCompleto: req.body.nomeCompleto,
+        cpf: req.body.cpf,
         dataNascimento: req.body.dataNascimento,
         telefone: req.body.telefone,
         email: req.body.email,
