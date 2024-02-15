@@ -17,6 +17,22 @@ const User = db.define('users', {
             }
         }
     },
+    cpf: {
+        type: Sequelize.STRING,
+        validate: {
+            isCpfValid(value) {
+                if (value.length !== 11) {
+                    throw new Error('O CPF deve ter 11 caracteres');
+                }
+                if (!/^\d+$/.test(value)) {
+                    throw new Error('O CPF deve conter apenas caracteres numéricos');
+                }
+            }
+        },
+        unique: {
+            msg: 'CPF já está sendo utilizado por outro usuário'
+        }
+    },
     dataNascimento: {
         type: Sequelize.STRING,
         allowNull: false,
